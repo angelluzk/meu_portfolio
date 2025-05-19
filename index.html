@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="bg-black text-white scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Meu Portfólio</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="relative overflow-x-hidden">
+    <!-- Navbar -->
+    <nav
+        class="flex items-center justify-between px-6 md:px-20 py-6 bg-black/90 sticky top-0 z-50 border-b border-yellow-400 shadow-lg">
+        <!-- Nome com efeito pulsante -->
+        <h1 class="text-2xl md:text-3xl font-extrabold text-yellow-400 animate-pulse glow-name select-none">
+            Angelita da Luz Mota
+        </h1>
+
+        <!-- Links e Toggle -->
+        <div class="flex items-center gap-6">
+            <ul class="flex gap-6 text-white font-semibold text-sm md:text-base">
+                <li><a href="#hero" class="nav-link relative group">Início<span class="nav-underline"></span></a></li>
+                <li><a href="#sobre" class="nav-link relative group">Sobre<span class="nav-underline"></span></a></li>
+                <li><a href="#mapa" class="nav-link relative group">Explorar<span class="nav-underline"></span></a></li>
+                <li><a href="#contato" class="nav-link relative group">Contato<span class="nav-underline"></span></a>
+                </li>
+            </ul>
+
+            <!-- Separador -->
+            <div class="border-l border-yellow-400 h-6 mx-2"></div>
+
+            <button id="themeToggle"
+                class="relative w-20 h-8 border-2 border-yellow-400 rounded-full flex items-center justify-between px-1 transition-all duration-300 bg-transparent ml-2 overflow-hidden">
+                <!-- Emojis -->
+                <span class="text-xl select-none">☀️</span>
+                <span class="text-xl select-none">🌙</span>
+
+                <!-- Bolinha deslizante -->
+                <span id="toggleCircle"
+                    class="absolute w-7 h-7 bg-white rounded-full shadow-md transition-all duration-300">
+                </span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Seção Inicial -->
+    <section id="hero"
+        class="relative min-h-screen flex flex-col justify-center items-center text-center z-10 px-8 pt-2 pb-37">
+
+        <!-- Fundo escuro + estrelas -->
+        <div class="absolute inset-0 bg-black bg-opacity-80 z-0"></div>
+        <canvas id="starCanvas" class="absolute top-0 left-0 w-full h-full z-0"></canvas>
+
+        <div
+            class="z-10 animate-fade-in w-full max-w-screen-xl mx-auto flex flex-col md:flex-row items-center justify-center gap-6 px-8">
+
+            <!-- Mascote e balão -->
+            <div class="flex flex-col items-center group animate-fade-in relative">
+
+                <!-- fundo blur amarelo -->
+                <div
+                    class="absolute -z-10 w-[280px] h-[280px] md:w-[450px] md:h-[450px] rounded-full bg-yellow-400 opacity-20 blur-3xl">
+                </div>
+
+                <!-- vagalumes extras -->
+                <div class="absolute top-10 left-5 w-2 h-2 rounded-full bg-yellow-400 opacity-70 firefly1"></div>
+                <div class="absolute top-20 right-10 w-3 h-3 rounded-full bg-yellow-400 opacity-60 firefly2"></div>
+                <div class="absolute bottom-10 left-14 w-1.5 h-1.5 rounded-full bg-yellow-400 opacity-50 firefly3">
+                </div>
+                <div class="absolute bottom-20 right-20 w-2 h-2 rounded-full bg-yellow-400 opacity-60 firefly4"></div>
+                <div class="absolute top-5 right-32 w-2.5 h-2.5 rounded-full bg-yellow-400 opacity-55 firefly1"></div>
+                <div class="absolute bottom-16 left-28 w-1.8 h-1.8 rounded-full bg-yellow-400 opacity-50 firefly2">
+                </div>
+                <div class="absolute top-36 right-16 w-2 h-2 rounded-full bg-yellow-400 opacity-60 firefly3"></div>
+
+                <!-- Balão -->
+                <div id="balao"
+                    class="absolute top-[0px] left-1/2 -translate-x-1/2 -translate-y-full bg-yellow-400 text-black text-lg px-6 py-3 rounded-xl shadow-xl w-max whitespace-nowrap animate-pulse-soft z-20">
+                    <span class="block font-semibold">Vamos explorar meu universo criativo?</span>
+                    <div
+                        class="absolute bottom-[-8px] left-6 w-0 h-0 border-l-[8px] border-r-[8px] border-t-[8px] border-l-transparent border-r-transparent border-t-yellow-400">
+                    </div>
+                </div>
+
+                <!-- Mascote -->
+                <img src="img/meu-mascote.png" alt="Mascote desenvolvedora"
+                    class="group w-[200px] md:w-[450px] object-contain drop-shadow-lg relative z-10 float" />
+                <div class="w-[180px] md:w-[360px] h-8 bg-black/30 rounded-full -mt-6 filter blur-xl"></div>
+            </div>
+
+            <!-- Texto -->
+            <div class="max-w-xl text-left animate-fade-in flex flex-col justify-center gap-4">
+                <h1
+                    class="text-4xl md:text-7xl font-bold text-yellow-400 drop-shadow-[0_2px_2px_rgba(255,255,255,0.2)] tracking-tight leading-tight">
+                    <span class="block md:inline whitespace-nowrap">Universo Criativo</span>
+                </h1>
+
+                <p class="text-lg md:text-xl text-white leading-relaxed">
+                    Prepare-se para explorar um universo onde código, criatividade e inovação se encontram!
+                </p>
+                <a href="#sobre"
+                    class="scribble-border mt-4 w-fit px-6 py-3 text-lg font-semibold text-white hover:bg-yellow-400 hover:text-black transition duration-300">
+                    Entrar
+                </a>
+            </div>
+        </div>
+
+        <!-- Vagalumes adicionais -->
+        <span class="absolute top-1/4 left-1/3 w-2 h-2 bg-yellow-400 rounded-full firefly1"></span>
+        <span class="absolute bottom-1/4 right-1/4 w-2 h-2 bg-yellow-400 rounded-full firefly2"></span>
+        <span class="absolute top-1/2 right-1/2 w-2 h-2 bg-yellow-400 rounded-full firefly3"></span>
+        <span class="absolute bottom-1/3 left-1/4 w-2 h-2 bg-yellow-400 rounded-full firefly4"></span>
+    </section>
+
+    <!-- Seção Sobre mim-->
+    <section id="sobre"
+        class="relative min-h-screen py-20 px-10 max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-center text-center md:text-left animate-fade-in overflow-hidden">
+
+        <!-- Fundo decorativo com múltiplos triângulos -->
+        <div class="absolute inset-0 z-0 pointer-events-none">
+            <!-- Triângulos maiores e mais brilhantes -->
+            <div class="absolute top-20 left-10 w-24 h-24 rotate-45 bg-yellow-400 opacity-40 clip-triangle blur-md">
+            </div>
+            <div class="absolute bottom-32 right-12 w-20 h-20 rotate-12 bg-yellow-300 opacity-30 clip-triangle blur-sm">
+            </div>
+            <div class="absolute top-1/5 left-1/4 w-16 h-16 -rotate-12 bg-yellow-200 opacity-15 clip-triangle blur-sm">
+            </div>
+            <div
+                class="absolute top-10 right-1/4 w-28 h-28 rotate-[30deg] bg-yellow-300 opacity-40 clip-triangle blur-md">
+            </div>
+
+            <!-- Triângulos pequenos com brilho mais intenso -->
+            <div
+                class="absolute bottom-12 left-1/4 w-6 h-6 rotate-45 bg-yellow-400 opacity-60 clip-triangle blur-[3px]">
+            </div>
+            <div
+                class="absolute top-[65%] left-[10%] w-4 h-4 rotate-[15deg] bg-yellow-200 opacity-30 clip-triangle blur-sm">
+            </div>
+            <div
+                class="absolute bottom-1/2 right-1/3 w-5 h-5 rotate-[75deg] bg-yellow-400 opacity-35 clip-triangle blur-[2px]">
+            </div>
+            <div
+                class="absolute top-1/4 right-1/2 w-8 h-8 rotate-[25deg] bg-yellow-300 opacity-20 clip-triangle blur-sm">
+            </div>
+
+            <!-- Triângulos bem translúcidos para profundidade -->
+            <div class="absolute bottom-10 left-10 w-24 h-24 rotate-45 bg-yellow-100 opacity-10 clip-triangle blur-lg">
+            </div>
+            <div class="absolute top-1/3 right-6 w-16 h-16 rotate-12 bg-yellow-100 opacity-10 clip-triangle blur-lg">
+            </div>
+            <div
+                class="absolute top-72 left-1/2 w-20 h-20 rotate-[60deg] bg-yellow-100 opacity-10 clip-triangle blur-xl">
+            </div>
+        </div>
+
+        <!-- Container texto + links -->
+        <div class="relative flex flex-col md:flex-row items-center md:items-center w-full gap-6">
+
+            <!-- Coluna esquerda: texto + links -->
+            <div class="flex flex-col justify-center md:flex-1 max-w-5xl mx-auto md:mx-0 md:mr-20 w-full">
+
+                <!-- Texto dentro do retângulo -->
+                <div class="scribble-border p-8 space-y-6">
+                    <h2
+                        class="text-5xl md:text-4xl extra-bold text-yellow-400 flex items-center gap-5 justify-center md:justify-start mb-10 animate-fade-in">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-user text-yellow-400" width="30"
+                            height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M4 21v-2a4 4 0 0 1 3-3.87"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        Sobre Mim
+                    </h2>
+                    <p class="text-white text-lg leading-tight">
+                        Olá! Sou <span class="text-yellow-400 font-semibold">Angelita Luz</span>, desenvolvedora <span
+                            class="text-yellow-400 font-semibold">Full Stack</span>, com um toque criativo em design e
+                        produtora
+                        de conteúdo audiovisual para o <span class="text-yellow-400 font-semibold">YouTube</span>.
+                    </p>
+                    <p class="text-white text-lg leading-tight">
+                        Com especialidade em <span class="text-yellow-400 font-semibold">Python</span>, <span
+                            class="text-yellow-400 font-semibold">PHP</span>, <span
+                            class="text-yellow-400 font-semibold">Java</span>, <span
+                            class="text-yellow-400 font-semibold">JavaScript</span>, <span
+                            class="text-yellow-400 font-semibold">HTML</span>, <span
+                            class="text-yellow-400 font-semibold">CSS</span> e <span
+                            class="text-yellow-400 font-semibold">MySQL</span>.
+                    </p>
+                    <p class="text-white text-lg leading-tight">
+                        Ajudo empresas a transformar sonhos em código e criatividade! Que tal conhecer meu <span
+                            class="text-yellow-400 font-semibold">Universo Criativo</span>?
+                    </p>
+
+                    <!-- Vagalumes decorativos -->
+                    <span class="sobre-firefly w-2 h-2 top-1 left-1 absolute firefly1"></span>
+                    <span class="sobre-firefly w-1.5 h-1.5 bottom-10 right-10 absolute firefly2"></span>
+                </div>
+
+                <!-- Links fora do retângulo, alinhados com o texto -->
+                <div class="flex justify-start gap-8 mt-6 px-2 text-yellow-400 text-lg font-semibold">
+                    <a href="https://www.linkedin.com/in/angelitaluz/" target="_blank" rel="noopener noreferrer"
+                        class="flex items-center gap-2 hover:text-yellow-300 transition-colors" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" aria-hidden="true">
+                            <rect width="24" height="24" rx="4" ry="4" fill="#FACC15" /> <!-- fundo amarelo -->
+                            <path fill="#000000"
+                                d="M6.94 19H4.39V9h2.55v10zM5.67 7.75a1.48 1.48 0 110-2.96 1.48 1.48 0 010 2.96zM20 19h-2.55v-5.5c0-1.32-.47-2.22-1.64-2.22-0.9 0-1.44.6-1.68 1.18-.09.21-.11.5-.11.79V19H11v-10h2.55v1.35c.34-.52 1.02-1.26 2.48-1.26 1.81 0 3.16 1.18 3.16 3.71V19z" />
+                        </svg>
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/angelluzk" target="_blank" rel="noopener noreferrer"
+                        class="flex items-center gap-2 hover:text-yellow-300 transition-colors" aria-label="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 0C5.37 0 0 5.37 0 12a12 12 0 008.21 11.42c.6.1.82-.26.82-.58 0-.29-.01-1.05-.02-2.06-3.34.73-4.04-1.61-4.04-1.61a3.18 3.18 0 00-1.34-1.76c-1.1-.75.08-.74.08-.74a2.51 2.51 0 011.83 1.23 2.54 2.54 0 003.47 1 2.54 2.54 0 01.76-1.6c-2.67-.3-5.47-1.33-5.47-5.93a4.62 4.62 0 011.23-3.21 4.28 4.28 0 01.12-3.17s1-.32 3.3 1.23a11.42 11.42 0 016 0c2.3-1.55 3.3-1.23 3.3-1.23a4.28 4.28 0 01.12 3.17 4.62 4.62 0 011.23 3.21c0 4.61-2.8 5.62-5.48 5.92a2.85 2.85 0 01.81 2.21c0 1.6-.02 2.9-.02 3.3 0 .32.22.69.83.58A12 12 0 0024 12c0-6.63-5.37-12-12-12z" />
+                        </svg>
+                        GitHub
+                    </a>
+                    <a href="seu-curriculo.pdf" target="_blank" rel="noopener noreferrer"
+                        class="flex items-center gap-2 hover:text-yellow-300 transition-colors" aria-label="Currículo">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" stroke="currentColor"
+                            stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                        Currículo
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Coluna direita: imagem -->
+            <div
+                class="relative flex-1 flex justify-center md:justify-start items-center animate-fade-in-right max-w-full">
+                <img src="img/minha-foto.png" alt="Foto Sobre Mim"
+                    class="scribble-photo-border w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] object-cover rounded-full relative z-20 float" />
+                <!-- Vagalumes decorativos -->
+                <span class="sobre-firefly w-3 h-3 top-5 left-10 absolute firefly1"></span>
+                <span class="sobre-firefly w-2 h-2 top-20 right-14 absolute firefly2"></span>
+                <span class="sobre-firefly w-2.5 h-2.5 bottom-12 left-14 absolute firefly3"></span>
+                <span class="sobre-firefly w-3 h-3 bottom-8 right-8 absolute firefly4"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Explore as áreas-->
+    <section id="mapa"
+        class="relative min-h-screen flex flex-col justify-center items-center text-center z-10 px-8 pt-2 pb-37">
+
+        <!-- Partículas decorativas -->
+        <div class="absolute inset-0 pointer-events-none z-0">
+            <!-- Triângulos -->
+            <div
+                class="w-16 h-16 bg-yellow-400 opacity-20 clip-triangle absolute top-10 left-10 animate-slow-spin z-10">
+            </div>
+            <div
+                class="w-20 h-20 bg-yellow-400 opacity-10 clip-triangle absolute bottom-20 right-20 animate-slow-spin-reverse z-10">
+            </div>
+            <div
+                class="w-12 h-12 bg-yellow-400 opacity-30 clip-triangle absolute top-1/3 right-1/4 animate-slow-spin z-10">
+            </div>
+            <div
+                class="w-14 h-14 bg-yellow-400 opacity-15 clip-triangle absolute bottom-10 left-1/3 animate-slow-spin-reverse z-10">
+            </div>
+
+            <!-- Brilhos -->
+            <span class="absolute top-1/2 left-1/4 w-2 h-2 rounded-full bg-yellow-400 opacity-60 blur-[2px]"></span>
+            <span class="absolute bottom-1/4 right-1/4 w-3 h-3 rounded-full bg-yellow-400 opacity-40 blur-[3px]"></span>
+        </div>
+
+        <!-- Título -->
+        <h2 class="text-4xl md:text-5xl text-yellow-400 font-extrabold mb-12 select-none animate-fade-in">Explore as
+            Áreas</h2>
+
+        <!-- Cards -->
+        <div class="grid md:grid-cols-3 gap-10 w-full max-w-6xl animate-fade-in z-10">
+
+            <!-- Exemplo de Card com Fumaça -->
+            <a href="#projetos"
+                class="relative scribble-border p-6 hover:scale-105 transition-transform cursor-pointer text-center">
+                <i data-lucide="brain-circuit" class="w-10 h-10 mx-auto mb-3 text-yellow-400"></i>
+                <h3 class="text-xl font-bold mb-2 text-white">Projetos</h3>
+                <p class="text-white">Projetos em <span class="text-yellow-400 font-semibold">PHP</span>, <span
+                        class="text-yellow-400 font-semibold">Python</span>, <span
+                        class="text-yellow-400 font-semibold">CSS3</span>, <span
+                        class="text-yellow-400 font-semibold">HTML5</span>, <span
+                        class="text-yellow-400 font-semibold">JavaScript</span>, <span
+                        class="text-yellow-400 font-semibold">MySQL</span>, entre outros.</p>
+
+                <!-- Fumaça animada -->
+                <div
+                    class="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-yellow-400 opacity-60 blur-lg animate-smoke">
+                </div>
+                <div
+                    class="absolute bottom-[-30px] left-[45%] w-5 h-5 rounded-full bg-yellow-400 opacity-50 blur-md animate-smoke delay-200">
+                </div>
+                <div
+                    class="absolute bottom-[-40px] left-[55%] w-4 h-4 rounded-full bg-yellow-300 opacity-40 blur-sm animate-smoke delay-400">
+                </div>
+            </a>
+
+            <!-- Card 2 -->
+            <a href="#laboratorio"
+                class="relative scribble-border p-6 hover:scale-105 transition-transform cursor-pointer text-center overflow-hidden">
+                <i data-lucide="palette" class="w-10 h-10 mx-auto mb-3 text-yellow-400"></i>
+                <h3 class="text-xl font-bold mb-2 text-white">Laboratório Criativo</h3>
+                <p class="text-white"><span class="text-yellow-400 font-semibold">Designs</span>, <span
+                        class="text-yellow-400 font-semibold">thumbnails</span>, <span
+                        class="text-yellow-400 font-semibold">ilustrações</span>, e <span
+                        class="text-yellow-400 font-semibold">logos</span> criativos.</p>
+
+                <!-- Fumaça animada -->
+                <div
+                    class="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-yellow-400 opacity-60 blur-lg animate-smoke">
+                </div>
+                <div
+                    class="absolute bottom-[-30px] left-[45%] w-5 h-5 rounded-full bg-yellow-400 opacity-50 blur-md animate-smoke delay-200">
+                </div>
+                <div
+                    class="absolute bottom-[-40px] left-[55%] w-4 h-4 rounded-full bg-yellow-300 opacity-40 blur-sm animate-smoke delay-400">
+                </div>
+            </a>
+
+            <!-- Card 3 -->
+            <a href="#estudio"
+                class="relative scribble-border p-6 hover:scale-105 transition-transform cursor-pointer text-center overflow-hidden">
+                <i data-lucide="video" class="w-10 h-10 mx-auto mb-3 text-yellow-400"></i>
+                <h3 class="text-xl font-bold mb-2 text-white">Estúdio de Edição</h3>
+                <p class="text-white">Meu canal de <span class="text-yellow-400 font-semibold">jogos</span> no <span
+                        class="text-yellow-400 font-semibold">YouTube</span>.</p>
+
+                <!-- Fumaça animada -->
+                <div
+                    class="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-yellow-400 opacity-60 blur-lg animate-smoke">
+                </div>
+                <div
+                    class="absolute bottom-[-30px] left-[45%] w-5 h-5 rounded-full bg-yellow-400 opacity-50 blur-md animate-smoke delay-200">
+                </div>
+                <div
+                    class="absolute bottom-[-40px] left-[55%] w-4 h-4 rounded-full bg-yellow-300 opacity-40 blur-sm animate-smoke delay-400">
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Seção Projetos-->
+    <section id="projetos"
+        class="relative min-h-screen flex flex-col justify-center items-center text-center px-6 pb-18">
+
+        <!-- Partículas decorativas -->
+        <div class="absolute inset-0 pointer-events-none -z">
+            <!-- Triângulos maiores e mais brilhantes -->
+            <div
+                class="absolute top-20 left-10 w-24 h-24 rotate-45 bg-yellow-400 opacity-40 clip-triangle blur-md animate-slow-spin-reverse">
+            </div>
+            <div
+                class="absolute bottom-32 right-12 w-20 h-20 rotate-12 bg-yellow-300 opacity-30 clip-triangle blur-sm animate-slow-spin">
+            </div>
+            <div
+                class="absolute top-1/2 left-1/3 w-16 h-16 -rotate-12 bg-yellow-200 opacity-25 clip-triangle blur-sm animate-slow-spin-reverse">
+            </div>
+            <div
+                class="absolute top-10 right-1/4 w-28 h-28 rotate-[30deg] bg-yellow-300 opacity-40 clip-triangle blur-md animate-slow-spin">
+            </div>
+
+            <!-- Triângulos pequenos com brilho mais intenso -->
+            <div
+                class="absolute bottom-12 left-1/4 w-6 h-6 rotate-45 bg-yellow-400 opacity-60 clip-triangle blur-[3px] animate-slow-spin-reverse">
+            </div>
+            <div
+                class="absolute top-[65%] left-[10%] w-4 h-4 rotate-[15deg] bg-yellow-200 opacity-30 clip-triangle blur-sm animate-slow-spin">
+            </div>
+            <div
+                class="absolute bottom-1/2 right-1/3 w-5 h-5 rotate-[75deg] bg-yellow-400 opacity-35 clip-triangle blur-[2px] animate-slow-spin-reverse">
+            </div>
+            <div
+                class="absolute top-1/4 right-1/2 w-8 h-8 rotate-[25deg] bg-yellow-300 opacity-20 clip-triangle blur-sm animate-slow-spin">
+            </div>
+
+            <!-- Triângulos bem translúcidos para profundidade -->
+            <div
+                class="absolute bottom-10 left-10 w-24 h-24 rotate-45 bg-yellow-100 opacity-10 clip-triangle blur-lg animate-slow-spin-reverse">
+            </div>
+            <div
+                class="absolute top-1/3 right-6 w-16 h-16 rotate-12 bg-yellow-100 opacity-10 clip-triangle blur-lg animate-slow-spin">
+            </div>
+            <div
+                class="absolute top-72 left-1/2 w-20 h-20 rotate-[60deg] bg-yellow-100 opacity-10 clip-triangle blur-xl animate-slow-spin-reverse">
+            </div>
+            <span class="absolute top-1/2 left-1/4 w-2 h-2 rounded-full bg-yellow-400 opacity-60 blur-sm "></span>
+            <span class="absolute bottom-1/4 right-1/4 w-3 h-3 rounded-full bg-yellow-400 opacity-40 blur-md"></span>
+        </div>
+
+        <!-- Título -->
+        <h2 class="text-4xl md:text-5xl text-yellow-400 font-extrabold mb-12 select-none animate-fade-in">
+            Projetos Atuais
+        </h2>
+
+        <!-- Carrossel -->
+        <div class="w-full max-w-7xl px-4">
+            <div class="swiper mySwiper relative">
+                <div class="swiper-wrapper">
+
+                    <!-- Card 1 -->
+                    <div class="swiper-slide flex justify-center">
+                        <article
+                            class="scribble-border w-[320px] md:w-[460px] h-[520px] p-6 flex flex-col justify-between text-center cursor-pointer transition-transform duration-300 relative overflow-hidden">
+
+                            <header>
+                                <h3 class="text-yellow-400 text-2xl font-semibold mb-4">Adote Pet - Adoção de Animais
+                                    (Cães
+                                    e Gato)</h3>
+                            </header>
+
+                            <img src="img/adote-pet-projeto.png" alt="Projeto Adoção Pet"
+                                class="w-full h-55 object-cover rounded-lg mb-4" />
+
+                            <p class="text-white text-sm leading-relaxed text-justify">
+                                <strong class="text-yellow-400">Adote Pet</strong> é um sistema web que une
+                                <strong class="text-yellow-400">tecnologia</strong>, <strong
+                                    class="text-yellow-400">design</strong> e
+                                <strong class="text-yellow-400">propósito social</strong>. A plataforma incentiva a
+                                <strong class="text-yellow-400">adoção responsável</strong> de <strong
+                                    class="text-yellow-400">animais</strong>
+                                em situação de <strong class="text-yellow-400">vulnerabilidade</strong>.
+                            </p>
+
+                            <footer class="mt-6">
+                                <a href="https://github.com/angelluzk/adotepet-projetotcc" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="inline-block px-6 py-2 bg-yellow-400 text-black font-semibold rounded hover:bg-yellow-300 transition">
+                                    Ver no GitHub
+                                </a>
+                            </footer>
+
+                            <!-- Efeito fumaça -->
+                            <div
+                                class="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 w-4 h-4 bg-yellow-400 rounded-full blur-sm opacity-40 animate-smoke">
+                            </div>
+                            <div
+                                class="absolute bottom-[-25px] left-[45%] w-3 h-3 bg-yellow-400 rounded-full blur-sm opacity-30 animate-smoke delay-200">
+                            </div>
+                            <div
+                                class="absolute bottom-[-30px] left-[55%] w-2 h-2 bg-yellow-400 rounded-full blur-sm opacity-20 animate-smoke delay-400">
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="swiper-slide flex justify-center">
+                        <article
+                            class="scribble-border w-[320px] md:w-[460px] h-[520px] p-6 flex flex-col justify-between text-center cursor-pointer transition-transform duration-300 relative overflow-hidden">
+
+                            <header>
+                                <h3 class="text-yellow-400 text-2xl font-semibold mb-4">Reconhecimento Facial para
+                                    Escolas
+                                </h3>
+                            </header>
+
+                            <img src="img/projeto_reconhecimento_facial.png" alt="Projeto Reconhecimento Facial"
+                                class="w-full h-55 object-cover rounded-lg mb-4" />
+
+                            <p class="text-white text-sm leading-relaxed text-justify">
+                                Sistema de controle de <strong class="text-yellow-400">entrada</strong> e
+                                <strong class="text-yellow-400">saída</strong> de alunos com
+                                <strong class="text-yellow-400">reconhecimento facial</strong> usando
+                                <strong class="text-yellow-400">Python</strong>,
+                                <strong class="text-yellow-400">OpenCV</strong>,
+                                <strong class="text-yellow-400">Flask</strong> e
+                                <strong class="text-yellow-400">WebSockets</strong>.
+                            </p>
+
+                            <footer class="mt-6">
+                                <a href="https://github.com/angelluzk/reconhecimento_facial" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="inline-block px-6 py-2 bg-yellow-400 text-black font-semibold rounded hover:bg-yellow-300 transition">
+                                    Ver no GitHub
+                                </a>
+                            </footer>
+
+                            <!-- Efeito fumaça -->
+                            <div
+                                class="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 w-4 h-4 bg-yellow-400 rounded-full blur-sm opacity-40 animate-smoke">
+                            </div>
+                            <div
+                                class="absolute bottom-[-25px] left-[45%] w-3 h-3 bg-yellow-400 rounded-full blur-sm opacity-30 animate-smoke delay-200">
+                            </div>
+                            <div
+                                class="absolute bottom-[-30px] left-[55%] w-2 h-2 bg-yellow-400 rounded-full blur-sm opacity-20 animate-smoke delay-400">
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="swiper-slide flex justify-center">
+                        <article
+                            class="scribble-border w-[320px] md:w-[460px] h-[520px] p-6 flex flex-col justify-between text-center cursor-pointer transition-transform duration-300 relative overflow-hidden">
+
+                            <header>
+                                <h3 class="text-yellow-400 text-2xl font-semibold mb-4">Sistema de Gerenciamento de
+                                    Tarefas
+                                </h3>
+                            </header>
+
+                            <img src="#" alt="Projeto Gerenciamento de Tarefas"
+                                class="w-full h-55 object-cover rounded-lg mb-4" />
+
+                            <p class="text-white text-sm leading-relaxed text-justify">
+                                Em breve visualização do PROJETO!
+                            </p>
+
+                            <footer class="mt-6">
+                                <a href="#" target="_blank" rel="noopener noreferrer"
+                                    class="inline-block px-6 py-2 bg-yellow-400 text-black font-semibold rounded hover:bg-yellow-300 transition">
+                                    Ver no GitHub
+                                </a>
+                            </footer>
+
+                            <!-- Efeito fumaça -->
+                            <div
+                                class="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 w-4 h-4 bg-yellow-400 rounded-full blur-sm opacity-40 animate-smoke">
+                            </div>
+                            <div
+                                class="absolute bottom-[-25px] left-[45%] w-3 h-3 bg-yellow-400 rounded-full blur-sm opacity-30 animate-smoke delay-200">
+                            </div>
+                            <div
+                                class="absolute bottom-[-30px] left-[55%] w-2 h-2 bg-yellow-400 rounded-full blur-sm opacity-20 animate-smoke delay-400">
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="swiper-slide flex justify-center">
+                        <article
+                            class="scribble-border w-[320px] md:w-[460px] h-[520px] p-6 flex flex-col justify-between text-center cursor-pointer transition-transform duration-300 relative overflow-hidden">
+
+                            <header>
+                                <h3 class="text-yellow-400 text-2xl font-semibold mb-4">Aplicativo de Controle
+                                    Financeiro
+                                </h3>
+                            </header>
+
+                            <img src="#" alt="Projeto Controle Financeiro"
+                                class="w-full h-55 object-cover rounded-lg mb-4" />
+
+                            <p class="text-white text-sm leading-relaxed text-justify">
+                                Em breve visualização do PROJETO!
+                            </p>
+
+                            <footer class="mt-6">
+                                <a href="#" target="_blank" rel="noopener noreferrer"
+                                    class="inline-block px-6 py-2 bg-yellow-400 text-black font-semibold rounded hover:bg-yellow-300 transition">
+                                    Ver no GitHub
+                                </a>
+                            </footer>
+
+                            <!-- Efeito fumaça -->
+                            <div
+                                class="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 w-4 h-4 bg-yellow-400 rounded-full blur-sm opacity-40 animate-smoke">
+                            </div>
+                            <div
+                                class="absolute bottom-[-25px] left-[45%] w-3 h-3 bg-yellow-400 rounded-full blur-sm opacity-30 animate-smoke delay-200">
+                            </div>
+                            <div
+                                class="absolute bottom-[-30px] left-[55%] w-2 h-2 bg-yellow-400 rounded-full blur-sm opacity-20 animate-smoke delay-400">
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="swiper-slide flex justify-center">
+                        <article
+                            class="scribble-border w-[320px] md:w-[460px] h-[520px] p-6 flex flex-col justify-between text-center cursor-pointer transition-transform duration-300 relative overflow-hidden">
+
+                            <header>
+                                <h3 class="text-yellow-400 text-2xl font-semibold mb-4">Portfolio Pessoal - Website</h3>
+                            </header>
+
+                            <img src="#" alt="Projeto Portfolio Pessoal"
+                                class="w-full h-55 object-cover rounded-lg mb-4" />
+
+                            <p class="text-white text-sm leading-relaxed text-justify">
+                                Em breve visualização do PROJETO!
+                            </p>
+
+                            <footer class="mt-6">
+                                <a href="#" target="_blank" rel="noopener noreferrer"
+                                    class="inline-block px-6 py-2 bg-yellow-400 text-black font-semibold rounded hover:bg-yellow-300 transition">
+                                    Ver no GitHub
+                                </a>
+                            </footer>
+
+                            <!-- Efeito fumaça -->
+                            <div
+                                class="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 w-4 h-4 bg-yellow-400 rounded-full blur-sm opacity-40 animate-smoke">
+                            </div>
+                            <div
+                                class="absolute bottom-[-25px] left-[45%] w-3 h-3 bg-yellow-400 rounded-full blur-sm opacity-30 animate-smoke delay-200">
+                            </div>
+                            <div
+                                class="absolute bottom-[-30px] left-[55%] w-2 h-2 bg-yellow-400 rounded-full blur-sm opacity-20 animate-smoke delay-400">
+                            </div>
+                        </article>
+                    </div>
+
+                </div>
+
+                <!-- Paginação -->
+                <div class="swiper-pagination mt-8"></div>
+
+                <!-- Navegação -->
+                <button
+                    class="swiper-button-prev text-yellow-400 rounded-full w-10 h-10 flex items-center justify-center shadow-md"
+                    aria-label="Previous slide">
+                </button>
+                <button
+                    class="swiper-button-next text-yellow-400 rounded-full w-10 h-10 flex items-center justify-center shadow-md"
+                    aria-label="Next slide">
+                </button>
+
+            </div>
+        </div>
+
+        <!-- Tecnologicas utilizadas -->
+        <div class="bg-neutral-900 py-8 px-4">
+            <h2 class="text-white text-2xl font-bold mb-4">Algumas Tecnologias Utilizadas nos Projetos Acima</h2>
+
+            <div class="marquee-wrapper relative overflow-hidden w-full h-[120px]">
+                <div class="marquee-track flex gap-2" id="marquee1">
+
+                    <!-- GRUPO DE ÍCONES -->
+                    <div class="icon-item"><img src="img/python.svg" alt="Python"><span>Python</span></div>
+                    <div class="icon-item"><img src="img/php.svg" alt="PHP"><span>PHP</span></div>
+                    <div class="icon-item"><img src="img/pytorch.svg" alt="PyTorch"><span>PyTorch</span></div>
+                    <div class="icon-item"><img src="img/git.svg" alt="Git"><span>Git</span></div>
+                    <div class="icon-item"><img src="img/photoshop.svg" alt="Photoshop"><span>Photoshop</span></div>
+                    <div class="icon-item"><img src="img/opencv.svg" alt="OpenCV"><span>OpenCV</span></div>
+                    <div class="icon-item"><img src="img/github.svg" alt="GitHub"><span>GitHub</span></div>
+                    <div class="icon-item"><img src="img/vscode.svg" alt="VsCode"><span>VsCode</span></div>
+                    <div class="icon-item"><img src="img/flask.svg" alt="Flask"><span>Flask</span></div>
+                    <div class="icon-item"><img src="img/mysql.svg" alt="MySQL"><span>MySQL</span></div>
+                    <div class="icon-item"><img src="img/html.svg" alt="HTML5"><span>HTML5</span></div>
+                    <div class="icon-item"><img src="img/css.svg" alt="CSS3"><span>CSS3</span></div>
+                    <div class="icon-item"><img src="img/javascript.svg" alt="JavaScript"><span>JavaScript</span></div>
+                    <div class="icon-item"><img src="img/tailwind.svg" alt="Tailwind CSS"><span>Tailwind CSS</span>
+                    </div>
+                </div>
+
+                <div class="marquee-track flex gap-2 absolute top-0 left-0" id="marquee2">
+                    <!-- GRUPO DE ÍCONES -->
+                    <div class="icon-item"><img src="img/python.svg" alt="Python"><span>Python</span></div>
+                    <div class="icon-item"><img src="img/php.svg" alt="PHP"><span>PHP</span></div>
+                    <div class="icon-item"><img src="img/pytorch.svg" alt="PyTorch"><span>PyTorch</span></div>
+                    <div class="icon-item"><img src="img/git.svg" alt="Git"><span>Git</span></div>
+                    <div class="icon-item"><img src="img/photoshop.svg" alt="Photoshop"><span>Photoshop</span></div>
+                    <div class="icon-item"><img src="img/opencv.svg" alt="OpenCV"><span>OpenCV</span></div>
+                    <div class="icon-item"><img src="img/github.svg" alt="GitHub"><span>GitHub</span></div>
+                    <div class="icon-item"><img src="img/vscode.svg" alt="VsCode"><span>VsCode</span></div>
+                    <div class="icon-item"><img src="img/flask.svg" alt="Flask"><span>Flask</span></div>
+                    <div class="icon-item"><img src="img/mysql.svg" alt="MySQL"><span>MySQL</span></div>
+                    <div class="icon-item"><img src="img/html.svg" alt="HTML5"><span>HTML5</span></div>
+                    <div class="icon-item"><img src="img/css.svg" alt="CSS3"><span>CSS3</span></div>
+                    <div class="icon-item"><img src="img/javascript.svg" alt="JavaScript"><span>JavaScript</span></div>
+                    <div class="icon-item"><img src="img/tailwind.svg" alt="Tailwind CSS"><span>Tailwind CSS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LABORATÓRIO CRIATIVO -->
+    <section id="laboratorio" class="relative py-32 px-6 md:px-20 bg-black text-center">
+
+        <!-- Fundo decorativo com múltiplos triângulos -->
+        <div class="absolute inset-0 z-0 pointer-events-none">
+            <!-- Triângulos maiores e mais brilhantes -->
+            <div class="absolute top-20 left-10 w-24 h-24 rotate-45 bg-yellow-400 opacity-40 clip-triangle blur-md">
+            </div>
+            <div class="absolute bottom-32 right-12 w-20 h-20 rotate-12 bg-yellow-300 opacity-30 clip-triangle blur-sm">
+            </div>
+            <div class="absolute top-1/5 left-1/4 w-16 h-16 -rotate-12 bg-yellow-200 opacity-15 clip-triangle blur-sm">
+            </div>
+            <div
+                class="absolute top-10 right-1/4 w-28 h-28 rotate-[30deg] bg-yellow-300 opacity-40 clip-triangle blur-md">
+            </div>
+
+            <!-- Triângulos pequenos com brilho mais intenso -->
+            <div
+                class="absolute bottom-12 left-1/4 w-6 h-6 rotate-45 bg-yellow-400 opacity-60 clip-triangle blur-[3px]">
+            </div>
+            <div
+                class="absolute top-[65%] left-[10%] w-4 h-4 rotate-[15deg] bg-yellow-200 opacity-30 clip-triangle blur-sm">
+            </div>
+            <div
+                class="absolute bottom-1/2 right-1/3 w-5 h-5 rotate-[75deg] bg-yellow-400 opacity-35 clip-triangle blur-[2px]">
+            </div>
+            <div
+                class="absolute top-1/4 right-1/2 w-8 h-8 rotate-[25deg] bg-yellow-300 opacity-20 clip-triangle blur-sm">
+            </div>
+
+            <!-- Triângulos bem translúcidos para profundidade -->
+            <div class="absolute bottom-10 left-10 w-24 h-24 rotate-45 bg-yellow-100 opacity-10 clip-triangle blur-lg">
+            </div>
+            <div class="absolute top-1/3 right-6 w-16 h-16 rotate-12 bg-yellow-100 opacity-10 clip-triangle blur-lg">
+            </div>
+            <div
+                class="absolute top-72 left-1/2 w-20 h-20 rotate-[60deg] bg-yellow-100 opacity-10 clip-triangle blur-xl">
+            </div>
+        </div>
+        <h2 class="text-4xl md:text-5xl text-yellow-400 font-extrabold mb-16 animate-fade-in">Laboratório Criativo</h2>
+
+        <!-- Carrossel 1: Thumbnails -->
+        <div class="mb-20">
+            <h3 class="text-white text-2xl font-bold mb-4">Thumbnails para YouTube</h3>
+            <p class="mb-6 max-w-2xl mx-auto text-white text-lg leading-tight">
+                Trabalhos que fiz de criação de <strong class="text-yellow-400">thumbnails</strong> para <strong
+                    class="text-yellow-400">vídeos</strong> no <strong class="text-yellow-400">YouTube</strong>,
+                aumentando
+                o <strong class="text-yellow-400">alcance</strong> e a <strong class="text-yellow-400">taxa</strong> de
+                cliques com
+                visuais <strong class="text-yellow-400">chamativos</strong> e <strong
+                    class="text-yellow-400">estratégicos</strong>.
+            </p>
+
+            <div class="swiper carousel-container carousel-clockwise w-[70%]">
+                <div class="swiper-wrapper ">
+                    <div class="swiper-slide"><img src="img/fenombrine.png" alt="Thumbnail 1"
+                            class="scribble-border cursor-zoom-in" onclick="openModal(this)"></div>
+                    <div class="swiper-slide"><img src="img/fenomforeverroubo.png" alt="Thumbnail 2"
+                            class="scribble-border cursor-zoom-in" onclick="openModal(this)"></div>
+                    <div class="swiper-slide"><img src="img/Fenomxx.png" alt="Thumbnail 3"
+                            class="scribble-border cursor-zoom-in" onclick="openModal(this)"></div>
+                    <div class="swiper-slide"><img src="img/Thumbnail Fenom ReidoParkour.png" alt="Thumbnail 4"
+                            class="scribble-border cursor-zoom-in" onclick="openModal(this)"></div>
+                    <div class="swiper-slide"><img src="img/Thumbnail Feromonas 1.png" alt="Thumbnail 5"
+                            class="scribble-border cursor-zoom-in" onclick="openModal(this)"></div>
+                    <div class="swiper-slide"><img src="img/Thumbnail Feromonas 10.png" alt="Thumbnail 6"
+                            class="scribble-border cursor-zoom-in" onclick="openModal(this)"></div>
+                    <div class="swiper-slide"><img src="img/Thumbnail Feromonas 11.png" alt="Thumbnail 7"
+                            class="scribble-border cursor-zoom-in" onclick="openModal(this)"></div>
+                    <div class="swiper-slide"><img src="img/Thumbnail Feromonas 3.png" alt="Thumbnail 8"
+                            class="scribble-border cursor-zoom-in" onclick="openModal(this)"></div>
+                    <div class="swiper-slide"><img src="img/Thumbnail Fenom ReidoParkour.png" alt="Thumbnail 9"
+                            class="scribble-border cursor-zoom-in" onclick="openModal(this)"></div>
+                    <div class="swiper-slide"><img src="img/Thumbnail Feromonas 4.png" alt="Thumbnail 10"
+                            class="scribble-border cursor-zoom-in" onclick="openModal(this)"></div>
+                    <div class="swiper-slide"><img src="img/Thumbnail Feromonas 6.png" alt="Thumbnail 11"
+                            class="scribble-border cursor-zoom-in" onclick="openModal(this)"></div>
+                    <div class="swiper-slide"><img src="img/Thumbnail Feromonas 8.png" alt="Thumbnail 12"
+                            class="scribble-border cursor-zoom-in" onclick="openModal(this)"></div>
+                    <div class="swiper-slide"><img src="img/Thumbnail Feromonas 9.png" alt="Thumbnail 13"
+                            class="scribble-border cursor-zoom-in" onclick="openModal(this)"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carrossel 2: Ilustrações -->
+        <div class="mb-20">
+            <h3 class="text-white text-2xl font-bold mb-4">Ilustrações Digitais</h3>
+            <p class="mb-6 max-w-2xl mx-auto text-white text-lg leading-tight">
+                Trabalhos que fiz de criação de <strong class="text-yellow-400">ilustrações</strong> para utilizar como
+                <strong class="text-yellow-400">avatar</strong>, <strong class="text-yellow-400">banners</strong>,
+                <strong class="text-yellow-400">thumbnails</strong>, entre outros.
+            </p>
+            <div class="swiper carousel-container carousel-counter w-[70%]">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/Bee swarm 1.png" alt="Ilustração 1"
+                            class="scribble-border cursor-zoom-in" onclick="openModal(this)"></div>
+
+                    <div class="swiper-slide"><img src="img/Bee swarm.png" alt="Ilustração 2"
+                            class="scribble-border cursor-zoom-in" onclick="openModal(this)"></div>
+                    <div class="swiper-slide"><img src="img/Desenho Conectados com Jesus.png" alt="Ilustração 3"
+                            class="scribble-border cursor-zoom-in" onclick="openModal(this)"></div>
+                    <div class="swiper-slide"><img src="img/logo clube da bibli terminado.png" alt="Ilustração 4"
+                            class="scribble-border cursor-zoom-in" onclick="openModal(this)"></div>
+                    <div class="swiper-slide"><img src="img/nota do Clube da Bíblia - Clube Investigadores.png"
+                            alt="Ilustração 5" class="scribble-border cursor-zoom-in" onclick="openModal(this)"></div>
+                    <div class="swiper-slide"><img src="img/NOVO AVATAR.png" alt="Ilustração 6"
+                            class="scribble-border cursor-zoom-in" onclick="openModal(this)"></div>
+                    <div class="swiper-slide"><img src="img/NovoAvatar panda.png" alt="Ilustração 7"
+                            class="scribble-border cursor-zoom-in" onclick="openModal(this)"></div>
+                    <div class="swiper-slide"><img src="img/Pandimonas1.png" alt="Ilustração 8"
+                            class="scribble-border cursor-zoom-in" onclick="openModal(this)"></div>
+                    <div class="swiper-slide"><img src="img/Para o Fenom Necrozilla 1.png" alt="Ilustração 9"
+                            class="scribble-border cursor-zoom-in" onclick="openModal(this)"></div>
+                    <div class="swiper-slide"><img src="img/pet sim x 1.png" alt="Ilustração 10"
+                            class="scribble-border cursor-zoom-in" onclick="openModal(this)"></div>
+                    <div class="swiper-slide"><img src="img/pet sim x 2.png" alt="Ilustração 11"
+                            class="scribble-border cursor-zoom-in" onclick="openModal(this)"></div>
+                    <div class="swiper-slide"><img src="img/pizza papas.png" alt="Ilustração 12"
+                            class="scribble-border cursor-zoom-in" onclick="openModal(this)"></div>
+                    <div class="swiper-slide"><img src="img/Slime Rancher 1.png" alt="Ilustração 13"
+                            class="scribble-border cursor-zoom-in" onclick="openModal(this)"></div>
+                    <div class="swiper-slide"><img src="img/Slime Rancher 2.png" alt="Ilustração 14"
+                            class="scribble-border cursor-zoom-in" onclick="openModal(this)"></div>
+                    <div class="swiper-slide"><img src="img/Slime Rancher 3.png" alt="Ilustração 15"
+                            class="scribble-border cursor-zoom-in" onclick="openModal(this)"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carrossel 3: Logos -->
+        <div class="mb-20">
+            <h3 class="text-white text-2xl font-bold mb-4">Logotipos para Estampas</h3>
+            <p class="mb-6 max-w-2xl mx-auto text-white text-lg leading-tight">
+                Trabalhos que fiz de criação de <strong class="text-yellow-400">logotipo</strong> para uma empresa
+                construtura de imóveis. Usado em <strong class="text-yellow-400">camisetas</strong>, <strong
+                    class="text-yellow-400">folhetos</strong>, <strong class="text-yellow-400">cartões</strong>, entre
+                outros.
+            </p>
+            <div class="swiper carousel-container carousel-clockwise w-[70%]">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/Logo-JGL-construtora-sem-fundo2.png" alt="Logo 1"
+                            class="scribble-border cursor-zoom-in" onclick="openModal(this)"></div>
+                    <div class="swiper-slide"><img src="img/Logo-JGL-construtora-sem-fundo.png" alt="Logo 1"
+                            class="scribble-border cursor-zoom-in" onclick="openModal(this)"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de Zoom -->
+    <div id="zoomModal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden">
+        <span class="absolute top-4 right-6 text-white text-3xl cursor-pointer" onclick="closeModal()">&times;</span>
+        <img id="zoomImage" src="#" alt="Imagem em destaque no modo zoom"
+            class="max-w-full max-h-[90vh] rounded-2xl shadow-xl border-4 border-yellow-400">
+    </div>
+
+<!-- Seção Estúdio de Criação -->
+    <section id="estudio"
+        class="relative min-h-screen flex flex-col justify-center items-center text-center z-10 px-8 pt-2 pb-37">
+        <!-- Partículas decorativas -->
+        <div class="absolute inset-0 pointer-events-none -z">
+            <!-- Triângulos maiores e mais brilhantes -->
+            <div
+                class="absolute top-20 left-10 w-24 h-24 rotate-45 bg-yellow-400 opacity-40 clip-triangle blur-md animate-slow-spin-reverse">
+            </div>
+            <div
+                class="absolute bottom-32 right-12 w-20 h-20 rotate-12 bg-yellow-300 opacity-30 clip-triangle blur-sm animate-slow-spin">
+            </div>
+            <div
+                class="absolute top-1/2 left-1/3 w-16 h-16 -rotate-12 bg-yellow-200 opacity-25 clip-triangle blur-sm animate-slow-spin-reverse">
+            </div>
+            <div
+                class="absolute top-10 right-1/4 w-28 h-28 rotate-[30deg] bg-yellow-300 opacity-40 clip-triangle blur-md animate-slow-spin">
+            </div>
+
+            <!-- Triângulos pequenos com brilho mais intenso -->
+            <div
+                class="absolute bottom-12 left-1/4 w-6 h-6 rotate-45 bg-yellow-400 opacity-60 clip-triangle blur-[3px] animate-slow-spin-reverse">
+            </div>
+            <div
+                class="absolute top-[65%] left-[10%] w-4 h-4 rotate-[15deg] bg-yellow-200 opacity-30 clip-triangle blur-sm animate-slow-spin">
+            </div>
+            <div
+                class="absolute bottom-1/2 right-1/3 w-5 h-5 rotate-[75deg] bg-yellow-400 opacity-35 clip-triangle blur-[2px] animate-slow-spin-reverse">
+            </div>
+            <div
+                class="absolute top-1/4 right-1/2 w-8 h-8 rotate-[25deg] bg-yellow-300 opacity-20 clip-triangle blur-sm animate-slow-spin">
+            </div>
+
+            <!-- Triângulos bem translúcidos para profundidade -->
+            <div
+                class="absolute bottom-10 left-10 w-24 h-24 rotate-45 bg-yellow-100 opacity-10 clip-triangle blur-lg animate-slow-spin-reverse">
+            </div>
+            <div
+                class="absolute top-1/3 right-6 w-16 h-16 rotate-12 bg-yellow-100 opacity-10 clip-triangle blur-lg animate-slow-spin">
+            </div>
+            <div
+                class="absolute top-72 left-1/2 w-20 h-20 rotate-[60deg] bg-yellow-100 opacity-10 clip-triangle blur-xl animate-slow-spin-reverse">
+            </div>
+            <span class="absolute top-1/2 left-1/4 w-2 h-2 rounded-full bg-yellow-400 opacity-60 blur-sm "></span>
+            <span class="absolute bottom-1/4 right-1/4 w-3 h-3 rounded-full bg-yellow-400 opacity-40 blur-md"></span>
+        </div>
+        <h2 class="text-4xl md:text-5xl text-yellow-400 font-extrabold mb-16 animate-fade-in">Estúdio de Criação</h2>
+        <div
+            class="scribble-border p-6  hover:scale-105 transition-transform cursor-pointer text-center flex flex-col md:flex-row items-center gap-8">
+            <img src="img/meu-canal.png" alt="Canal YouTube Universo Criativo Dev"
+                class="rounded-md w-full max-w-xs md:max-w-sm" />
+            <div>
+                <h3 class="text-yellow-400 text-2xl font-semibold mb-4">Canal no YouTube</h3>
+                <p>Com quase 600 mil Inscritos, acompanhamendo vídeos com a temática de jogos.</p>
+                <a href="https://www.youtube.com/PandinhaGame" target="_blank" rel="noopener noreferrer"
+                    class="mt-4 inline-block px-5 py-3 bg-yellow-400 text-black font-semibold rounded hover:bg-yellow-300 transition">Visitar
+                    Canal</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato" class="px-6 max-w-6xl mx-auto py-20 bg-black/80 rounded-lg">
+        <h2 class="text-yellow-400 text-4xl font-bold mb-12 text-center select-none">Contato</h2>
+        <form class="max-w-3xl mx-auto flex flex-col gap-6" action="#" method="POST">
+            <input type="text" name="nome" placeholder="Seu Nome" required
+                class="p-4 rounded-md bg-black border border-yellow-400 text-white placeholder-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-400" />
+            <input type="email" name="email" placeholder="Seu Email" required
+                class="p-4 rounded-md bg-black border border-yellow-400 text-white placeholder-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-400" />
+            <textarea name="mensagem" rows="6" placeholder="Sua Mensagem" required
+                class="p-4 rounded-md bg-black border border-yellow-400 text-white placeholder-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-400"></textarea>
+            <button type="submit"
+                class="bg-yellow-400 text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition">
+                Enviar Mensagem
+            </button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer
+        class="bg-black/90 border-t border-yellow-400 text-yellow-400 py-6 px-6 max-w-6xl mx-auto text-center select-none">
+        <p>© 2025 Universo Criativo Dev. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Apenas UMA vez o JS do Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Seu script customizado -->
+    <script src="scripts.js"></script>
+    <script src="script_carrossel.js"></script>
+
+<!-- Botão para subir e descer a página -->
+<button id="scrollButton"
+    type="button"
+    aria-label="Ir para a próxima seção"
+    class="fixed bottom-8 right-6 md:right-10 bg-yellow-400 text-black p-3 rounded-full shadow-lg z-50 hover:bg-yellow-300 transition-all hidden">
+    <i class="fa-solid fa-arrow-down text-xl" aria-hidden="true"></i>
+</button>
+
+</body>
+
+</html>

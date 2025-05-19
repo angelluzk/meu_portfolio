@@ -1,0 +1,19 @@
+/* Swiper layout */
+.swiper {
+  width: 100%;
+  padding: 10px 0;
+}
+.swiper-slide {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.swiper-slide img {
+  max-height: 350px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  object-fit: contain;
+}
+.swiper-slide img:hover {
+  transform: scale(1.05);
+}
