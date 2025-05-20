@@ -1,3 +1,19 @@
+body {
+background-color: #000;
+color: #fff;
+font-family: 'Inter', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+font-family: 'Orbitron', sans-serif;
+}
+
+html {
+scroll-padding-top: 3rem;
+}
+
 .scribble-border {
 border: 3px solid #facc15;
 box-shadow: -4px 4px 0 #fff200, 2px -2px 0 #fff200;
