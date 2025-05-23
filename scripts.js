@@ -187,3 +187,34 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const text = "Universo Criativo Dev";
+    const typedSpan = document.getElementById("typed");
+    let index = 0;
+    let isDeleting = false;
+
+    function typeEffect() {
+      if (!isDeleting) {
+        typedSpan.textContent = text.substring(0, index + 1);
+        index++;
+        if (index === text.length) {
+          setTimeout(() => {
+            isDeleting = true;
+            typeEffect();
+          }, 1500);  // Pausa antes de apagar
+          return;
+        }
+      } else {
+        typedSpan.textContent = text.substring(0, index - 1);
+        index--;
+        if (index === 0) {
+          isDeleting = false;
+        }
+      }
+      const speed = isDeleting ? 50 : 100;  // Velocidade de digitação/remoção
+      setTimeout(typeEffect, speed);
+    }
+
+    typeEffect();
+  });

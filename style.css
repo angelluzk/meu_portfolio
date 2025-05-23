@@ -398,3 +398,28 @@ color: #facc15;
 .animate-glow {
     animation: pulseZoom 3s ease-in-out infinite;
 }
+
+#cursor {
+    display: inline-block;
+    margin-left: 5px;
+    animation: blink 0.7s infinite;
+  }
+
+  @keyframes blink {
+    0%, 50% {
+      opacity: 1;
+    }
+    51%, 100% {
+      opacity: 0;
+    }
+ }
+
+#typed-container {
+  white-space: nowrap; /* desktop: sem quebra */
+}
+
+@media (max-width: 768px) {
+  #typed-container {
+    white-space: normal; /* mobile: quebra quando necessário */
+  }
+}
