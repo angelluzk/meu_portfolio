@@ -386,3 +386,15 @@ font-size: 0.75rem;
 color: #facc15;
 }
 
+@keyframes pulseZoom {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+.animate-glow {
+    animation: pulseZoom 3s ease-in-out infinite;
+}
