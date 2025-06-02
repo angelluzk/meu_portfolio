@@ -1,0 +1,119 @@
+/* Animações */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
+
+/* Fundo decorativo com triângulos */
+.decor-bg div {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 215, 0, 0.1);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  animation: rotate 20s linear infinite;
+}
+
+.decor-bg div:nth-child(1) {
+  top: 10%;
+  left: 15%;
+}
+
+.decor-bg div:nth-child(2) {
+  bottom: 20%;
+  right: 20%;
+  animation-duration: 30s;
+}
+
+.decor-bg div:nth-child(3) {
+  top: 50%;
+  right: 10%;
+  animation-duration: 25s;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Partículas flutuantes (vagalumes) */
+.particles span {
+  position: absolute;
+  display: block;
+  width: 8px;
+  height: 8px;
+  background: rgba(255, 215, 0, 0.8);
+  border-radius: 50%;
+  animation: float 10s infinite ease-in-out alternate;
+}
+
+.particles span:nth-child(1) { top: 10%; left: 20%; animation-duration: 12s; }
+.particles span:nth-child(2) { top: 20%; left: 80%; animation-duration: 10s; }
+.particles span:nth-child(3) { top: 50%; left: 50%; animation-duration: 14s; }
+.particles span:nth-child(4) { top: 70%; left: 10%; animation-duration: 11s; }
+.particles span:nth-child(5) { top: 80%; left: 90%; animation-duration: 13s; }
+.particles span:nth-child(6) { top: 30%; left: 30%; animation-duration: 9s; }
+.particles span:nth-child(7) { top: 60%; left: 70%; animation-duration: 10s; }
+.particles span:nth-child(8) { top: 40%; left: 80%; animation-duration: 15s; }
+.particles span:nth-child(9) { top: 85%; left: 40%; animation-duration: 12s; }
+.particles span:nth-child(10) { top: 15%; left: 60%; animation-duration: 8s; }
+
+@keyframes float {
+  0% { transform: translateY(0) translateX(0); opacity: 0.7; }
+  50% { opacity: 1; }
+  100% { transform: translateY(-20px) translateX(10px); opacity: 0.7; }
+}
+
+/* Animação do mascote */
+.animate-float {
+  animation: float-mascote 6s ease-in-out infinite;
+}
+
+@keyframes float-mascote {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Fade-in do conteúdo */
+.animate-fade-in {
+  animation: fade-in 1s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fade-in {
+  to { opacity: 1; }
+}
+
+/* Pulse no botão */
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}

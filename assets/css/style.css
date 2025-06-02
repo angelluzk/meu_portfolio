@@ -341,7 +341,6 @@ left: 0;
 height: 2px;
 width: 0%;
 background-color: #facc15;
-/* Amarelo Tailwind */
 transition: width 0.3s ease-in-out;
 }
 
@@ -415,11 +414,11 @@ color: #facc15;
  }
 
 #typed-container {
-  white-space: nowrap; /* desktop: sem quebra */
+  white-space: nowrap;
 }
 
 @media (max-width: 768px) {
   #typed-container {
-    white-space: normal; /* mobile: quebra quando necessário */
+    white-space: normal;
   }
 }

@@ -69,13 +69,17 @@
         </div>
 
         <!-- Formulário -->
-        <form class="w-full md:w-1/2 flex flex-col gap-6 animate-fade-in delay-100" action="#" method="POST">
+        <form class="w-full md:w-1/2 flex flex-col gap-6 animate-fade-in delay-100"
+            action="https://formsubmit.co/contatoangelluz@gmail.com" method="POST">
             <input type="text" name="nome" placeholder="Seu Nome" required
                 class="p-4 rounded-md bg-black border border-yellow-400 text-white placeholder-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-400" />
             <input type="email" name="email" placeholder="Seu Email" required
                 class="p-4 rounded-md bg-black border border-yellow-400 text-white placeholder-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-400" />
             <textarea name="mensagem" rows="6" placeholder="Sua Mensagem" required
                 class="p-4 rounded-md bg-black border border-yellow-400 text-white placeholder-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-400"></textarea>
+
+            <input type="hidden" name="_next" value="https://seunome.github.io/portfolio/obrigado.html">
+
             <button type="submit"
                 class="bg-yellow-400 text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition">
                 Enviar Mensagem
@@ -83,3 +87,32 @@
         </form>
     </div>
 </section>
+
+<!-- Modal de Sucesso -->
+<div id="modal-sucesso"
+    class="fixed top-0 right-0 w-full md:w-1/3 h-full bg-gray-900 bg-opacity-95 flex flex-col justify-center items-center p-8 z-50 transform translate-x-full transition-transform duration-500 ease-in-out">
+
+    <!-- Triângulos decorativos -->
+    <div class="decor-bg absolute inset-0 pointer-events-none">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <!-- Partículas flutuantes -->
+    <div class="particles absolute inset-0 pointer-events-none">
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <img src="assets/img/mascote-obrigado.png" alt="Mascote" class="w-40 h-auto mb-6 animate-float">
+
+    <h2 class="text-3xl font-bold text-yellow-400 mb-4">Obrigada!</h2>
+    <p class="text-white text-center mb-6">Sua mensagem foi recebida. Em breve entrarei em contato!</p>
+
+    <button onclick="fecharModal()"
+        class="px-6 py-3 bg-yellow-400 text-black font-semibold rounded-lg shadow-md hover:bg-yellow-500 transition animate-pulse">
+        Voltar
+    </button>
+
+</div>
