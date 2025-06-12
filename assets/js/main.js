@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "projetos",
         "laboratorio",
         "estudio",
+        "mais-sobre-mim",
         "contato",
         "footer"
     ];
