@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // ⭐ Scroll Button
 document.addEventListener("DOMContentLoaded", function () {
     const scrollButton = document.getElementById("scrollButton");
-    const sectionOrder = ["sobre", "mapa", "projetos", "laboratorio", "estudio", "contato"];
+    const sectionOrder = ["sobre", "mapa", "projetos", "laboratorio", "estudio", "mais-sobre-mim", "contato"];
 
     if (!scrollButton) return;
 
