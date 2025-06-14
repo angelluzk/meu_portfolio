@@ -30,33 +30,36 @@
 
     <!-- Estilos customizados -->
     <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
 
 <body class="relative overflow-x-hidden">
 
-    <!-- Estrutura das seções carregadas dinamicamente -->
     <div id="navbar"></div>
-    <div id="hero"></div>
-    <div id="sobre"></div>
-    <div id="mapa"></div>
-    <div id="projetos"></div>
-    <div id="laboratorio"></div>
-    <div id="estudio"></div>
-    <div id="mais-sobre-mim"></div>
-    <div id="contato"></div>
+
+    <main>
+        <div id="hero"></div>
+        <div id="sobre"></div>
+        <div id="mapa"></div>
+        <div id="projetos"></div>
+        <div id="laboratorio"></div>
+        <div id="estudio"></div>
+        <div id="mais-sobre-mim"></div>
+        <div id="contato"></div>
+    </main>
+
     <div id="footer"></div>
 
-    <!-- Scripts principais -->
     <!-- SwiperJS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <!-- Scripts de lógica -->
-    <script src="assets/js/init.js" defer></script> <!-- Funções de inicialização -->
-    <script src="assets/js/interacoes.js" defer></script> <!-- Canvas, Scroll, etc -->
+    <!-- Scripts customizados -->
+    <script src="assets/js/init.js" defer></script>
+    <script src="assets/js/interacoes.js" defer></script>
     <script src="assets/js/carrossel.js" defer></script>
     <script src="assets/js/main.js" defer></script>
 
-    <!-- Botão para subir e descer a página -->
+    <!-- Botão subir/descer -->
     <button id="scrollButton" type="button" aria-label="Ir para a próxima seção" class="scroll-button hidden">
         <div class="rastro-container" aria-hidden="true">
             <span class="rastro fumaca"></span>

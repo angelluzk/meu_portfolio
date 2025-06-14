@@ -14,6 +14,12 @@ html {
 scroll-padding-top: 3rem;
 }
 
+section {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  margin-bottom: 0;
+}
+
 .scribble-border {
 border: 3px solid #facc15;
 box-shadow: -4px 4px 0 #fff200, 2px -2px 0 #fff200;
@@ -423,13 +429,12 @@ color: #facc15;
   }
 }
 
+/* Animação do mascote da sessão "mais sobre mim" */
 .shape-mascote {
-    float: right;
-    width: 30vw;
-    height: 35vw;
-    shape-outside: circle(52%);
-    clip-path: circle(50%);
-    margin-top:5rem;
+    width: 35vw; /* antes 35vw */
+    height: 35vw; /* antes 40vw */
+    margin-left: 2.5rem; /* espaçamento lateral */
+    margin-top: 5rem;
 }
 
 .shape-mascote img {
@@ -450,12 +455,14 @@ color: #facc15;
         margin: 2rem auto;
         clip-path: none;
         shape-outside: none;
+        margin-left: 0; /* remove margem lateral no mobile */
     }
 }
 
 .animate-floating {
     animation: floating 3s ease-in-out infinite;
 }
+
 
 /* 🎯 Estilo do botão scroll */
 .scroll-button {
@@ -610,3 +617,50 @@ color: #facc15;
       filter: blur(2px);
     }
   }
+
+/* 🎨 Separador de seções */
+.separador {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 800px;
+  margin: 40px auto;
+  gap: 12px;
+}
+
+.pontos {
+  color: #facc15;
+  font-size: 20px;
+  letter-spacing: 10px;
+  white-space: nowrap;
+}
+
+.pontos.left {
+  /* Afinar os pontos da esquerda para o centro */
+  transform-origin: right center;
+  transform: scaleX(1);
+}
+
+.pontos.right {
+  /* Afinar os pontos da direita para o centro */
+  transform-origin: left center;
+  transform: scaleX(1);
+}
+
+.linha {
+  flex-grow: 1;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    #facc15 0%,
+    #facc15 30%,
+    #eab308 50%,
+    #facc15 70%,
+    #facc15 100%
+  );
+  border-radius: 1px;
+
+  /* Afinar as pontas */
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+}
