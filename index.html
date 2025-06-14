@@ -57,8 +57,12 @@
     <script src="assets/js/main.js" defer></script>
 
     <!-- Botão para subir e descer a página -->
-    <button id="scrollButton" type="button" aria-label="Ir para a próxima seção"
-        class="fixed bottom-8 right-6 md:right-10 bg-yellow-400 text-black p-3 rounded-full shadow-lg z-50 hover:bg-yellow-300 transition-all hidden">
+    <button id="scrollButton" type="button" aria-label="Ir para a próxima seção" class="scroll-button hidden">
+        <div class="rastro-container" aria-hidden="true">
+            <span class="rastro fumaca"></span>
+            <span class="rastro faisca"></span>
+            <span class="rastro faisca-pequena"></span>
+        </div>
         <i class="fa-solid fa-arrow-down text-xl" aria-hidden="true"></i>
     </button>
 

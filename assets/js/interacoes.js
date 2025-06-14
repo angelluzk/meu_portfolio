@@ -72,8 +72,18 @@ document.addEventListener("DOMContentLoaded", function () {
         if (isBelowSobre) {
             scrollButton.classList.remove("hidden");
             scrollButton.innerHTML = isInContato ?
-                '<i class="fa-solid fa-arrow-up text-xl" aria-hidden="true"></i>' :
-                '<i class="fa-solid fa-arrow-down text-xl" aria-hidden="true"></i>';
+                `<div class="rastro-container" aria-hidden="true">
+                <span class="rastro fumaca"></span>
+                <span class="rastro faisca"></span>
+                <span class="rastro faisca-pequena"></span>
+            </div>
+            <i class="fa-solid fa-arrow-up text-xl" aria-hidden="true"></i>` :
+                `<div class="rastro-container" aria-hidden="true">
+                <span class="rastro fumaca"></span>
+                <span class="rastro faisca"></span>
+                <span class="rastro faisca-pequena"></span>
+            </div>
+            <i class="fa-solid fa-arrow-down text-xl" aria-hidden="true"></i>`;
             scrollButton.setAttribute("aria-label", isInContato ? "Voltar para o topo" : "Ir para a próxima seção");
         } else {
             scrollButton.classList.add("hidden");
