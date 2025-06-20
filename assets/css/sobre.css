@@ -1,0 +1,8 @@
+/* Fireflies */
+.sobre-firefly {
+  background-color: #facc15;
+  border-radius: 9999px;
+  position: absolute;
+  filter: drop-shadow(0 0 4px #facc15);
+  pointer-events: none;
+}

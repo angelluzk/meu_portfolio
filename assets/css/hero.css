@@ -1,0 +1,21 @@
+/* Efeito de digitação */
+#cursor {
+  display: inline-block;
+  margin-left: 5px;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%,50% { opacity: 1; }
+  51%,100% { opacity: 0; }
+}
+
+#typed-container {
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  #typed-container {
+    white-space: normal;
+  }
+}

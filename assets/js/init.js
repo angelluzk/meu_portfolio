@@ -1,7 +1,9 @@
-// ⭐ Inicialização do Swiper principal (.mySwiper)
+// ⭐ Inicialização do Swiper principal (.mySwiper) SECTION PROJETOS
 function initMainSwiper() {
     const swiperContainer = document.querySelector('.mySwiper');
-    if (!swiperContainer) return;
+    const slides = swiperContainer?.querySelectorAll('.swiper-slide');
+
+    if (!swiperContainer || !slides.length) return; // ✅ Verifica se existe conteúdo antes de iniciar
 
     new Swiper('.mySwiper', {
         loop: true,
@@ -31,55 +33,7 @@ function initMainSwiper() {
     });
 }
 
-// ⭐ Inicialização dos carrosséis no Laboratório Criativo
-function initCarrosselClockwise() {
-    const containers = document.querySelectorAll('.carousel-clockwise');
-    if (!containers.length) return;
-
-    containers.forEach(container => {
-        new Swiper(container, {
-            loop: true,
-            autoplay: {
-                delay: 2000,
-                disableOnInteraction: false
-            },
-            speed: 1000,
-            slidesPerView: 3,
-            spaceBetween: 30,
-            breakpoints: {
-                320: { slidesPerView: 1, spaceBetween: 10 },
-                640: { slidesPerView: 2, spaceBetween: 20 },
-                1024: { slidesPerView: 2, spaceBetween: 30 }
-            }
-        });
-    });
-}
-
-function initCarrosselCounter() {
-    const containers = document.querySelectorAll('.carousel-counter');
-    if (!containers.length) return;
-
-    containers.forEach(container => {
-        new Swiper(container, {
-            loop: true,
-            autoplay: {
-                delay: 2500,
-                reverseDirection: true,
-                disableOnInteraction: false
-            },
-            speed: 1000,
-            slidesPerView: 3,
-            spaceBetween: 30,
-            breakpoints: {
-                320: { slidesPerView: 1, spaceBetween: 10 },
-                640: { slidesPerView: 2, spaceBetween: 20 },
-                1024: { slidesPerView: 4, spaceBetween: 30 }
-            }
-        });
-    });
-}
-
-// ⭐ Inicialização do Marquee
+// ⭐ Inicialização do Marquee (rolagem de tecnologias) SECTION PROJETOS
 function initMarquee() {
     const marquee1 = document.getElementById("marquee1");
     const marquee2 = document.getElementById("marquee2");
@@ -105,7 +59,7 @@ function initMarquee() {
     animateMarquee();
 }
 
-// ⭐ Inicialização do Typed Text
+// ⭐ Typed Effect (texto digitando)
 function initTyped() {
     const typedSpan = document.getElementById("typed");
     if (!typedSpan) return;
@@ -134,7 +88,7 @@ function initTyped() {
     typeEffect();
 }
 
-// ⭐ Inicialização do Star Canvas
+// ⭐ Animação de estrelas (canvas de fundo)
 function initStarCanvas() {
     const canvas = document.getElementById('starCanvas');
     if (!canvas) return;
@@ -173,13 +127,18 @@ function initStarCanvas() {
     drawStars();
 }
 
-// ⭐ Reexecução dos ícones do Lucide após carregar parciais
+// ⭐ Atualizar Lucide Icons após carregar conteúdo dinâmico
 function initLucide() {
     lucide.createIcons();
 }
 
-// ⭐ Inicialização consolidada de todos os carrosséis
+// ⭐ Inicialização consolidada dos carrosséis do laboratório
 function initCarrossels() {
     initCarrosselClockwise();
     initCarrosselCounter();
 }
+
+// ⭐ Exporta as funções que precisa usar em outros arquivos
+window.initMainSwiper = initMainSwiper;
+window.initCarrossels = initCarrossels;
+window.initLucide = initLucide;
