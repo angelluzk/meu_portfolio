@@ -1,17 +1,31 @@
 /* Animações */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from { 
+    opacity: 0; 
+    transform: translateY(20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+  0%, 100% { 
+    transform: translateY(0); 
+  }
+  50% { 
+    transform: translateY(-10px); 
+  }
 }
 
 @keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
+  0%, 100% { 
+    transform: scale(1); 
+  }
+  50% { 
+    transform: scale(1.05); 
+  }
 }
 
 .animate-fade-in {
@@ -82,9 +96,15 @@
 .particles span:nth-child(10) { top: 15%; left: 60%; animation-duration: 8s; }
 
 @keyframes float {
-  0% { transform: translateY(0) translateX(0); opacity: 0.7; }
-  50% { opacity: 1; }
-  100% { transform: translateY(-20px) translateX(10px); opacity: 0.7; }
+  0% { 
+    transform: translateY(0) translateX(0); 
+    opacity: 0.7; 
+  }
+  50% { opacity: 1; 
+  }
+  100% { transform: translateY(-20px) translateX(10px); 
+    opacity: 0.7; 
+  }
 }
 
 /* Animação do mascote */
@@ -93,8 +113,12 @@
 }
 
 @keyframes float-mascote {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+  0%, 100% { 
+    transform: translateY(0); 
+  }
+  50% { 
+    transform: translateY(-10px); 
+  }
 }
 
 /* Fade-in do conteúdo */
@@ -104,7 +128,9 @@
 }
 
 @keyframes fade-in {
-  to { opacity: 1; }
+  to { 
+    opacity: 1; 
+  }
 }
 
 /* Pulse no botão */
@@ -113,7 +139,13 @@
 }
 
 @keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
+  0% { 
+    transform: scale(1); 
+  }
+  50% { 
+    transform: scale(1.05); 
+  }
+  100% { 
+    transform: scale(1); 
+  }
 }

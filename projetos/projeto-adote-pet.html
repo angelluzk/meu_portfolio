@@ -1,14 +1,15 @@
 <!-- Card do projeto -->
-<div class="swiper-slide flex justify-center" data-projeto="projeto-adote-pet">
-    <div class="box group cursor-pointer w-[320px] md:w-[460px]">
-        <div class="cover relative overflow-hidden rounded-lg">
+<div class="card-projeto swiper-slide flex justify-center" data-projeto="projeto-adote-pet">
+    <div class="group cursor-pointer w-[320px] md:w-[460px] rounded-2xl shadow-xl overflow-hidden">
+        <div class="relative">
             <img src="../assets/img/adote-pet-projeto.png" alt="Adote Pet"
-                class="w-full h-[240px] object-cover transition-transform duration-500 group-hover:scale-110">
+                class="w-full h-[240px] object-cover transition-transform duration-700 ease-in-out group-hover:scale-105">
 
+            <!-- Detalhes ao hover -->
             <div
-                class="details absolute bottom-[-100%] left-0 right-0 bg-black bg-opacity-70 p-3 flex flex-col gap-2 transition-all duration-500 group-hover:bottom-0">
-                <p class="text-yellow-400 font-semibold">Projeto - Adote Pet</p>
-                <div class="mini-languages flex gap-2">
+                class="absolute bottom-[-100%] left-0 right-0 backdrop-blur-md bg-black/70 p-4 flex flex-col gap-3 transition-all duration-500 ease-in-out group-hover:bottom-0">
+                <p class="text-yellow-400 font-semibold text-sm">Projeto - Adote Pet</p>
+                <div class="flex gap-3">
                     <img src="../assets/icons/html5-2.svg" alt="HTML" class="w-5">
                     <img src="../assets/icons/css3-2.svg" alt="CSS" class="w-5">
                     <img src="../assets/icons/javascript-2.svg" alt="JavaScript" class="w-5">
@@ -18,9 +19,13 @@
             </div>
         </div>
 
-        <div class="description bg-black bg-opacity-80 p-4 rounded-b-lg flex justify-between items-center">
-            <p class="text-white text-xs">Dezembro de 2024</p>
-            <a class="saiba-mais text-yellow-400 font-semibold hover:underline cursor-pointer">Ver mais</a>
+        <!-- Descrição fixa -->
+        <div class="bg-black/80 px-5 py-3 flex justify-between items-center">
+            <p class="text-white text-xs md:text-sm">Dezembro de 2024</p>
+            <a class="ver-mais text-yellow-400 text-sm font-semibold hover:underline hover:text-yellow-300 transition">
+                Ver mais
+            </a>
+
         </div>
     </div>
 </div>

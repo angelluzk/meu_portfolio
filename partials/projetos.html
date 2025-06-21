@@ -1,46 +1,23 @@
 <section id="projetos"
-    class="scroll-mt-40 relative px-8 py-32 flex flex-col justify-center items-center text-center z-10">
+    class="scroll-mt-40 relative px-4 md:px-8 py-32 flex flex-col justify-center items-center text-center z-10">
 
     <!-- Partículas decorativas -->
-    <div class="absolute inset-0 pointer-events-none -z">
-        <!-- Triângulos maiores e mais brilhantes -->
-        <div
-            class="absolute top-20 left-10 w-24 h-24 rotate-45 bg-yellow-400 opacity-40 clip-triangle blur-md animate-slow-spin-reverse">
-        </div>
-        <div
-            class="absolute bottom-32 right-12 w-20 h-20 rotate-12 bg-yellow-300 opacity-30 clip-triangle blur-sm animate-slow-spin">
-        </div>
-        <div
-            class="absolute top-1/2 left-1/3 w-16 h-16 -rotate-12 bg-yellow-200 opacity-25 clip-triangle blur-sm animate-slow-spin-reverse">
-        </div>
-        <div
-            class="absolute top-10 right-1/4 w-28 h-28 rotate-[30deg] bg-yellow-300 opacity-40 clip-triangle blur-md animate-slow-spin">
-        </div>
+    <div class="absolute inset-0 pointer-events-none z-[-1]">
+        <!-- Triângulos decorativos -->
+        <div class="absolute top-20 left-10 w-24 h-24 rotate-45 bg-yellow-400 opacity-40 clip-triangle blur-md animate-slow-spin-reverse"></div>
+        <div class="absolute bottom-32 right-12 w-20 h-20 rotate-12 bg-yellow-300 opacity-30 clip-triangle blur-sm animate-slow-spin"></div>
+        <div class="absolute top-1/2 left-1/3 w-16 h-16 -rotate-12 bg-yellow-200 opacity-25 clip-triangle blur-sm animate-slow-spin-reverse"></div>
+        <div class="absolute top-10 right-1/4 w-28 h-28 rotate-[30deg] bg-yellow-300 opacity-40 clip-triangle blur-md animate-slow-spin"></div>
 
-        <!-- Triângulos pequenos com brilho mais intenso -->
-        <div
-            class="absolute bottom-12 left-1/4 w-6 h-6 rotate-45 bg-yellow-400 opacity-60 clip-triangle blur-[3px] animate-slow-spin-reverse">
-        </div>
-        <div
-            class="absolute top-[65%] left-[10%] w-4 h-4 rotate-[15deg] bg-yellow-200 opacity-30 clip-triangle blur-sm animate-slow-spin">
-        </div>
-        <div
-            class="absolute bottom-1/2 right-1/3 w-5 h-5 rotate-[75deg] bg-yellow-400 opacity-35 clip-triangle blur-[2px] animate-slow-spin-reverse">
-        </div>
-        <div
-            class="absolute top-1/4 right-1/2 w-8 h-8 rotate-[25deg] bg-yellow-300 opacity-20 clip-triangle blur-sm animate-slow-spin">
-        </div>
+        <div class="absolute bottom-12 left-1/4 w-6 h-6 rotate-45 bg-yellow-400 opacity-60 clip-triangle blur-[3px] animate-slow-spin-reverse"></div>
+        <div class="absolute top-[65%] left-[10%] w-4 h-4 rotate-[15deg] bg-yellow-200 opacity-30 clip-triangle blur-sm animate-slow-spin"></div>
+        <div class="absolute bottom-1/2 right-1/3 w-5 h-5 rotate-[75deg] bg-yellow-400 opacity-35 clip-triangle blur-[2px] animate-slow-spin-reverse"></div>
+        <div class="absolute top-1/4 right-1/2 w-8 h-8 rotate-[25deg] bg-yellow-300 opacity-20 clip-triangle blur-sm animate-slow-spin"></div>
 
-        <!-- Triângulos bem translúcidos para profundidade -->
-        <div
-            class="absolute bottom-10 left-10 w-24 h-24 rotate-45 bg-yellow-100 opacity-10 clip-triangle blur-lg animate-slow-spin-reverse">
-        </div>
-        <div
-            class="absolute top-1/3 right-6 w-16 h-16 rotate-12 bg-yellow-100 opacity-10 clip-triangle blur-lg animate-slow-spin">
-        </div>
-        <div
-            class="absolute top-72 left-1/2 w-20 h-20 rotate-[60deg] bg-yellow-100 opacity-10 clip-triangle blur-xl animate-slow-spin-reverse">
-        </div>
+        <div class="absolute bottom-10 left-10 w-24 h-24 rotate-45 bg-yellow-100 opacity-10 clip-triangle blur-lg animate-slow-spin-reverse"></div>
+        <div class="absolute top-1/3 right-6 w-16 h-16 rotate-12 bg-yellow-100 opacity-10 clip-triangle blur-lg animate-slow-spin"></div>
+        <div class="absolute top-72 left-1/2 w-20 h-20 rotate-[60deg] bg-yellow-100 opacity-10 clip-triangle blur-xl animate-slow-spin-reverse"></div>
+
         <span class="absolute top-1/2 left-1/4 w-2 h-2 rounded-full bg-yellow-400 opacity-60 blur-sm "></span>
         <span class="absolute bottom-1/4 right-1/4 w-3 h-3 rounded-full bg-yellow-400 opacity-40 blur-md"></span>
     </div>
@@ -51,9 +28,10 @@
     </h2>
 
     <!-- Carrossel -->
-    <div class="w-full max-w-7xl px-4">
-        <div class="swiper mySwiper relative">
+    <div class="w-full max-w-[1800px] px-6">
+        <div class="swiper swiper-projetos mySwiper-projetos relative">
             <div class="swiper-wrapper">
+                <!-- Os cards dos projetos são injetados dinamicamente aqui via JS -->
             </div>
 
             <!-- Paginação -->
@@ -62,29 +40,28 @@
             <!-- Navegação -->
             <button
                 class="swiper-button-prev text-yellow-400 rounded-full w-10 h-10 flex items-center justify-center shadow-md"
-                aria-label="Previous slide">
+                aria-label="Slide anterior">
             </button>
             <button
                 class="swiper-button-next text-yellow-400 rounded-full w-10 h-10 flex items-center justify-center shadow-md"
-                aria-label="Next slide">
+                aria-label="Próximo slide">
             </button>
         </div>
     </div>
 
-    <!-- Tecnologicas utilizadas -->
+    <!-- Tecnologias utilizadas -->
     <div class="bg-neutral-900 py-2 px-4 mt-4">
         <h2 class="text-white text-2xl font-bold mb-4">Algumas Tecnologias Utilizadas nos Projetos Acima</h2>
 
         <div class="marquee-wrapper relative overflow-hidden w-full h-[80px]">
             <div class="marquee-track flex gap-2" id="marquee1">
 
-                <!-- GRUPO DE ÍCONES -->
+                <!-- Ícones -->
                 <div class="icon-item"><img src="assets/icons/python.svg" alt="Python"><span>Python</span></div>
                 <div class="icon-item"><img src="assets/icons/php.svg" alt="PHP"><span>PHP</span></div>
                 <div class="icon-item"><img src="assets/icons/pytorch.svg" alt="PyTorch"><span>PyTorch</span></div>
                 <div class="icon-item"><img src="assets/icons/git.svg" alt="Git"><span>Git</span></div>
-                <div class="icon-item"><img src="assets/icons/photoshop.svg" alt="Photoshop"><span>Photoshop</span>
-                </div>
+                <div class="icon-item"><img src="assets/icons/photoshop.svg" alt="Photoshop"><span>Photoshop</span></div>
                 <div class="icon-item"><img src="assets/icons/opencv.svg" alt="OpenCV"><span>OpenCV</span></div>
                 <div class="icon-item"><img src="assets/icons/github.svg" alt="GitHub"><span>GitHub</span></div>
                 <div class="icon-item"><img src="assets/icons/vscode.svg" alt="VsCode"><span>VsCode</span></div>
@@ -92,20 +69,17 @@
                 <div class="icon-item"><img src="assets/icons/mysql.svg" alt="MySQL"><span>MySQL</span></div>
                 <div class="icon-item"><img src="assets/icons/html.svg" alt="HTML5"><span>HTML5</span></div>
                 <div class="icon-item"><img src="assets/icons/css.svg" alt="CSS3"><span>CSS3</span></div>
-                <div class="icon-item"><img src="assets/icons/javascript.svg" alt="JavaScript"><span>JavaScript</span>
-                </div>
-                <div class="icon-item"><img src="assets/icons/tailwind.svg" alt="Tailwind CSS"><span>Tailwind CSS</span>
-                </div>
+                <div class="icon-item"><img src="assets/icons/javascript.svg" alt="JavaScript"><span>JavaScript</span></div>
+                <div class="icon-item"><img src="assets/icons/tailwind.svg" alt="Tailwind CSS"><span>Tailwind CSS</span></div>
             </div>
 
             <div class="marquee-track flex gap-2 absolute top-0 left-0" id="marquee2">
-                <!-- GRUPO DE ÍCONES -->
+                <!-- Mesmos ícones duplicados para efeito contínuo -->
                 <div class="icon-item"><img src="assets/icons/python.svg" alt="Python"><span>Python</span></div>
                 <div class="icon-item"><img src="assets/icons/php.svg" alt="PHP"><span>PHP</span></div>
                 <div class="icon-item"><img src="assets/icons/pytorch.svg" alt="PyTorch"><span>PyTorch</span></div>
                 <div class="icon-item"><img src="assets/icons/git.svg" alt="Git"><span>Git</span></div>
-                <div class="icon-item"><img src="assets/icons/photoshop.svg" alt="Photoshop"><span>Photoshop</span>
-                </div>
+                <div class="icon-item"><img src="assets/icons/photoshop.svg" alt="Photoshop"><span>Photoshop</span></div>
                 <div class="icon-item"><img src="assets/icons/opencv.svg" alt="OpenCV"><span>OpenCV</span></div>
                 <div class="icon-item"><img src="assets/icons/github.svg" alt="GitHub"><span>GitHub</span></div>
                 <div class="icon-item"><img src="assets/icons/vscode.svg" alt="VsCode"><span>VsCode</span></div>
@@ -113,23 +87,21 @@
                 <div class="icon-item"><img src="assets/icons/mysql.svg" alt="MySQL"><span>MySQL</span></div>
                 <div class="icon-item"><img src="assets/icons/html.svg" alt="HTML5"><span>HTML5</span></div>
                 <div class="icon-item"><img src="assets/icons/css.svg" alt="CSS3"><span>CSS3</span></div>
-                <div class="icon-item"><img src="assets/icons/javascript.svg" alt="JavaScript"><span>JavaScript</span>
-                </div>
-                <div class="icon-item"><img src="assets/icons/tailwind.svg" alt="Tailwind CSS"><span>Tailwind CSS</span>
-                </div>
+                <div class="icon-item"><img src="assets/icons/javascript.svg" alt="JavaScript"><span>JavaScript</span></div>
+                <div class="icon-item"><img src="assets/icons/tailwind.svg" alt="Tailwind CSS"><span>Tailwind CSS</span></div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Separador centralizado -->
+<!-- Separador -->
 <div class="separador" aria-hidden="true">
     <span class="pontos left">. . .</span>
     <div class="linha"></div>
     <span class="pontos right">. . .</span>
 </div>
 
-<!-- Modal padrão -->
+<!-- Modal -->
 <div id="modal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 hidden">
     <div class="bg-neutral-900 p-6 rounded-lg max-w-6xl w-full relative">
         <button id="close-modal" class="absolute top-4 right-4 text-yellow-400 text-3xl">&times;</button>

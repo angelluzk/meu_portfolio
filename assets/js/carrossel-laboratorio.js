@@ -1,6 +1,6 @@
 // ⭐ Inicialização dos carrosséis do Laboratório Criativo
 function initCarrosselClockwise() {
-    const containers = document.querySelectorAll('.carousel-clockwise');
+    const containers = document.querySelectorAll('.carousel-laboratorio-clockwise');
     if (!containers.length) return;
 
     containers.forEach(container => {
@@ -23,7 +23,7 @@ function initCarrosselClockwise() {
 }
 
 function initCarrosselCounter() {
-    const containers = document.querySelectorAll('.carousel-counter');
+    const containers = document.querySelectorAll('.carousel-laboratorio-counter');
     if (!containers.length) return;
 
     containers.forEach(container => {
@@ -46,7 +46,7 @@ function initCarrosselCounter() {
     });
 }
 
-// ⭐ Função para abrir o modal de zoom
+// ⭐ Função para abrir o modal de zoom das imagens
 function openModal(img) {
     const zoomImage = document.getElementById("zoomImage");
     const zoomModal = document.getElementById("zoomModal");
@@ -56,7 +56,7 @@ function openModal(img) {
     zoomModal.classList.remove("hidden");
 }
 
-// ⭐ Função para fechar o modal de zoom
+// ⭐ Função para fechar o modal de zoom das imagens
 function closeModal() {
     const zoomModal = document.getElementById("zoomModal");
     if (!zoomModal) return;
@@ -72,3 +72,10 @@ function initModalDelegation() {
         }
     });
 }
+
+// ⭐ Exporta as funções para uso em outros arquivos, se quiser modularizar
+window.initCarrosselClockwise = initCarrosselClockwise;
+window.initCarrosselCounter = initCarrosselCounter;
+window.openModal = openModal;
+window.closeModal = closeModal;
+window.initModalDelegation = initModalDelegation;

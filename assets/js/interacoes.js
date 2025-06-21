@@ -1,4 +1,4 @@
-// ⭐ Canvas Estrelas
+// ⭐ Canvas Estrelas SECTION HERO
 const canvas = document.getElementById('starCanvas');
 if (canvas) {
     const ctx = canvas.getContext('2d');
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// ⭐ Scroll Button
+// ⭐ Scroll Button INDEX.HTML
 document.addEventListener("DOMContentLoaded", function () {
     const scrollButton = document.getElementById("scrollButton");
     const sectionOrder = ["sobre", "mapa", "projetos", "laboratorio", "estudio", "mais-sobre-mim", "contato"];

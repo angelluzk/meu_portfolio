@@ -1,30 +1,34 @@
-// ⭐ Inicialização do Swiper principal (.mySwiper) SECTION PROJETOS
+// ⭐ Inicialização do Swiper principal (.swiper-projetos) SECTION PROJETOS
 function initMainSwiper() {
-    const swiperContainer = document.querySelector('.mySwiper');
+    const swiperContainer = document.querySelector('.mySwiper-projetos');
     const slides = swiperContainer?.querySelectorAll('.swiper-slide');
 
-    if (!swiperContainer || !slides.length) return; // ✅ Verifica se existe conteúdo antes de iniciar
+    if (!swiperContainer || !slides.length) return;
 
-    new Swiper('.mySwiper', {
+    new Swiper('.mySwiper-projetos', {
         loop: true,
-        spaceBetween: 30,
+        spaceBetween: 16,
         slidesPerView: 1,
         centeredSlides: true,
         grabCursor: true,
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
         breakpoints: {
-            640: { slidesPerView: 1 },
-            768: { slidesPerView: 2, spaceBetween: 20 },
-            1024: { slidesPerView: 3, spaceBetween: 30 }
+            640: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 3,
+            },
         },
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
-            bulletClass: 'swiper-pagination-bullet bg-yellow-400 opacity-80',
-            bulletActiveClass: 'swiper-pagination-bullet-active bg-yellow-600',
-        },
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
         },
         navigation: {
             nextEl: '.swiper-button-next',
@@ -59,7 +63,7 @@ function initMarquee() {
     animateMarquee();
 }
 
-// ⭐ Typed Effect (texto digitando)
+// ⭐ Typed Effect (texto digitando) SECTION HERO
 function initTyped() {
     const typedSpan = document.getElementById("typed");
     if (!typedSpan) return;
@@ -88,7 +92,7 @@ function initTyped() {
     typeEffect();
 }
 
-// ⭐ Animação de estrelas (canvas de fundo)
+// ⭐ Animação de estrelas (canvas de fundo) SECTION HERO
 function initStarCanvas() {
     const canvas = document.getElementById('starCanvas');
     if (!canvas) return;
@@ -136,9 +140,10 @@ function initLucide() {
 function initCarrossels() {
     initCarrosselClockwise();
     initCarrosselCounter();
+    initModalDelegation();
 }
 
-// ⭐ Exporta as funções que precisa usar em outros arquivos
+// ⭐ Exporta as funções globais
 window.initMainSwiper = initMainSwiper;
 window.initCarrossels = initCarrossels;
 window.initLucide = initLucide;
