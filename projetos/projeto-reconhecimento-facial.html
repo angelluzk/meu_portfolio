@@ -1,0 +1,140 @@
+<!-- Card do projeto -->
+<div class="card-projeto swiper-slide flex justify-center" data-projeto="projeto-adote-pet">
+    <div
+        class="group cursor-pointer w-[320px] md:w-[460px] rounded-2xl shadow-lg bg-black/90 transition-shadow duration-300 hover:shadow-yellow-400/50">
+        <!-- Container imagem -->
+        <div class="relative overflow-hidden rounded-t-2xl">
+            <img src="../assets/img/adote-pet-projeto.png" alt="Adote Pet" class="w-full h-[240px] object-cover">
+        </div>
+
+        <!-- Título e data com efeito vidro fosco -->
+        <div class="p-5 bg-black/50 backdrop-blur-md flex flex-col gap-4 rounded-b-2xl border border-yellow-400/30">
+            <p class="text-yellow-400 font-semibold text-lg md:text-xl tracking-wide">Projeto - Adote Pet</p>
+
+            <div class="flex justify-between items-center">
+                <p class="text-white text-sm md:text-base tracking-wide">Dezembro de 2024</p>
+                <button
+                    class="ver-mais text-yellow-400 text-sm font-semibold px-3 py-1 rounded-md border border-yellow-400 hover:bg-yellow-400 hover:text-black transition">
+                    Ver mais
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Conteúdo do modal -->
+<div
+    class="modal-content hidden max-w-[1280px] w-full mx-auto p-8 bg-black/80 rounded-2xl shadow-2xl border border-yellow-400/20 backdrop-blur-md animate-fadeIn relative flex flex-col overflow-x-visible box-border">
+
+    <div class="flex flex-col md:flex-row gap-6 md:gap-10 items-center relative z-10 overflow-visible">
+
+        <!-- 🎥 Coluna da Esquerda (Vídeo) -->
+        <div class="w-full md:w-[55%] flex flex-col">
+            <div
+                class="rounded-xl overflow-hidden shadow-xl border border-yellow-400/10 w-full aspect-[21/12] max-w-full">
+                <iframe src="https://www.youtube.com/embed/SEU_VIDEO_ID_AQUI?autoplay=1&mute=1&rel=0"
+                    title="Adote Pet - Vídeo do Projeto" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen class="w-full h-full"></iframe>
+            </div>
+        </div>
+
+        <!-- 📝 Coluna da Direita (Texto) -->
+        <div
+            class="w-full md:w-[45%] flex flex-col gap-4 max-h-[calc(100vw*12/21)] md:max-h-[calc(1280px*12/21)] overflow-y-auto overflow-x-visible pr-3 min-w-[300px]">
+
+            <!-- Título -->
+            <h3
+                class="text-3xl text-yellow-400 font-extrabold tracking-wide drop-shadow-[0_0_10px_rgba(253,224,71,0.7)]">
+                Adote Pet – Plataforma para Adoção Responsável
+            </h3>
+
+            <!-- Container com Scroll apenas no conteúdo textual -->
+            <div class="overflow-y-auto pr-3 custom-scroll w-full aspect-video">
+
+                <div class="flex flex-col gap-4">
+                    <p class="text-white text-base leading-relaxed">
+                        <strong class="text-yellow-400">Adote Pet</strong> é uma plataforma web desenvolvida como
+                        <span class="text-yellow-400 font-semibold">Trabalho de Conclusão de Curso (TCC)</span> que une
+                        <span class="text-yellow-400 font-semibold">tecnologia</span>,
+                        <span class="text-yellow-400 font-semibold">design</span> e
+                        <span class="text-yellow-400 font-semibold">propósito social</span> para promover a
+                        <span class="text-yellow-400 font-semibold">adoção responsável</span> de
+                        <span class="text-yellow-400 font-semibold">gatos e cachorros</span>.
+                    </p>
+
+                    <p class="text-white text-base leading-relaxed">
+                        Este projeto foi desenvolvido como projeto acadêmico, com o objetivo de praticar:
+                    </p>
+
+                    <ul class="list-disc list-inside text-white text-base leading-relaxed space-y-1">
+                        <li><span class="text-yellow-400 font-semibold">Desenvolvimento Full Stack</span> – Front-end e
+                            Back-end.
+                        </li>
+                        <li><span class="text-yellow-400 font-semibold">Integração com banco de dados relacional</span>
+                            (MySQL).
+                        </li>
+                        <li><span class="text-yellow-400 font-semibold">Estruturação e manipulação de formulários</span>
+                            com
+                            validações.</li>
+                        <li><span class="text-yellow-400 font-semibold">Programação Orientada a Objetos (POO)</span> no
+                            back-end.
+                        </li>
+                        <li><span class="text-yellow-400 font-semibold">CRUD completo</span> – Create, Read, Update,
+                            Delete.</li>
+                        <li><span class="text-yellow-400 font-semibold">Trabalho em equipe</span> com versionamento em
+                            GitHub.</li>
+                        <li><span class="text-yellow-400 font-semibold">Diagramação do banco de dados</span> e modelagem
+                            de
+                            entidades.</li>
+                        <li><span class="text-yellow-400 font-semibold">Documentação técnica</span> do projeto.</li>
+                        <li><span class="text-yellow-400 font-semibold">Boas práticas de desenvolvimento</span> e
+                            organização de
+                            código.</li>
+                    </ul>
+
+                    <p class="text-white text-base leading-relaxed">
+                        Conta com funcionalidades como <span class="text-yellow-400 font-semibold">listagem detalhada
+                            dos animais</span>,
+                        <span class="text-yellow-400 font-semibold">favoritar animais</span>,
+                        <span class="text-yellow-400 font-semibold">formulários de adoção e doação</span>,
+                        <span class="text-yellow-400 font-semibold">dashboard administrativo</span> e
+                        <span class="text-yellow-400 font-semibold">comunicação educativa</span> sobre cuidados e adoção
+                        responsável.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- 🔸 Linha separadora -->
+            <hr class="border-yellow-400/30 mt-6 mb-4" />
+        </div>
+    </div>
+
+    <!-- 🚀 Tecnologias -->
+    <div class="flex gap-3 justify-end overflow-x-visible whitespace-nowrap">
+
+        <p class="text-white text-base leading-relaxed">Tecnologias:</p>
+
+        <img src="../assets/icons/php-2.svg" alt="PHP"
+            class="w-7 filter saturate-150 brightness-110 hover:scale-110 hover:drop-shadow-[0_0_6px_rgba(253,224,71,0.8)] transition relative z-10" />
+        <img src="../assets/icons/mysql-3.svg" alt="MySQL"
+            class="w-7 filter saturate-150 brightness-110 hover:scale-110 hover:drop-shadow-[0_0_6px_rgba(253,224,71,0.8)] transition relative z-10" />
+        <img src="../assets/icons/html5-2.svg" alt="HTML5"
+            class="w-7 filter saturate-150 brightness-110 hover:scale-110 hover:drop-shadow-[0_0_6px_rgba(253,224,71,0.8)] transition relative z-10" />
+        <img src="../assets/icons/css3-2.svg" alt="CSS3"
+            class="w-7 filter saturate-150 brightness-110 hover:scale-110 hover:drop-shadow-[0_0_6px_rgba(253,224,71,0.8)] transition relative z-10" />
+        <img src="../assets/icons/javascript-2.svg" alt="JavaScript"
+            class="w-7 filter saturate-150 brightness-110 hover:scale-110 hover:drop-shadow-[0_0_6px_rgba(253,224,71,0.8)] transition relative z-10" />
+
+    </div>
+
+    <!-- 🔗 Botão GitHub -->
+    <div class="flex justify-start mt-4">
+        <a href="https://github.com/angelluzk/adotepet-projetotcc" target="_blank" rel="noopener noreferrer"
+            class="inline-flex items-center gap-3 px-4 py-1 bg-yellow-400 text-black font-semibold rounded-xl shadow-md hover:bg-yellow-300 hover:shadow-yellow-400/60 hover:scale-105 transition-all">
+            <img src="../assets/icons/github.svg" alt="GitHub" class="w-8 h-8" />
+            Ver no GitHub
+        </a>
+    </div>
+</div>
