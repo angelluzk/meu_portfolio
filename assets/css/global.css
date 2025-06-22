@@ -1,20 +1,4 @@
-/* 🌗 Variáveis para Dark/Light Theme */
-html.light-theme {
-  --bg-primary: #ffffff;
-  --text-primary: #111111;
-  --text-secondary: #555555;
-  --border-color: #facc15;
-  --bg-navbar: rgba(255 255 255 / 0.9);
-  --text-navbar: #222222;
-  --bg-button: #facc15;
-  --text-button: #000000;
-  --shadow-button: rgba(250 204 21 / 0.7);
-  --bg-input: #f9f9f9;
-  --text-input: #222222;
-  --placeholder-color: #b59f00;
-}
-
-html.dark-theme {
+:root {
   --bg-primary: #000000;
   --text-primary: #ffffff;
   --text-secondary: #cccccc;
@@ -160,17 +144,6 @@ animation-delay: 0.8s, 0.4s;
   50% { transform: scale(1.05); opacity: 0.85; }
 }
 
-/* Inputs e textarea */
-input, textarea {
-  background-color: var(--bg-input);
-  color: var(--text-input);
-  border: 1px solid var(--border-color);
-}
-
-input::placeholder, textarea::placeholder {
-  color: var(--placeholder-color);
-}
-
 /* ✍️ Linha separadora (usada globalmente) */
 .separador {
   display: flex;
@@ -182,7 +155,7 @@ input::placeholder, textarea::placeholder {
 }
 
 .pontos {
-  color: var(--border-color);
+  color: #facc15;
   font-size: 20px;
   letter-spacing: 10px;
   white-space: nowrap;
@@ -193,11 +166,11 @@ input::placeholder, textarea::placeholder {
   height: 2px;
   background: linear-gradient(
     to right,
-    var(--border-color) 0%,
-    var(--border-color) 30%,
+    #facc15 0%,
+    #facc15 30%,
     #eab308 50%,
-    var(--border-color) 70%,
-    var(--border-color) 100%
+    #facc15 70%,
+    #facc15 100%
   );
   border-radius: 1px;
 

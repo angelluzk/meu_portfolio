@@ -37,21 +37,6 @@ if (canvas) {
     drawStars();
 }
 
-// ⭐ Theme Toggle
-document.addEventListener("DOMContentLoaded", function () {
-    const toggle = document.getElementById('themeToggle');
-    const circle = document.getElementById('toggleCircle');
-    if (!toggle || !circle) return;
-
-    const leftPos = 4;
-    const rightPos = toggle.clientWidth - circle.clientWidth - 4;
-    circle.style.left = leftPos + 'px';
-
-    toggle.addEventListener('click', () => {
-        circle.style.left = circle.style.left === leftPos + 'px' ? rightPos + 'px' : leftPos + 'px';
-    });
-});
-
 // ⭐ Scroll Button INDEX.HTML
 document.addEventListener("DOMContentLoaded", function () {
     const scrollButton = document.getElementById("scrollButton");
@@ -73,17 +58,17 @@ document.addEventListener("DOMContentLoaded", function () {
             scrollButton.classList.remove("hidden");
             scrollButton.innerHTML = isInContato ?
                 `<div class="rastro-container" aria-hidden="true">
-                <span class="rastro fumaca"></span>
-                <span class="rastro faisca"></span>
-                <span class="rastro faisca-pequena"></span>
-            </div>
-            <i class="fa-solid fa-arrow-up text-xl" aria-hidden="true"></i>` :
+                    <span class="rastro fumaca"></span>
+                    <span class="rastro faisca"></span>
+                    <span class="rastro faisca-pequena"></span>
+                </div>
+                <i class="fa-solid fa-arrow-up text-xl" aria-hidden="true"></i>` :
                 `<div class="rastro-container" aria-hidden="true">
-                <span class="rastro fumaca"></span>
-                <span class="rastro faisca"></span>
-                <span class="rastro faisca-pequena"></span>
-            </div>
-            <i class="fa-solid fa-arrow-down text-xl" aria-hidden="true"></i>`;
+                    <span class="rastro fumaca"></span>
+                    <span class="rastro faisca"></span>
+                    <span class="rastro faisca-pequena"></span>
+                </div>
+                <i class="fa-solid fa-arrow-down text-xl" aria-hidden="true"></i>`;
             scrollButton.setAttribute("aria-label", isInContato ? "Voltar para o topo" : "Ir para a próxima seção");
         } else {
             scrollButton.classList.add("hidden");
