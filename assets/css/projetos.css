@@ -1,10 +1,50 @@
-/* ⭐️ Container do swiper */
+/* =======================
+⭐️ Swiper - Container e Navegação
+======================= */
 .swiper-projetos {
     padding-bottom: 50px;
     position: relative;
 }
 
-/* ⭐️ Cards */
+/* ⭐️ Swiper - Paginação */
+.swiper-pagination {
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+}
+
+.swiper-pagination-bullet {
+    background-color: #facc15;
+    opacity: 0.6;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+/* ⭐️ Swiper - Botões de Navegação */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #facc15;
+    width: 48px;
+    height: 48px;
+    border-radius: 9999px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+/* =======================
+⭐️ Cards de Projetos
+======================= */
 .box {
     background: rgba(0, 0, 0, 0.7);
     border-radius: 20px;
@@ -19,6 +59,7 @@
     transform: translateY(-6px) scale(1.02);
 }
 
+/* Imagem */
 .cover img {
     width: 100%;
     height: clamp(220px, 25vw, 300px);
@@ -30,6 +71,7 @@
     transform: scale(1.07);
 }
 
+/* Detalhes ao Hover */
 .details {
     position: absolute;
     bottom: 0;
@@ -50,7 +92,7 @@
     transform: translateY(0);
 }
 
-/* Descrição fixa */
+/* Descrição fixa no card */
 .description {
     background-color: rgba(0, 0, 0, 0.8);
     padding: 10px 16px;
@@ -75,42 +117,10 @@
     color: #fde047;
 }
 
-/* ⭐️ Swiper paginação */
-.swiper-pagination {
-    position: absolute;
-    bottom: 12px;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    z-index: 10;
-}
 
-.swiper-pagination-bullet {
-    background-color: #facc15;
-    opacity: 0.6;
-}
-
-.swiper-pagination-bullet-active {
-    opacity: 1;
-}
-
-/* ⭐️ Swiper setas */
-.swiper-button-next,
-.swiper-button-prev {
-    color: #facc15;
-    width: 48px;
-    height: 48px;
-    border-radius: 9999px;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 20;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* ⭐️ Marquee */
+/* =======================
+⭐️ Marquee - Tecnologias
+======================= */
 .icon-item {
     display: flex;
     flex-direction: column;
@@ -126,80 +136,156 @@
     height: 48px;
 }
 
-/* ⭐️ Container dos ícones no modal de tecnologias - ajuste para evitar scroll horizontal */
+/* Container dos ícones no modal - impede scroll horizontal */
 .flex.gap-3.justify-end {
     overflow-x: visible;
 }
 
-/* ⭐️ Scrollbar dos textos no modal dos projetos */
+
+/* =======================
+⭐️ Scrollbar Personalizada
+======================= */
 .custom-scroll::-webkit-scrollbar {
-  width: 6px;
+    width: 6px;
 }
 
 .custom-scroll::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
 }
 
 .custom-scroll::-webkit-scrollbar-thumb {
-  background-color: rgba(253, 224, 71, 0.8);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(253, 224, 71, 0.8);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .custom-scroll::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(253, 224, 71, 1);
+    background-color: rgba(253, 224, 71, 1);
 }
 
-/* ⭐️ Camada de partículas sempre no fundo */
+
+/* =======================
+⭐️ Correções de Camada
+======================= */
 #projetos > div.absolute {
     z-index: 0;
 }
 
-/* Animações */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
 
-@keyframes gradientMove {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+/* =======================
+⭐️ Animações
+======================= */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 @keyframes fadeOut {
-  from {
-    opacity: 1;
-    transform: scale(1);
-  }
-  to {
-    opacity: 0;
-    transform: scale(0.95);
-  }
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.95);
+    }
 }
 
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Aplicação das Animações */
 .animate-fadeIn {
-  animation: fadeIn 0.6s ease forwards;
-}
-
-.animate-gradientMove {
-  background-size: 200% 200%;
-  animation: gradientMove 10s ease infinite;
+    animation: fadeIn 0.6s ease forwards;
 }
 
 .animate-fadeOut {
-  animation: fadeOut 0.3s ease forwards;
+    animation: fadeOut 0.3s ease forwards;
+}
+
+.animate-gradientMove {
+    background-size: 200% 200%;
+    animation: gradientMove 10s ease infinite;
+}
+
+
+/* =======================
+⭐️ Modal Global
+======================= */
+#close-modal {
+    cursor: pointer;
+    z-index: 9999;
+    line-height: 1;
+    transition: transform 0.3s ease;
+}
+
+#close-modal:hover {
+    transform: scale(1.15);
+}
+
+.modal-content h3 {
+    line-height: 1.2;
+}
+
+
+/* =======================
+⭐️ Tooltip para Tecnologias
+======================= */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip .tooltip-text {
+    visibility: hidden;
+    width: max-content;
+    background-color: rgba(253, 224, 71, 0.9);
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 4px 8px;
+    position: absolute;
+    z-index: 1000;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+    font-weight: 600;
+    font-size: 0.75rem;
+    pointer-events: none;
+}
+
+.tooltip .tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(253, 224, 71, 0.9) transparent transparent transparent;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
 }

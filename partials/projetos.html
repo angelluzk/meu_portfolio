@@ -129,10 +129,22 @@
     <span class="pontos right">. . .</span>
 </div>
 
-<!-- Modal -->
-<div id="modal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 hidden">
-    <div class="bg-neutral-900 p-6 rounded-lg max-w-6xl w-full max-h-[90vh] overflow-y-auto relative">
-        <button id="close-modal" type="button" aria-label="Fechar modal" class="absolute top-4 right-4 text-yellow-400 text-3xl">&times;</button>
-        <div id="modal-content"></div>
+<!-- Modal Global dos Projetos -->
+<div id="modal"
+    class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 hidden overflow-x-hidden">
+
+    <div
+        class="bg-neutral-900 p-6 rounded-2xl max-w-6xl w-full max-h-[90vh] overflow-y-auto overflow-x-hidden relative shadow-2xl border border-yellow-400/20">
+
+        <!-- 🔺 Botão de Fechar -->
+        <button id="close-modal" type="button" aria-label="Fechar modal"
+            class="absolute top-4 right-4 text-yellow-400 hover:text-yellow-300 text-3xl font-bold transition">
+            &times;
+        </button>
+
+        <!-- 🔥 Conteúdo do Modal Carregado Dinamicamente -->
+        <div class="bg-neutral-900 p-6 rounded-lg w-full relative overflow-x-hidden">
+            <div id="modal-content"></div>
+        </div>
     </div>
 </div>

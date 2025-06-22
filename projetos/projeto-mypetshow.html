@@ -26,6 +26,12 @@
 <div
     class="modal-content hidden max-w-[1280px] w-full mx-auto p-8 bg-black/80 rounded-2xl shadow-2xl border border-yellow-400/20 backdrop-blur-md animate-fadeIn relative flex flex-col overflow-x-visible box-border">
 
+    <!-- 🔥 Título no topo -->
+    <h3
+        class="text-3xl md:text-4xl text-yellow-400 font-extrabold tracking-wide drop-shadow-[0_0_10px_rgba(253,224,71,0.7)] mb-8 text-center">
+        MyPetShow – Sistema de Gestão e Agendamento PetShop
+    </h3>
+
     <div class="flex flex-col md:flex-row gap-6 md:gap-10 items-center relative z-10 overflow-visible">
 
         <!-- 🎥 Coluna da Esquerda (Vídeo) -->
@@ -42,12 +48,6 @@
         <!-- 📝 Coluna da Direita (Texto) -->
         <div
             class="w-full md:w-[45%] flex flex-col gap-4 max-h-[calc(100vw*12/21)] md:max-h-[calc(1280px*12/21)] overflow-y-auto overflow-x-visible pr-3 min-w-[300px]">
-
-            <!-- Título -->
-            <h3
-                class="text-3xl text-yellow-400 font-extrabold tracking-wide drop-shadow-[0_0_10px_rgba(253,224,71,0.7)]">
-                MyPetShow – Sistema de Gestão e Agendamento PetShop
-            </h3>
 
             <!-- Container com Scroll apenas no conteúdo textual -->
             <div class="overflow-y-auto pr-3 custom-scroll w-full aspect-video">
@@ -111,21 +111,39 @@
     </div>
 
     <!-- 🚀 Tecnologias -->
-    <div class="flex gap-3 justify-end overflow-x-visible whitespace-nowrap">
+    <div class="flex gap-3 justify-end overflow-x-visible whitespace-nowrap items-center">
 
         <p class="text-white text-base leading-relaxed">Tecnologias:</p>
 
-        <img src="../assets/icons/php-2.svg" alt="PHP"
-            class="w-7 filter saturate-150 brightness-110 hover:scale-110 hover:drop-shadow-[0_0_6px_rgba(253,224,71,0.8)] transition relative z-10" />
-        <img src="../assets/icons/mysql-3.svg" alt="MySQL"
-            class="w-7 filter saturate-150 brightness-110 hover:scale-110 hover:drop-shadow-[0_0_6px_rgba(253,224,71,0.8)] transition relative z-10" />
-        <img src="../assets/icons/html5-2.svg" alt="HTML5"
-            class="w-7 filter saturate-150 brightness-110 hover:scale-110 hover:drop-shadow-[0_0_6px_rgba(253,224,71,0.8)] transition relative z-10" />
-        <img src="../assets/icons/css3-2.svg" alt="CSS3"
-            class="w-7 filter saturate-150 brightness-110 hover:scale-110 hover:drop-shadow-[0_0_6px_rgba(253,224,71,0.8)] transition relative z-10" />
-        <img src="../assets/icons/javascript-2.svg" alt="JavaScript"
-            class="w-7 filter saturate-150 brightness-110 hover:scale-110 hover:drop-shadow-[0_0_6px_rgba(253,224,71,0.8)] transition relative z-10" />
+        <div class="tooltip">
+            <img src="../assets/icons/php-2.svg" alt="PHP"
+                class="w-7 filter saturate-150 brightness-110 hover:scale-110 hover:drop-shadow-[0_0_6px_rgba(253,224,71,0.8)] transition relative z-10" />
+            <span class="tooltip-text">PHP</span>
+        </div>
 
+        <div class="tooltip">
+            <img src="../assets/icons/mysql-3.svg" alt="MySQL"
+                class="w-7 filter saturate-150 brightness-110 hover:scale-110 hover:drop-shadow-[0_0_6px_rgba(253,224,71,0.8)] transition relative z-10" />
+            <span class="tooltip-text">MySQL</span>
+        </div>
+
+        <div class="tooltip">
+            <img src="../assets/icons/html5-2.svg" alt="HTML5"
+                class="w-7 filter saturate-150 brightness-110 hover:scale-110 hover:drop-shadow-[0_0_6px_rgba(253,224,71,0.8)] transition relative z-10" />
+            <span class="tooltip-text">HTML5</span>
+        </div>
+
+        <div class="tooltip">
+            <img src="../assets/icons/css3-2.svg" alt="CSS3"
+                class="w-7 filter saturate-150 brightness-110 hover:scale-110 hover:drop-shadow-[0_0_6px_rgba(253,224,71,0.8)] transition relative z-10" />
+            <span class="tooltip-text">CSS3</span>
+        </div>
+
+        <div class="tooltip">
+            <img src="../assets/icons/javascript-2.svg" alt="JavaScript"
+                class="w-7 filter saturate-150 brightness-110 hover:scale-110 hover:drop-shadow-[0_0_6px_rgba(253,224,71,0.8)] transition relative z-10" />
+            <span class="tooltip-text">JavaScript</span>
+        </div>
     </div>
 
     <!-- 🔗 Botão GitHub -->

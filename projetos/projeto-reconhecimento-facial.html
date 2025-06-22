@@ -39,6 +39,12 @@
 <div
     class="modal-content hidden max-w-[1280px] w-full mx-auto p-8 bg-black/80 rounded-2xl shadow-2xl border border-yellow-400/20 backdrop-blur-md animate-fadeIn relative flex flex-col overflow-x-visible box-border">
 
+    <!-- 🔥 Título no topo -->
+    <h3
+        class="text-3xl md:text-4xl text-yellow-400 font-extrabold tracking-wide drop-shadow-[0_0_10px_rgba(253,224,71,0.7)] mb-8 text-center">
+        Sistema de Reconhecimento Facial para Escolas – Registro de Entrada e Saída de Alunos
+    </h3>
+
     <div class="flex flex-col md:flex-row gap-6 md:gap-10 items-center relative z-10 overflow-visible">
 
         <!-- 🎥 Coluna da Esquerda (Vídeo) -->
@@ -46,7 +52,7 @@
             <div
                 class="rounded-xl overflow-hidden shadow-xl border border-yellow-400/10 w-full aspect-[21/12] max-w-full">
                 <iframe src="https://www.youtube.com/embed/SEU_VIDEO_ID_AQUI?autoplay=1&mute=1&rel=0"
-                    title="Adote Pet - Vídeo do Projeto" frameborder="0"
+                    title="Reconhecimento Facial - Vídeo do Projeto" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen class="w-full h-full"></iframe>
             </div>
@@ -56,67 +62,65 @@
         <div
             class="w-full md:w-[45%] flex flex-col gap-4 max-h-[calc(100vw*12/21)] md:max-h-[calc(1280px*12/21)] overflow-y-auto overflow-x-visible pr-3 min-w-[300px]">
 
-            <!-- Título -->
-            <h3
-                class="text-3xl text-yellow-400 font-extrabold tracking-wide drop-shadow-[0_0_10px_rgba(253,224,71,0.7)]">
-                Adote Pet – Plataforma para Adoção Responsável
-            </h3>
-
             <!-- Container com Scroll apenas no conteúdo textual -->
             <div class="overflow-y-auto pr-3 custom-scroll w-full aspect-video">
-
                 <div class="flex flex-col gap-4">
+
                     <p class="text-white text-base leading-relaxed">
-                        <strong class="text-yellow-400">Adote Pet</strong> é uma plataforma web desenvolvida como
-                        <span class="text-yellow-400 font-semibold">Trabalho de Conclusão de Curso (TCC)</span> que une
-                        <span class="text-yellow-400 font-semibold">tecnologia</span>,
-                        <span class="text-yellow-400 font-semibold">design</span> e
-                        <span class="text-yellow-400 font-semibold">propósito social</span> para promover a
-                        <span class="text-yellow-400 font-semibold">adoção responsável</span> de
-                        <span class="text-yellow-400 font-semibold">gatos e cachorros</span>.
+                        <strong class="text-yellow-400">Sistema de Reconhecimento Facial</strong> tem como objetivo
+                        automatizar o registro de <span class="text-yellow-400 font-semibold">entrada e saída de
+                            alunos</span>
+                        por meio de <span class="text-yellow-400 font-semibold">reconhecimento facial em tempo
+                            real</span>,
+                        utilizando tecnologias como <span class="text-yellow-400 font-semibold">Python</span>,
+                        <span class="text-yellow-400 font-semibold">OpenCV</span> e <span
+                            class="text-yellow-400 font-semibold">InsightFace</span>.
                     </p>
 
                     <p class="text-white text-base leading-relaxed">
-                        Este projeto foi desenvolvido como projeto acadêmico, com o objetivo de praticar:
+                        O sistema conta com uma <span class="text-yellow-400 font-semibold">interface web</span> baseada
+                        em <span class="text-yellow-400 font-semibold">Flask</span> e <span
+                            class="text-yellow-400 font-semibold">WebSocket</span>, que permite exibir
+                        <span class="text-yellow-400 font-semibold">vídeo em tempo real</span>, <span
+                            class="text-yellow-400 font-semibold">alertas persistentes</span>
+                        e <span class="text-yellow-400 font-semibold">relatórios completos</span>.
+                    </p>
+
+                    <p class="text-white text-base leading-relaxed">
+                        Este projeto foi desenvolvido com o objetivo de praticar:
                     </p>
 
                     <ul class="list-disc list-inside text-white text-base leading-relaxed space-y-1">
-                        <li><span class="text-yellow-400 font-semibold">Desenvolvimento Full Stack</span> – Front-end e
-                            Back-end.
-                        </li>
-                        <li><span class="text-yellow-400 font-semibold">Integração com banco de dados relacional</span>
-                            (MySQL).
-                        </li>
-                        <li><span class="text-yellow-400 font-semibold">Estruturação e manipulação de formulários</span>
-                            com
-                            validações.</li>
-                        <li><span class="text-yellow-400 font-semibold">Programação Orientada a Objetos (POO)</span> no
-                            back-end.
-                        </li>
-                        <li><span class="text-yellow-400 font-semibold">CRUD completo</span> – Create, Read, Update,
-                            Delete.</li>
-                        <li><span class="text-yellow-400 font-semibold">Trabalho em equipe</span> com versionamento em
-                            GitHub.</li>
-                        <li><span class="text-yellow-400 font-semibold">Diagramação do banco de dados</span> e modelagem
-                            de
-                            entidades.</li>
-                        <li><span class="text-yellow-400 font-semibold">Documentação técnica</span> do projeto.</li>
-                        <li><span class="text-yellow-400 font-semibold">Boas práticas de desenvolvimento</span> e
-                            organização de
-                            código.</li>
+                        <li><span class="text-yellow-400 font-semibold">Reconhecimento facial em tempo real</span> com
+                            webcam.</li>
+                        <li><span class="text-yellow-400 font-semibold">Registro automático</span> de entrada e saída no
+                            banco de dados.</li>
+                        <li><span class="text-yellow-400 font-semibold">Controle inteligente de alertas</span> e
+                            duplicidade de registros.</li>
+                        <li><span class="text-yellow-400 font-semibold">Desenvolvimento Full Stack</span> (Python +
+                            Flask + MySQL + Frontend).</li>
+                        <li><span class="text-yellow-400 font-semibold">Manipulação de dados e geração de
+                                relatórios</span> em PDF, Excel e TXT.</li>
+                        <li><span class="text-yellow-400 font-semibold">Banco de dados relacional</span> com modelagem e
+                            integrações.</li>
+                        <li><span class="text-yellow-400 font-semibold">Comunicação em tempo real</span> via WebSocket
+                            (SocketIO).</li>
+                        <li><span class="text-yellow-400 font-semibold">Dashboard administrativo completo</span> com
+                            estatísticas, CRUD de alunos e relatórios dinâmicos.</li>
+                        <li><span class="text-yellow-400 font-semibold">Boas práticas de desenvolvimento</span> com
+                            organização de código e segurança.</li>
                     </ul>
 
                     <p class="text-white text-base leading-relaxed">
-                        Conta com funcionalidades como <span class="text-yellow-400 font-semibold">listagem detalhada
-                            dos animais</span>,
-                        <span class="text-yellow-400 font-semibold">favoritar animais</span>,
-                        <span class="text-yellow-400 font-semibold">formulários de adoção e doação</span>,
-                        <span class="text-yellow-400 font-semibold">dashboard administrativo</span> e
-                        <span class="text-yellow-400 font-semibold">comunicação educativa</span> sobre cuidados e adoção
-                        responsável.
+                        Funcionalidades incluem <span class="text-yellow-400 font-semibold">treinamento de rostos com
+                            embeddings</span>,
+                        <span class="text-yellow-400 font-semibold">alertas inteligentes</span> por aluno,
+                        <span class="text-yellow-400 font-semibold">painel administrativo interativo</span> e
+                        <span class="text-yellow-400 font-semibold">exportação de relatórios</span> para acompanhamento
+                        da frequência.
                     </p>
-                </div>
 
+                </div>
             </div>
 
             <!-- 🔸 Linha separadora -->
@@ -125,20 +129,75 @@
     </div>
 
     <!-- 🚀 Tecnologias -->
-    <div class="flex gap-3 justify-end overflow-x-visible whitespace-nowrap">
+    <div class="flex gap-3 justify-end overflow-x-visible whitespace-nowrap items-center">
 
         <p class="text-white text-base leading-relaxed">Tecnologias:</p>
 
-        <img src="../assets/icons/php-2.svg" alt="PHP"
-            class="w-7 filter saturate-150 brightness-110 hover:scale-110 hover:drop-shadow-[0_0_6px_rgba(253,224,71,0.8)] transition relative z-10" />
-        <img src="../assets/icons/mysql-3.svg" alt="MySQL"
-            class="w-7 filter saturate-150 brightness-110 hover:scale-110 hover:drop-shadow-[0_0_6px_rgba(253,224,71,0.8)] transition relative z-10" />
-        <img src="../assets/icons/html5-2.svg" alt="HTML5"
-            class="w-7 filter saturate-150 brightness-110 hover:scale-110 hover:drop-shadow-[0_0_6px_rgba(253,224,71,0.8)] transition relative z-10" />
-        <img src="../assets/icons/css3-2.svg" alt="CSS3"
-            class="w-7 filter saturate-150 brightness-110 hover:scale-110 hover:drop-shadow-[0_0_6px_rgba(253,224,71,0.8)] transition relative z-10" />
-        <img src="../assets/icons/javascript-2.svg" alt="JavaScript"
-            class="w-7 filter saturate-150 brightness-110 hover:scale-110 hover:drop-shadow-[0_0_6px_rgba(253,224,71,0.8)] transition relative z-10" />
+        <div class="tooltip">
+            <img src="../assets/icons/python.svg" alt="Python"
+                class="w-7 filter saturate-150 brightness-110 hover:scale-110 hover:drop-shadow-[0_0_6px_rgba(253,224,71,0.8)] transition relative z-10" />
+            <span class="tooltip-text">Python</span>
+        </div>
+
+        <div class="tooltip">
+            <img src="../assets/icons/flask-2.svg" alt="Flask"
+                class="w-7 filter saturate-150 brightness-110 hover:scale-110 hover:drop-shadow-[0_0_6px_rgba(253,224,71,0.8)] transition relative z-10" />
+            <span class="tooltip-text">Flask</span>
+        </div>
+
+        <div class="tooltip">
+            <img src="../assets/icons/numpy-2.svg" alt="NumPy"
+                class="w-7 filter saturate-150 brightness-110 hover:scale-110 hover:drop-shadow-[0_0_6px_rgba(253,224,71,0.8)] transition relative z-10" />
+            <span class="tooltip-text">NumPy</span>
+        </div>
+
+        <div class="tooltip">
+            <img src="../assets/icons/opencv-2.svg" alt="OpenCV"
+                class="w-7 filter saturate-150 brightness-110 hover:scale-110 hover:drop-shadow-[0_0_6px_rgba(253,224,71,0.8)] transition relative z-10" />
+            <span class="tooltip-text">OpenCV</span>
+        </div>
+
+        <div class="tooltip">
+            <img src="../assets/icons/pandas-2.svg" alt="Pandas"
+                class="w-7 filter saturate-150 brightness-110 hover:scale-110 hover:drop-shadow-[0_0_6px_rgba(253,224,71,0.8)] transition relative z-10" />
+            <span class="tooltip-text">Pandas</span>
+        </div>
+
+        <div class="tooltip">
+            <img src="../assets/icons/pytorch-2.svg" alt="PyTorch"
+                class="w-7 filter saturate-150 brightness-110 hover:scale-110 hover:drop-shadow-[0_0_6px_rgba(253,224,71,0.8)] transition relative z-10" />
+            <span class="tooltip-text">PyTorch</span>
+        </div>
+
+        <div class="tooltip">
+            <img src="../assets/icons/mysql-3.svg" alt="MySQL"
+                class="w-7 filter saturate-150 brightness-110 hover:scale-110 hover:drop-shadow-[0_0_6px_rgba(253,224,71,0.8)] transition relative z-10" />
+            <span class="tooltip-text">MySQL</span>
+        </div>
+
+        <div class="tooltip">
+            <img src="../assets/icons/html5-2.svg" alt="HTML5"
+                class="w-7 filter saturate-150 brightness-110 hover:scale-110 hover:drop-shadow-[0_0_6px_rgba(253,224,71,0.8)] transition relative z-10" />
+            <span class="tooltip-text">HTML5</span>
+        </div>
+
+        <div class="tooltip">
+            <img src="../assets/icons/css3-2.svg" alt="CSS3"
+                class="w-7 filter saturate-150 brightness-110 hover:scale-110 hover:drop-shadow-[0_0_6px_rgba(253,224,71,0.8)] transition relative z-10" />
+            <span class="tooltip-text">CSS3</span>
+        </div>
+
+        <div class="tooltip">
+            <img src="../assets/icons/tailwindcss-2.svg" alt="Tailwind CSS"
+                class="w-7 filter saturate-150 brightness-110 hover:scale-110 hover:drop-shadow-[0_0_6px_rgba(253,224,71,0.8)] transition relative z-10" />
+            <span class="tooltip-text">Tailwind CSS</span>
+        </div>
+
+        <div class="tooltip">
+            <img src="../assets/icons/javascript-2.svg" alt="JavaScript"
+                class="w-7 filter saturate-150 brightness-110 hover:scale-110 hover:drop-shadow-[0_0_6px_rgba(253,224,71,0.8)] transition relative z-10" />
+            <span class="tooltip-text">JavaScript</span>
+        </div>
 
     </div>
 
