@@ -73,7 +73,7 @@ function initModalDelegation() {
     });
 }
 
-// ⭐ Exporta as funções para uso em outros arquivos, se quiser modularizar
+// ⭐ Exporta as funções para uso em outros arquivos
 window.initCarrosselClockwise = initCarrosselClockwise;
 window.initCarrosselCounter = initCarrosselCounter;
 window.openModal = openModal;

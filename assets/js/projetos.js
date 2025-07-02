@@ -39,12 +39,12 @@ async function initProjetos() {
     }
   }
 
-  // Inicializa swiper e lucide (suponho que já existem essas funções)
+  // Inicializa swiper e lucide
   initMainSwiper();
   initLucide();
 
-  // Função para abrir modal com animação
-  function abrirModal(projeto) {
+  // Função para abrir modal com animação e carregar galeria do JSON
+  async function abrirModal(projeto) {
     const modalData = document.querySelector(`.modal-content[data-projeto="${projeto}"]`);
     if (!modal || !modalContent || !modalData) return;
 
@@ -56,7 +56,35 @@ async function initProjetos() {
     modal.classList.remove("animate-fadeOut");
     modal.classList.add("animate-fadeIn");
 
-    // Inicializa partículas (se quiser reiniciar ao abrir)
+    // Seleciona container da galeria no modal inserido
+    const galeriaContainer = modalContent.querySelector('.galeria-imagens[data-projeto]');
+    if (galeriaContainer) {
+      try {
+        // Busca JSON da galeria daquele projeto
+        const res = await fetch(`assets/data/galeria-${projeto}.json`);
+        const imagens = await res.json();
+
+        // Limpa a galeria antes de inserir
+        galeriaContainer.innerHTML = '';
+
+        // Cria e insere as imagens na galeria
+        imagens.forEach(src => {
+          const img = document.createElement('img');
+          img.src = src;
+          img.alt = `Print do projeto ${projeto}`;
+          img.className = 'rounded-xl shadow-lg cursor-zoom-in hover:scale-[1.02] transition-transform duration-300';
+          galeriaContainer.appendChild(img);
+        });
+
+        // Inicializa zoom nas imagens
+        inicializarSwiperEZoom(modalContent);
+
+      } catch (error) {
+        console.error(`Erro ao carregar galeria do projeto ${projeto}:`, error);
+      }
+    }
+
+    // Inicializa partículas
     iniciarParticulas();
   }
 
@@ -98,6 +126,18 @@ async function initProjetos() {
       if (e.target === modal) {
         fecharModal();
       }
+    });
+  }
+}
+
+// Função para inicializar zoom nas imagens
+function inicializarSwiperEZoom(modalContent) {
+  const imagens = modalContent.querySelectorAll('img');
+  if (imagens.length && typeof mediumZoom !== 'undefined') {
+    mediumZoom(imagens, {
+      margin: 24,
+      background: 'rgba(0, 0, 0, 0.9)',
+      scrollOffset: 0,
     });
   }
 }
