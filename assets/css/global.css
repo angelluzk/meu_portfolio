@@ -30,7 +30,6 @@ html {
 }
 
 section {
-  padding-top: 10rem;
   padding-bottom: 10rem;
   margin-bottom: 0;
 }
@@ -144,7 +143,7 @@ animation-delay: 0.8s, 0.4s;
   50% { transform: scale(1.05); opacity: 0.85; }
 }
 
-/* ✍️ Linha separadora (usada globalmente) */
+/* ✍️ Linha separadora entre as seções */
 .separador {
   display: flex;
   align-items: center;
@@ -174,7 +173,7 @@ animation-delay: 0.8s, 0.4s;
   );
   border-radius: 1px;
 
-  /* Afinar as pontas */
+  /* Afinar as pontas da linha */
   -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
   mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
 }

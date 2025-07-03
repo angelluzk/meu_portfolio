@@ -43,48 +43,91 @@ async function initProjetos() {
   initMainSwiper();
   initLucide();
 
+  let galeriaState = {
+    imagens: [],
+    paginaAtual: 1,
+    imagensPorPagina: 4,
+  };
+
+  function atualizarGaleria(modalContent) {
+    const container = modalContent.querySelector('.galeria-imagens');
+    const pagina = galeriaState.paginaAtual;
+    const inicio = (pagina - 1) * galeriaState.imagensPorPagina;
+    const fim = inicio + galeriaState.imagensPorPagina;
+    const imagensPagina = galeriaState.imagens.slice(inicio, fim);
+
+    container.innerHTML = '';
+
+    imagensPagina.forEach(src => {
+      const img = document.createElement('img');
+      img.src = src;
+      img.alt = 'Print do projeto';
+      img.className = `
+      w-full aspect-video object-cover
+      rounded-2xl shadow-[0_4px_20px_rgba(255,255,255,0.05)]
+      ring-1 ring-yellow-400/10 hover:ring-2 hover:ring-yellow-300
+      hover:brightness-110 hover:scale-[1.03]
+      transition-all duration-300 ease-in-out cursor-zoom-in
+    `.trim();
+      container.appendChild(img);
+    });
+
+    const pageDisplay = modalContent.querySelector('.galeria-page');
+    if (pageDisplay) {
+      const totalPaginas = Math.ceil(galeriaState.imagens.length / galeriaState.imagensPorPagina);
+      pageDisplay.textContent = `Página ${pagina} de ${totalPaginas}`;
+    }
+
+    inicializarSwiperEZoom(modalContent);
+  }
+
   // Função para abrir modal com animação e carregar galeria do JSON
   async function abrirModal(projeto) {
     const modalData = document.querySelector(`.modal-content[data-projeto="${projeto}"]`);
     if (!modal || !modalContent || !modalData) return;
 
-    // Copia conteúdo do modal específico
     modalContent.innerHTML = modalData.innerHTML;
 
-    // Remove classe hidden e adiciona animação fadeIn
     modal.classList.remove("hidden");
     modal.classList.remove("animate-fadeOut");
     modal.classList.add("animate-fadeIn");
 
-    // Seleciona container da galeria no modal inserido
     const galeriaContainer = modalContent.querySelector('.galeria-imagens[data-projeto]');
     if (galeriaContainer) {
       try {
-        // Busca JSON da galeria daquele projeto
         const res = await fetch(`assets/data/galeria-${projeto}.json`);
         const imagens = await res.json();
 
-        // Limpa a galeria antes de inserir
-        galeriaContainer.innerHTML = '';
+        galeriaState.imagens = imagens;
+        galeriaState.paginaAtual = 1;
 
-        // Cria e insere as imagens na galeria
-        imagens.forEach(src => {
-          const img = document.createElement('img');
-          img.src = src;
-          img.alt = `Print do projeto ${projeto}`;
-          img.className = 'rounded-xl shadow-lg cursor-zoom-in hover:scale-[1.02] transition-transform duration-300';
-          galeriaContainer.appendChild(img);
-        });
+        atualizarGaleria(modalContent);
 
-        // Inicializa zoom nas imagens
-        inicializarSwiperEZoom(modalContent);
+        const btnPrev = modalContent.querySelector('.galeria-prev');
+        const btnNext = modalContent.querySelector('.galeria-next');
+
+        if (btnPrev && btnNext) {
+          btnPrev.onclick = () => {
+            if (galeriaState.paginaAtual > 1) {
+              galeriaState.paginaAtual--;
+              atualizarGaleria(modalContent);
+            }
+          };
+
+          btnNext.onclick = () => {
+            const maxPagina = Math.ceil(galeriaState.imagens.length / galeriaState.imagensPorPagina);
+            if (galeriaState.paginaAtual < maxPagina) {
+              galeriaState.paginaAtual++;
+              atualizarGaleria(modalContent);
+            }
+          };
+        }
 
       } catch (error) {
         console.error(`Erro ao carregar galeria do projeto ${projeto}:`, error);
       }
     }
 
-    // Inicializa partículas
     iniciarParticulas();
   }
 
@@ -132,7 +175,7 @@ async function initProjetos() {
 
 // Função para inicializar zoom nas imagens
 function inicializarSwiperEZoom(modalContent) {
-  const imagens = modalContent.querySelectorAll('img');
+  const imagens = modalContent.querySelectorAll('.galeria-imagens img');
   if (imagens.length && typeof mediumZoom !== 'undefined') {
     mediumZoom(imagens, {
       margin: 24,

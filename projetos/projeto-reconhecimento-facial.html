@@ -46,17 +46,21 @@
     </h3>
 
     <div class="flex flex-col md:flex-row gap-6 md:gap-10 items-center relative z-10 overflow-visible">
+        <!-- 📸 Galeria -->
+        <div class="w-full md:w-[55%] flex flex-col gap-6">
+            <div class="galeria-imagens grid grid-cols-2 gap-4 md:gap-6" data-projeto="projeto-reconhecimento-facial">
+            </div>
 
-        <!-- 🎥 Coluna da Esquerda (Vídeo) -->
-        <div class="w-full md:w-[55%] flex flex-col">
-            <div
-                class="rounded-xl overflow-hidden shadow-xl border border-yellow-400/10 w-full aspect-[21/12] max-w-full">
-                <iframe
-                    src="https://www.youtube.com/embed/SEU_VIDEO_ID_AQUI?autoplay=1&mute=1&rel=0&modestbranding=1&controls=1"
-                    title="Sistema de Reconhecimento Facial - Vídeo do Projeto" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen class="w-full h-full">
-                </iframe>
+            <div class="flex justify-center gap-4 mt-2">
+                <button
+                    class="galeria-prev px-3 py-1 rounded-full bg-yellow-400 text-black font-bold shadow-md hover:bg-yellow-300 hover:scale-105 transition-all duration-200">
+                    ←
+                </button>
+                <span class="galeria-page text-white text-sm font-semibold px-3"></span>
+                <button
+                    class="galeria-next px-3 py-1 rounded-full bg-yellow-400 text-black font-bold shadow-md hover:bg-yellow-300 hover:scale-105 transition-all duration-200">
+                    →
+                </button>
             </div>
         </div>
 

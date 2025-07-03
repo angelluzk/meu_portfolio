@@ -43,9 +43,21 @@
   </h3>
 
   <div class="flex flex-col md:flex-row gap-6 md:gap-10 items-center relative z-10 overflow-visible">
-    <!-- 📸 Coluna da Esquerda (Galeria dinâmica de prints) -->
-    <div class="w-full md:w-[55%] grid grid-cols-2 gap-4 md:gap-6 galeria-imagens" data-projeto="projeto-adote-pet">
-      <!-- Imagens serão inseridas dinamicamente pelo JS -->
+    <!-- 📸 Galeria -->
+    <div class="w-full md:w-[55%] flex flex-col gap-6">
+      <div class="galeria-imagens grid grid-cols-2 gap-4 md:gap-6" data-projeto="projeto-adote-pet"></div>
+
+      <div class="flex justify-center gap-4 mt-2">
+        <button
+          class="galeria-prev px-3 py-1 rounded-full bg-yellow-400 text-black font-bold shadow-md hover:bg-yellow-300 hover:scale-105 transition-all duration-200">
+          ←
+        </button>
+        <span class="galeria-page text-white text-sm font-semibold px-3"></span>
+        <button
+          class="galeria-next px-3 py-1 rounded-full bg-yellow-400 text-black font-bold shadow-md hover:bg-yellow-300 hover:scale-105 transition-all duration-200">
+          →
+        </button>
+      </div>
     </div>
 
     <!-- 📝 Coluna da Direita (Texto) -->

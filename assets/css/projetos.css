@@ -41,7 +41,6 @@
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-
 /* =======================
 ⭐️ Cards de Projetos
 ======================= */
@@ -117,7 +116,6 @@
     color: #fde047;
 }
 
-
 /* =======================
 ⭐️ Marquee - Tecnologias
 ======================= */
@@ -141,7 +139,6 @@
     overflow-x: visible;
 }
 
-
 /* =======================
 ⭐️ Scrollbar Personalizada
 ======================= */
@@ -164,14 +161,12 @@
     background-color: rgba(253, 224, 71, 1);
 }
 
-
 /* =======================
 ⭐️ Correções de Camada
 ======================= */
 #projetos > div.absolute {
     z-index: 0;
 }
-
 
 /* =======================
 ⭐️ Animações
@@ -224,7 +219,6 @@
     animation: gradientMove 10s ease infinite;
 }
 
-
 /* =======================
 ⭐️ Modal Global
 ======================= */
@@ -242,7 +236,6 @@
 .modal-content h3 {
     line-height: 1.2;
 }
-
 
 /* =======================
 ⭐️ Tooltip para Tecnologias
@@ -288,4 +281,82 @@
 .tooltip:hover .tooltip-text {
     visibility: visible;
     opacity: 1;
+}
+
+/* =======================
+✨ Estilo das Imagens na Galeria do Modal
+======================= */
+.galeria-imagens img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: 0 6px 20px rgba(253, 224, 71, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeria-imagens img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 24px rgba(253, 224, 71, 0.3);
+}
+
+/* =======================
+✨ Modal - Estética Geral
+======================= */
+.modal-content {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.85), rgba(20, 20, 20, 0.85));
+  border: 1px solid rgba(253, 224, 71, 0.2);
+  box-shadow: 0 0 24px rgba(253, 224, 71, 0.05);
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+/* =======================
+✨ Animação de entrada
+======================= */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* =======================
+✨ Botões de paginação da galeria
+======================= */
+.galeria-prev,
+.galeria-next {
+  padding: 0.5rem 0.75rem;
+  border-radius: 9999px;
+  background-color: #facc15;
+  color: black;
+  font-weight: bold;
+  box-shadow: 0 3px 8px rgba(253, 224, 71, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.galeria-prev:hover,
+.galeria-next:hover {
+  background-color: #fde047;
+  transform: scale(1.05);
+}
+
+/* =======================
+✨ Scrollbar no modal
+======================= */
+.modal-content .custom-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.modal-content .custom-scroll::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+.modal-content .custom-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(253, 224, 71, 0.8);
+  border-radius: 10px;
+}
+.modal-content .custom-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(253, 224, 71, 1);
 }
