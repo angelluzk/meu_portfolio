@@ -49,7 +49,6 @@ Mascote + links para entrar em contato.
 - **SwiperJS** (carrossel dos projetos)
 - **Lightbox / Modal customizado**
 - **SVG + Lottie** para animações
-- **Figma** para prototipagem e ilustração
 - **GitHub Pages** para hospedagem
 
 ---
