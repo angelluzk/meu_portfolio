@@ -56,26 +56,29 @@ Mascote + links para entrar em contato.
 ## 📁 Estrutura de Pastas
 
 ```
-├── assets/                        # Recursos estáticos do projeto
-│   ├── css/                      # Arquivos CSS separados por seção ou estilo geral
-│   ├── data/                     # Dados dinâmicos (ex: JSON)
-│   │   └── galeria-projetos.json # JSON com imagens dinâmicas dos projetos
-│   ├── docs/                     # Documentação adicional, se houver
-│   ├── icons/                    # Ícones usados no projeto
-│   ├── img/                      # Imagens gerais
-│   │   └── galeria/              # Galeria de imagens dos projetos
-│   │       ├── projeto-adote-pet/
-│   │       ├── projeto-clinica-odontologica/
-│   │       ├── projeto-motoxtreme/
-│   │       ├── projeto-mypetshow/
-│   │       └── projeto-reconhecimento-facial/
-│   └── js/                       # Scripts JS separados por funcionalidade
+├── 📁 assets/                        
+│   ├── 📁 css/                      # Arquivos CSS separados por seção ou estilos gerais
+│   ├── 📁 data/                     # Dados dinâmicos, como JSON
+│   ├── 📁 docs/                     # Documentação extra, se houver
+│   ├── 📁 icons/                    # Ícones usados no projeto
+│   ├── 📁 img/                      # Imagens gerais
+│   │   └── 📁 galeria/              # Galeria de imagens dos projetos
+│   │       ├── 📁 projeto-adote-pet/
+│   │       ├── 📁 projeto-clinica-odontologica/
+│   │       ├── 📁 projeto-motoxtreme/
+│   │       ├── 📁 projeto-mypetshow/
+│   │       └── 📁 projeto-reconhecimento-facial/
+│   └── 📁 js/                       # Scripts JS organizados por funcionalidades
 │
-├── partials/                     # Partes do site reaproveitáveis (header, footer, modais, etc)
-├── projetos/                     # Pastas ou arquivos específicos de cada projeto (HTML, docs, etc)
+├── 📁 partials/                     # Sections carregadas dinamicamente no index.html
+│                                 # (ex: seções como "Sobre mim", "Contato", "Laboratório Criativo")
 │
-├── index.html                    # Página principal do portfólio
+├── 📁 projetos/                     # Layouts dos cards e modais dos projetos
+│                                 # Carregados dinamicamente pelo partial projetos.html
+│
+├── index.html                    # Página principal do portfólio, que carrega os partials
 └── README.md                     # Documentação principal do projeto
+
 ```
 
 ---
