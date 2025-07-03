@@ -57,15 +57,26 @@ Mascote + links para entrar em contato.
 ## 📁 Estrutura de Pastas
 
 ```
-├── assets/
-│   ├── img/                       # Imagens gerais e da galeria
-│   ├── icons/                     # Ícones usados
-│   ├── logos/                     # Logotipos e identidade visual
-│   └── data/galeria-projetos.json # Imagens dinâmicas dos projetos
-├── css/                           # Estilos separados por seção
-├── js/                            # Scripts separados por funcionalidade
-├── index.html                     # Página principal do portfólio
-└── README.md                      # Este arquivo
+├── assets/                        # Recursos estáticos do projeto
+│   ├── css/                      # Arquivos CSS separados por seção ou estilo geral
+│   ├── data/                     # Dados dinâmicos (ex: JSON)
+│   │   └── galeria-projetos.json # JSON com imagens dinâmicas dos projetos
+│   ├── docs/                     # Documentação adicional, se houver
+│   ├── icons/                    # Ícones usados no projeto
+│   ├── img/                      # Imagens gerais
+│   │   └── galeria/              # Galeria de imagens dos projetos
+│   │       ├── projeto-adote-pet/
+│   │       ├── projeto-clinica-odontologica/
+│   │       ├── projeto-motoxtreme/
+│   │       ├── projeto-mypetshow/
+│   │       └── projeto-reconhecimento-facial/
+│   └── js/                       # Scripts JS separados por funcionalidade
+│
+├── partials/                     # Partes do site reaproveitáveis (header, footer, modais, etc)
+├── projetos/                     # Pastas ou arquivos específicos de cada projeto (HTML, docs, etc)
+│
+├── index.html                    # Página principal do portfólio
+└── README.md                     # Documentação principal do projeto
 ```
 
 ---
