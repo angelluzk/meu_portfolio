@@ -1,21 +1,21 @@
 /* Efeito de digitação do título */
 #cursor {
-  display: inline-block;
-  margin-left: 5px;
-  animation: blink 0.7s infinite;
+  display: inline-block;         /* Permite aplicar animação ao cursor (como um caractere visível) */
+  margin-left: 5px;              /* Espaço entre o texto digitado e o cursor */
+  animation: blink 0.7s infinite;/* Animação de piscar contínua */
 }
 
 @keyframes blink {
-  0%,50% { opacity: 1; }
-  51%,100% { opacity: 0; }
+  0%,50% { opacity: 1; }         /* Cursor visível na metade inicial */
+  51%,100% { opacity: 0; }       /* Cursor invisível na segunda metade */
 }
 
 #typed-container {
-  white-space: nowrap;
+  white-space: nowrap;           /* Mantém todo o texto digitado em uma única linha */
 }
 
 @media (max-width: 768px) {
   #typed-container {
-    white-space: normal;
+    white-space: normal;         /* Permite quebra de linha em telas pequenas */
   }
 }

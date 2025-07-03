@@ -1,37 +1,37 @@
 /* 🎯 Estilo do botão scroll */
 .scroll-button {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
+    position: fixed;                       /* Fixa o botão na tela */
+    bottom: 2rem;                          /* Distância do rodapé */
+    right: 2rem;                           /* Distância da lateral direita */
     width: 60px;
     height: 60px;
-    background-image: url('/assets/img/foguete.png');
-    background-size: cover;
+    background-image: url('/assets/img/foguete.png'); /* Ícone de foguete */
+    background-size: cover;               /* Preenche completamente a área do botão */
     background-repeat: no-repeat;
     background-position: center;
-    border-radius: 50%;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    border-radius: 50%;                   /* Botão redondo */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6); /* Sombra externa */
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 999;
+    z-index: 999;                          /* Fica acima de outros elementos */
     cursor: pointer;
-    transition: transform 0.3s ease;
-    animation: flutuarPulsando 2.8s ease-in-out infinite;
+    transition: transform 0.3s ease;       /* Suaviza o hover */
+    animation: flutuarPulsando 2.8s ease-in-out infinite; /* Animação de flutuação */
     overflow: visible;
 }
 
 @keyframes flutuarPulsando {
     0%, 100% {
-        transform: translateY(0) scale(1);
+        transform: translateY(0) scale(1);  /* Estado normal */
     }
     50% {
-        transform: translateY(-8px) scale(1.05);
+        transform: translateY(-8px) scale(1.05); /* Sobe e amplia um pouco */
     }
 }
 
 .scroll-button:hover {
-    transform: scale(1.05);
+    transform: scale(1.05);               /* Aumenta levemente no hover */
 }
 
 /* 🎯 Ícone da seta */
@@ -41,24 +41,24 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);     /* Centraliza o ícone no botão */
 }
 
 /* 🔥 Rastro de fogo/fumaça */
-  .rastro-container {
+.rastro-container {
     position: absolute;
-    bottom: -8px;
+    bottom: -8px;                          /* Abaixo do foguete */
     width: 30px;
     height: 40px;
     left: 50%;
-    transform: translateX(-50%);
-    pointer-events: none;
+    transform: translateX(-50%);           /* Centraliza horizontalmente */
+    pointer-events: none;                  /* Não interfere nos cliques */
     overflow: visible;
     z-index: 1;
 }
 
-  /* Cada rastro individual */
-  .rastro {
+/* Cada rastro individual */
+.rastro {
     position: absolute;
     bottom: 0;
     border-radius: 50%;
@@ -66,88 +66,88 @@
     filter: blur(1px);
     animation-timing-function: ease-out;
     animation-iteration-count: infinite;
-  }
+}
 
-  /* Fumaça maior e lenta */
-  .rastro.fumaca {
+/* Fumaça maior e lenta */
+.rastro.fumaca {
     width: 14px;
     height: 20px;
     background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 80%);
     left: 0;
     animation-name: rastroFumaca;
     animation-duration: 2.5s;
-  }
+}
 
-  @keyframes rastroFumaca {
+@keyframes rastroFumaca {
     0% {
-      transform: translateY(0) scale(1);
-      opacity: 0.5;
-      filter: blur(2px);
+        transform: translateY(0) scale(1);
+        opacity: 0.5;
+        filter: blur(2px);
     }
     50% {
-      transform: translateY(20px) scale(1.4);
-      opacity: 0.2;
-      filter: blur(6px);
+        transform: translateY(20px) scale(1.4);
+        opacity: 0.2;
+        filter: blur(6px);
     }
     100% {
-      transform: translateY(40px) scale(1.8);
-      opacity: 0;
-      filter: blur(8px);
+        transform: translateY(40px) scale(1.8);
+        opacity: 0;
+        filter: blur(8px);
     }
-  }
+}
 
-  /* Faísca média, mais rápida */
-  .rastro.faisca {
+/* Faísca média, mais rápida */
+.rastro.faisca {
     width: 8px;
     height: 8px;
     background: radial-gradient(circle, #f8d33a, #ff5722, transparent);
     left: 12px;
     animation-name: rastroFaisca;
     animation-duration: 1.2s;
-  }
+}
 
-  @keyframes rastroFaisca {
+@keyframes rastroFaisca {
     0% {
-      transform: translateY(0) scale(1);
-      opacity: 0.8;
-      filter: blur(0);
+        transform: translateY(0) scale(1);
+        opacity: 0.8;
+        filter: blur(0);
     }
     50% {
-      transform: translateY(15px) scale(1.3);
-      opacity: 0.5;
-      filter: blur(1px);
+        transform: translateY(15px) scale(1.3);
+        opacity: 0.5;
+        filter: blur(1px);
     }
     100% {
-      transform: translateY(30px) scale(1.6);
-      opacity: 0;
-      filter: blur(3px);
+        transform: translateY(30px) scale(1.6);
+        opacity: 0;
+        filter: blur(3px);
     }
-  }
+}
 
-  /* Faísca pequena e rápida */
-  .rastro.faisca-pequena {
+/* Faísca pequena e rápida */
+.rastro.faisca-pequena {
     width: 6px;
     height: 6px;
     background: radial-gradient(circle, #fff200, #ff9100, transparent);
     left: 20px;
     animation-name: rastroFaiscaPequena;
     animation-duration: 0.9s;
-  }
+}
 
-  @keyframes rastroFaiscaPequena {
+@keyframes rastroFaiscaPequena {
     0% {
-      transform: translateY(0) scale(1);
-      opacity: 0.9;
-      filter: blur(0);
+        transform: translateY(0) scale(1);
+        opacity: 0.9;
+        filter: blur(0);
     }
     50% {
-      transform: translateY(10px) scale(1.2);
-      opacity: 0.4;
-      filter: blur(1px);
+        transform: translateY(10px) scale(1.2);
+        opacity: 0.4;
+        filter: blur(1px);
     }
     100% {
-      transform: translateY(20px) scale(1.4);
-      opacity: 0;
-      filter: blur(2px);
+        transform: translateY(20px) scale(1.4);
+        opacity: 0;
+        filter: blur(2px);
     }
-  }
+}

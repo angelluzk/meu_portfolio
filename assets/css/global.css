@@ -1,32 +1,33 @@
+/* 🎨 Variáveis globais para cores e temas */
 :root {
-  --bg-primary: #000000;
-  --text-primary: #ffffff;
-  --text-secondary: #cccccc;
-  --border-color: #facc15;
-  --bg-navbar: rgba(0 0 0 / 0.9);
-  --text-navbar: #ffffff;
-  --bg-button: #facc15;
-  --text-button: #000000;
-  --shadow-button: rgba(250 204 21 / 0.7);
-  --bg-input: #000000;
-  --text-input: #ffffff;
-  --placeholder-color: #facc15;
+  --bg-primary: #000000;           /* Fundo geral do site (preto) */
+  --text-primary: #ffffff;         /* Cor principal do texto (branco) */
+  --text-secondary: #cccccc;       /* Cor secundária do texto */
+  --border-color: #facc15;         /* Amarelo vibrante usado para destaques e bordas */
+  --bg-navbar: rgba(0 0 0 / 0.9);  /* Fundo semi-transparente da navbar */
+  --text-navbar: #ffffff;          /* Texto da navbar */
+  --bg-button: #facc15;            /* Fundo dos botões */
+  --text-button: #000000;          /* Texto dentro dos botões */
+  --shadow-button: rgba(250 204 21 / 0.7); /* Sombra sutil em botões */
+  --bg-input: #000000;             /* Fundo dos campos de formulário */
+  --text-input: #ffffff;           /* Cor do texto nos inputs */
+  --placeholder-color: #facc15;    /* Cor do texto placeholder */
 }
 
-/* 🎨 Paleta, Tipografia, Reset */
+/* 🎨 Estilo base e tipografia */
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', sans-serif; /* Fonte principal para textos */
 }
 
 h1, h2, h3 {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Orbitron', sans-serif; /* Fonte diferenciada para títulos */
   color: var(--text-primary);
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* Suaviza a rolagem entre seções */
 }
 
 section {
@@ -34,7 +35,7 @@ section {
   margin-bottom: 0;
 }
 
-/* 🌟 Bordas padrão */
+/* ✏️ Bordas com efeito rabiscado para destacar elementos */
 .scribble-border {
   border: 3px solid #facc15;
   box-shadow: -4px 4px 0 #fff200, 2px -2px 0 #fff200;
@@ -45,41 +46,31 @@ section {
   box-shadow: -6px 6px 0 #fff200, 4px -4px 0 #fff200;
 }
 
-/* Triângulo */
+/* 🔺 Formato de triângulo com clip-path */
 .clip-triangle {
-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
 
-/* Animações de rotação */
+/* ♻️ Animações de rotação suave */
 @keyframes slow-spin {
-0% {
-transform: rotate(0deg);
-}
-
-100% {
-transform: rotate(360deg);
-}
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 @keyframes slow-spin-reverse {
-0% {
-transform: rotate(360deg);
-}
-
-100% {
-transform: rotate(0deg);
-}
+  0% { transform: rotate(360deg); }
+  100% { transform: rotate(0deg); }
 }
 
 .animate-slow-spin {
-animation: slow-spin 20s linear infinite;
+  animation: slow-spin 20s linear infinite;
 }
 
 .animate-slow-spin-reverse {
-animation: slow-spin-reverse 25s linear infinite;
+  animation: slow-spin-reverse 25s linear infinite;
 }
 
-/* 🔥 Animações gerais */
+/* 🔥 Efeito de flutuação suave */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
@@ -89,6 +80,7 @@ animation: slow-spin-reverse 25s linear infinite;
   animation: float 3s ease-in-out infinite;
 }
 
+/* ✨ Fade-in para elementos surgirem suavemente */
 @keyframes fade-in {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
@@ -98,52 +90,52 @@ animation: slow-spin-reverse 25s linear infinite;
   animation: fade-in 0.6s ease forwards;
 }
 
-/* 🐝 Fireflies (usados em várias seções) */
+/* 🐝 Animações para os elementos "firefly" (pontos brilhantes em movimento) */
 @keyframes floatX {
-  0%,100% { transform: translateX(0); }
+  0%, 100% { transform: translateX(0); }
   50% { transform: translateX(8px); }
 }
 
 @keyframes floatY {
-  0%,100% { transform: translateY(0); }
+  0%, 100% { transform: translateY(0); }
   50% { transform: translateY(6px); }
 }
 
 @keyframes pulseOpacity {
-  0%,100% { opacity: 0.6; }
+  0%, 100% { opacity: 0.6; }
   50% { opacity: 1; }
 }
 
 .firefly1 {
-animation: floatX 4s ease-in-out infinite, pulseOpacity 2.5s ease-in-out infinite;
+  animation: floatX 4s ease-in-out infinite, pulseOpacity 2.5s ease-in-out infinite;
 }
 
 .firefly2 {
-animation: floatY 5s ease-in-out infinite, pulseOpacity 3s ease-in-out infinite;
-animation-delay: 0.3s, 0s;
+  animation: floatY 5s ease-in-out infinite, pulseOpacity 3s ease-in-out infinite;
+  animation-delay: 0.3s, 0s;
 }
 
 .firefly3 {
-animation: floatX 3.7s ease-in-out infinite, pulseOpacity 2.2s ease-in-out infinite;
-animation-delay: 0.5s, 0.2s;
+  animation: floatX 3.7s ease-in-out infinite, pulseOpacity 2.2s ease-in-out infinite;
+  animation-delay: 0.5s, 0.2s;
 }
 
 .firefly4 {
-animation: floatY 4.3s ease-in-out infinite, pulseOpacity 2.8s ease-in-out infinite;
-animation-delay: 0.8s, 0.4s;
+  animation: floatY 4.3s ease-in-out infinite, pulseOpacity 2.8s ease-in-out infinite;
+  animation-delay: 0.8s, 0.4s;
 }
 
-/* ✨ Outras animações utilitárias */
+/* 💡 Pulso suave para destacar elementos */
+@keyframes pulse-soft {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.85; }
+}
+
 .animate-pulse-soft {
   animation: pulse-soft 2s ease-in-out infinite;
 }
 
-@keyframes pulse-soft {
-  0%,100% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.05); opacity: 0.85; }
-}
-
-/* ✍️ Linha separadora entre as seções */
+/* 🌌 Linha separadora estilizada entre seções */
 .separador {
   display: flex;
   align-items: center;
@@ -173,7 +165,7 @@ animation-delay: 0.8s, 0.4s;
   );
   border-radius: 1px;
 
-  /* Afinar as pontas da linha */
+  /* Afinamento nas pontas para efeito de dissolução */
   -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
   mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
 }

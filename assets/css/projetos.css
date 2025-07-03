@@ -2,37 +2,37 @@
 ⭐️ Swiper - Container e Navegação
 ======================= */
 .swiper-projetos {
-    padding-bottom: 50px;
-    position: relative;
+    padding-bottom: 50px;           /* Espaço inferior para a paginação */
+    position: relative;             /* Necessário para posicionar botões e paginação dentro */
 }
 
 /* ⭐️ Swiper - Paginação */
 .swiper-pagination {
-    position: absolute;
-    bottom: 12px;
+    position: absolute;             /* Posiciona sobre o carrossel */
+    bottom: 12px;                   /* Distância da base */
     left: 0;
     width: 100%;
     text-align: center;
-    z-index: 10;
+    z-index: 10;                    /* Garante que fique acima das imagens */
 }
 
 .swiper-pagination-bullet {
-    background-color: #facc15;
-    opacity: 0.6;
+    background-color: #facc15;      /* Cor dos indicadores */
+    opacity: 0.6;                   /* Menor destaque quando inativo */
 }
 
 .swiper-pagination-bullet-active {
-    opacity: 1;
+    opacity: 1;                     /* Destaque total ao bullet ativo */
 }
 
 /* ⭐️ Swiper - Botões de Navegação */
 .swiper-button-next,
 .swiper-button-prev {
-    color: #facc15;
+    color: #facc15;                 /* Cor dos ícones de seta */
     width: 48px;
     height: 48px;
-    border-radius: 9999px;
-    top: 50%;
+    border-radius: 9999px;          /* Botão circular */
+    top: 50%;                       /* Centraliza verticalmente */
     transform: translateY(-50%);
     z-index: 20;
     display: flex;
@@ -45,9 +45,9 @@
 ⭐️ Cards de Projetos
 ======================= */
 .box {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.7); /* Fundo semitransparente escuro */
     border-radius: 20px;
-    overflow: hidden;
+    overflow: hidden;              /* Garante bordas arredondadas visíveis */
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease;
@@ -55,19 +55,19 @@
 }
 
 .box:hover {
-    transform: translateY(-6px) scale(1.02);
+    transform: translateY(-6px) scale(1.02); /* Eleva e amplia levemente no hover */
 }
 
 /* Imagem */
 .cover img {
     width: 100%;
-    height: clamp(220px, 25vw, 300px);
-    object-fit: cover;
+    height: clamp(220px, 25vw, 300px); /* Altura responsiva */
+    object-fit: cover;                 /* Garante o preenchimento da área */
     transition: transform 0.5s ease;
 }
 
 .group:hover .cover img {
-    transform: scale(1.07);
+    transform: scale(1.07);           /* Zoom na imagem ao passar o mouse */
 }
 
 /* Detalhes ao Hover */
@@ -76,7 +76,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0, 0.75); /* Fundo escuro transparente */
     padding: 14px;
     display: flex;
     flex-direction: column;
@@ -88,7 +88,7 @@
 
 .group:hover .details {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0);         /* Exibe os detalhes com transição suave */
 }
 
 /* Descrição fixa no card */
@@ -165,7 +165,7 @@
 ⭐️ Correções de Camada
 ======================= */
 #projetos > div.absolute {
-    z-index: 0;
+    z-index: 0; /* Garante que decorativos no fundo fiquem atrás dos elementos principais */
 }
 
 /* =======================

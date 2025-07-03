@@ -1,31 +1,31 @@
 .shape-mascote {
-  width: 35vw;
-  height: 35vw;
-  margin-left: 2.5rem;
-  margin-top: 5rem;
+  width: 35vw;             /* Largura proporcional à viewport (35% da largura da tela) */
+  height: 35vw;            /* Altura proporcional, formando um quadrado */
+  margin-left: 2.5rem;     /* Espaço à esquerda do mascote */
+  margin-top: 5rem;        /* Espaço acima do mascote */
 }
 
 .shape-mascote img {
-  animation: floating 4s ease-in-out infinite;
+  animation: floating 4s ease-in-out infinite; /* Aplica animação de flutuação ao mascote */
 }
 
 @keyframes floating {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
+  0%   { transform: translateY(0px); }     /* Posição inicial */
+  50%  { transform: translateY(-10px); }   /* Sobe 10px */
+  100% { transform: translateY(0px); }     /* Volta à posição inicial */
 }
 
 @media (max-width: 768px) {
   .shape-mascote {
-    float: none;
-    display: flex;
-    margin: 2rem auto;
-    clip-path: none;
-    shape-outside: none;
-    margin-left: 0;
+    float: none;            /* Remove flutuação em telas menores */
+    display: flex;          /* Centraliza com flex */
+    margin: 2rem auto;      /* Centraliza horizontalmente com margem automática */
+    clip-path: none;        /* Remove qualquer recorte aplicado */
+    shape-outside: none;    /* Remove comportamento de contorno de forma */
+    margin-left: 0;         /* Elimina margem lateral esquerda */
   }
 }
 
 .animate-floating {
-  animation: floating 3s ease-in-out infinite;
+  animation: floating 3s ease-in-out infinite; /* Classe utilitária para aplicar a mesma animação em outros elementos */
 }

@@ -1,34 +1,38 @@
 /* 🟨 Navbar */
 .nav-link:hover {
-  color: #facc15;
+  color: #facc15; /* Altera a cor do link da navbar para amarelo ao passar o mouse */
 }
 
 .nav-underline {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  height: 2px;
-  width: 0%;
-  background-color: #facc15;
-  transition: width 0.3s ease-in-out;
+  content: "";                         /* Conteúdo vazio para criar a linha */
+  display: block;                      /* Torna o elemento visível como bloco */
+  position: absolute;                  /* Posicionamento absoluto relativo ao link */
+  bottom: -2px;                        /* Coloca a linha 2px abaixo do link */
+  left: 0;                             /* Alinha à esquerda */
+  height: 2px;                         /* Espessura da linha */
+  width: 0%;                           /* Inicialmente invisível */
+  background-color: #facc15;           /* Cor da linha (amarelo) */
+  transition: width 0.3s ease-in-out;  /* Transição suave no aumento da largura */
 }
 
 .group:hover .nav-underline {
-  width: 100%;
+  width: 100%; /* Expande a linha ao passar o mouse sobre o grupo do link */
 }
 
 @keyframes glowPulse {
-  0%,100% { text-shadow: 0 0 4px #facc15, 0 0 10px #facc15; }
-  50% { text-shadow: 0 0 12px #facc15, 0 0 20px #facc15; }
+  0%,100% {
+    text-shadow: 0 0 4px #facc15, 0 0 10px #facc15;  /* Brilho sutil */
+  }
+  50% {
+    text-shadow: 0 0 12px #facc15, 0 0 20px #facc15; /* Brilho mais intenso no meio do ciclo */
+  }
 }
 
 .animate-glow {
-  animation: pulseZoom 3s ease-in-out infinite;
+  animation: pulseZoom 3s ease-in-out infinite; /* Aplica efeito de pulsar com zoom */
 }
 
 @keyframes pulseZoom {
-  0%,100% { transform: scale(1); }
-  50% { transform: scale(1.15); }
+  0%,100% { transform: scale(1); }    /* Tamanho normal */
+  50% { transform: scale(1.15); }     /* Zoom de 15% no meio da animação */
 }
