@@ -1,4 +1,3 @@
-```md
 # 🌌 Universo Criativo Dev - Portfólio Pessoal
 
 <img src="assets/img/capa-portfolio-dev.png" alt="Capa do Portfólio Universo Criativo Dev" style="width:100%; border-radius: 12px;"/>
