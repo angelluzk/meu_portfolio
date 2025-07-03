@@ -57,7 +57,6 @@ Mascote + links para entrar em contato.
 ## 📁 Estrutura de Pastas
 
 ```
-
 ├── assets/
 │   ├── img/                       # Imagens gerais e da galeria
 │   ├── icons/                     # Ícones usados
@@ -67,8 +66,7 @@ Mascote + links para entrar em contato.
 ├── js/                            # Scripts separados por funcionalidade
 ├── index.html                     # Página principal do portfólio
 └── README.md                      # Este arquivo
-
-````
+```
 
 ---
 
@@ -77,24 +75,23 @@ Mascote + links para entrar em contato.
 1. Clone o repositório:
    ```bash
    git clone https://github.com/angelluzk/meu_portfolio.git
-````
+   ```
 
 2. Acesse a pasta:
-
    ```bash
    cd meu_portfolio
    ```
 
 3. Abra o arquivo `index.html` no navegador.
 
-> Não é necessário backend ou dependências adicionais. É um projeto 100% front-end.
+> ✅ Não é necessário backend ou dependências adicionais. É um projeto 100% front-end.
 
 ---
 
 ## 🌐 Hospedagem
 
-O portfólio está disponível online em:
-📍 [https://angelluzk.github.io/meu\_portfolio](https://angelluzk.github.io/meu_portfolio)
+O portfólio está disponível online em:  
+📍 [https://angelluzk.github.io/meu_portfolio](https://angelluzk.github.io/meu_portfolio)
 
 ---
 
@@ -108,8 +105,8 @@ A todas as inspirações visuais e tutoriais que me ajudaram a compor este unive
 
 Se quiser conversar, colaborar ou oferecer uma oportunidade:
 
-📬 E-mail: [contatoangelluz@gmail.com](mailto:contatoangelluz@gmail.com)
-🐙 GitHub: [@angelluzk](https://github.com/angelluzk)
+📬 E-mail: [contatoangelluz@gmail.com](mailto:contatoangelluz@gmail.com)  
+🐙 GitHub: [@angelluzk](https://github.com/angelluzk)  
 💼 LinkedIn: [linkedin.com/in/angelitaluz](https://www.linkedin.com/in/angelitaluz/)
 
 ---
