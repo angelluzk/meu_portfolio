@@ -5,7 +5,7 @@
     right: 2rem;                           /* Distância da lateral direita */
     width: 60px;
     height: 60px;
-    background-image: url('../img/foguete.png'); /* Ícone de foguete */
+    background-image: url('/assets/img/foguete.png'); /* Ícone de foguete */
     background-size: cover;               /* Preenche completamente a área do botão */
     background-repeat: no-repeat;
     background-position: center;
