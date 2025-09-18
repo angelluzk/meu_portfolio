@@ -114,14 +114,15 @@ A todas as inspirações visuais e tutoriais que me ajudaram a compor este unive
 
 ---
 
-## 📩 Contato
+### ✍️ Autor
+
+<img src="https://github.com/angelluzk.png" width="100px;" alt="Foto de Angel Luz"/>
+
+> Desenvolvido com 💛 por **Angel Luz** – Universo Criativo Dev.
 
 Se quiser conversar, colaborar ou oferecer uma oportunidade:
 
 📬 E-mail: [contatoangelluz@gmail.com](mailto:contatoangelluz@gmail.com)  
 🐙 GitHub: [@angelluzk](https://github.com/angelluzk)  
-💼 LinkedIn: [linkedin.com/in/angelitaluz](https://www.linkedin.com/in/angelitaluz/)
-
----
-
-> Desenvolvido com 💛 por Angel Luz – Universo Criativo Dev
+💼 LinkedIn: [linkedin.com/in/angelitaluz](https://www.linkedin.com/in/angelitaluz/)  
+🗂️Website / Portfólio: [meu_portfolio/](https://angelluzk.github.io/meu_portfolio/) 
