@@ -3,19 +3,16 @@ async function loadPartial(id, file) {
     const html = await response.text();
     document.getElementById(id).innerHTML = html;
 
-    // Sempre reexecuta os ícones do Lucide após carregar qualquer parcial
     initLucide();
 
-    // Inicializa funções específicas por seção
     switch (file) {
         case 'hero':
             initTyped();
             initStarCanvas();
             break;
         case 'projetos':
-            initMainSwiper();
             initMarquee();
-            initProjetos(); // ⭐ Chama a função que carrega os projetos dinamicamente
+            initProjetos();
             break;
         case 'laboratorio':
             initCarrossels();
