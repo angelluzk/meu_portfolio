@@ -93,45 +93,49 @@ function initMainSwiper(slideCount) {
 
     const count = slideCount || swiperContainer.querySelectorAll('.swiper-slide').length;
 
-    let swiperOptions = {
-        spaceBetween: 16,
-        grabCursor: true,
-        pagination: { el: '.swiper-pagination', clickable: true },
-        navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
-    };
-
-    if (count === 1) {
-        swiperOptions = {
-            ...swiperOptions,
-            slidesPerView: 1,
-            centeredSlides: true,
-        };
-    } else if (count === 2) {
-        swiperOptions = {
-            ...swiperOptions,
-            slidesPerView: 2,
-            centeredSlides: true,
-            breakpoints: {
-                300: { slidesPerView: 1, centeredSlides: true },
-                768: { slidesPerView: 2, centeredSlides: true }
-            },
-        };
-    } else {
-        swiperOptions = {
-            ...swiperOptions,
-            loop: true,
-            centeredSlides: true,
-            slidesPerView: 1,
-            autoplay: { delay: 4000, disableOnInteraction: false },
-            breakpoints: {
-                768: { slidesPerView: 2 },
-                1024: { slidesPerView: 3 },
-            },
-        };
+    // Limpa qualquer Swiper anterior antes de recriar
+    if (swiperContainer.swiper) {
+        swiperContainer.swiper.destroy(true, true);
     }
 
-    return new Swiper('.mySwiper-projetos', swiperOptions);
+    const swiperOptions = {
+        spaceBetween: 24,
+        grabCursor: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            dynamicBullets: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        autoplay: {
+            delay: 4500,
+            disableOnInteraction: false,
+        },
+        speed: 800,
+        loop: count > 2, // só ativa loop se houver mais de 2
+        centeredSlides: false,
+        slidesPerView: 3,
+        breakpoints: {
+            320: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1280: { slidesPerView: 3 },
+        },
+    };
+
+    const swiper = new Swiper('.mySwiper-projetos', swiperOptions);
+
+    // 🔹 Centraliza manualmente quando há 1 ou 2 slides
+    if (count <= 2) {
+        const wrapper = swiperContainer.querySelector('.swiper-wrapper');
+        wrapper.style.justifyContent = 'center';
+    }
+
+    return swiper;
 }
+
 
 let galeriaState = { imagens: [], paginaAtual: 1, imagensPorPagina: 4 };
 

@@ -1,9 +1,15 @@
 /* =======================
 ⭐️ Swiper - Container e Navegação
 ======================= */
-.swiper-projetos {
-    padding-bottom: 50px;           /* Espaço inferior para a paginação */
-    position: relative;             /* Necessário para posicionar botões e paginação dentro */
+.swiper-projetos .swiper-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.swiper-projetos .swiper-slide {
+  display: flex;
+  justify-content: center;
 }
 
 /* ⭐️ Swiper - Paginação */
