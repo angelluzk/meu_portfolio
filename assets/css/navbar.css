@@ -1,38 +1,59 @@
-/* 🟨 Navbar */
+/* 🟨 Links da Navbar */
 .nav-link:hover {
-  color: #facc15; /* Altera a cor do link da navbar para amarelo ao passar o mouse */
+  color: #facc15;
 }
 
 .nav-underline {
-  content: "";                         /* Conteúdo vazio para criar a linha */
-  display: block;                      /* Torna o elemento visível como bloco */
-  position: absolute;                  /* Posicionamento absoluto relativo ao link */
-  bottom: -2px;                        /* Coloca a linha 2px abaixo do link */
-  left: 0;                             /* Alinha à esquerda */
-  height: 2px;                         /* Espessura da linha */
-  width: 0%;                           /* Inicialmente invisível */
-  background-color: #facc15;           /* Cor da linha (amarelo) */
-  transition: width 0.3s ease-in-out;  /* Transição suave no aumento da largura */
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #facc15;
+  transition: width 0.3s ease-in-out;
 }
 
 .group:hover .nav-underline {
-  width: 100%; /* Expande a linha ao passar o mouse sobre o grupo do link */
+  width: 100%;
 }
 
+/* ✨ Logo com brilho */
 @keyframes glowPulse {
   0%,100% {
-    text-shadow: 0 0 4px #facc15, 0 0 10px #facc15;  /* Brilho sutil */
+    filter: drop-shadow(0 0 6px #facc15);
   }
   50% {
-    text-shadow: 0 0 12px #facc15, 0 0 20px #facc15; /* Brilho mais intenso no meio do ciclo */
+    filter: drop-shadow(0 0 20px #facc15);
   }
 }
 
 .animate-glow {
-  animation: pulseZoom 3s ease-in-out infinite; /* Aplica efeito de pulsar com zoom */
+  animation: glowPulse 3s ease-in-out infinite;
 }
 
-@keyframes pulseZoom {
-  0%,100% { transform: scale(1); }    /* Tamanho normal */
-  50% { transform: scale(1.15); }     /* Zoom de 15% no meio da animação */
+/* 🍔 Botão hambúrguer animado */
+.hamburger-line {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background-color: #facc15;
+  border-radius: 2px;
+  margin: 5px 0;
+  transition: all 0.35s ease;
+  transform-origin: center;
+}
+
+/* ✖️ Efeito do X */
+#menu-btn.open .hamburger-line:nth-child(1) {
+  transform: rotate(35deg) translateY(15px);
+}
+
+#menu-btn.open .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+#menu-btn.open .hamburger-line:nth-child(3) {
+  transform: rotate(-35deg) translateY(-15px);
 }

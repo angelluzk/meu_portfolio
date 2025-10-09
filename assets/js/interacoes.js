@@ -101,3 +101,16 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+// ⭐ Navbar Mobile do navbar.html
+function initNavbar() {
+  const menuBtn = document.getElementById('menu-btn');
+  const menu = document.getElementById('menu');
+
+  if (!menuBtn || !menu) return;
+
+  menuBtn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+    menuBtn.classList.toggle('open');
+  });
+}

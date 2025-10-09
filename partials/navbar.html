@@ -1,19 +1,33 @@
 <nav
-    class="fixed top-0 w-full bg-black/90 z-50 shadow-lg border-b border-yellow-400 flex items-center justify-between px-6 md:px-20 py-3">
+  class="fixed top-0 w-full bg-black/90 z-50 shadow-lg border-b border-yellow-400 flex items-center justify-between px-6 md:px-20 py-3">
 
-    <!-- Logo com animação -->
-    <a href="#hero" class="logo-wrapper block select-none transition-transform duration-300 hover:scale-130">
-        <img src="assets/img/logo-2.png" alt="Logo Angelita da Luz Mota" class="w-20 h-20 animate-glow">
-    </a>
+  <!-- Logo -->
+  <a href="#hero" class="logo-wrapper block select-none transition-transform duration-300 hover:scale-110">
+    <img src="assets/img/logo-2.png" alt="Logo Angelita da Luz Mota" class="w-16 h-16 md:w-20 md:h-20 animate-glow">
+  </a>
 
-    <!-- Links -->
-    <div class="flex items-center gap-6">
-        <ul class="flex gap-6 text-white font-semibold text-sm md:text-base">
-            <li><a href="#hero" class="nav-link relative group">Início<span class="nav-underline"></span></a></li>
-            <li><a href="#sobre" class="nav-link relative group">Sobre<span class="nav-underline"></span></a></li>
-            <li><a href="#mapa" class="nav-link relative group">Explorar<span class="nav-underline"></span></a></li>
-            <li><a href="#mais-sobre-mim" class="nav-link relative group">Mais Sobre<span class="nav-underline"></span></a></li>
-            <li><a href="#contato" class="nav-link relative group">Contato<span class="nav-underline"></span></a></li>
-        </ul>
-    </div>
+  <!-- Botão do menu mobile -->
+  <button
+    id="menu-btn"
+    class="flex flex-col justify-center items-center w-10 h-10 md:hidden focus:outline-none"
+    aria-label="Menu"
+  >
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+  </button>
+
+  <!-- Menu -->
+  <div
+    id="menu"
+    class="hidden md:flex flex-col md:flex-row items-center gap-6 absolute md:static top-full left-0 w-full md:w-auto bg-black/95 md:bg-transparent py-4 md:py-0 border-t border-yellow-400 md:border-none transition-all duration-300 ease-in-out">
+    
+    <ul class="flex flex-col md:flex-row gap-4 md:gap-6 text-white font-semibold text-sm md:text-base text-center md:text-left">
+      <li><a href="#hero" class="nav-link relative group">Início<span class="nav-underline"></span></a></li>
+      <li><a href="#sobre" class="nav-link relative group">Sobre<span class="nav-underline"></span></a></li>
+      <li><a href="#mapa" class="nav-link relative group">Explorar<span class="nav-underline"></span></a></li>
+      <li><a href="#mais-sobre-mim" class="nav-link relative group">Mais Sobre<span class="nav-underline"></span></a></li>
+      <li><a href="#contato" class="nav-link relative group">Contato<span class="nav-underline"></span></a></li>
+    </ul>
+  </div>
 </nav>

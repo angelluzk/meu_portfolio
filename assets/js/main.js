@@ -6,6 +6,9 @@ async function loadPartial(id, file) {
     initLucide();
 
     switch (file) {
+        case 'navbar':
+            initNavbar();
+        break;
         case 'hero':
             initTyped();
             initStarCanvas();
