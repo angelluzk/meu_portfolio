@@ -17,6 +17,13 @@ Este portfólio tem como propósito:
 
 ---
 
+## 🌐 Hospedagem
+
+O portfólio está disponível online em:  
+📍 [https://angelluzk.github.io/meu_portfolio](https://angelluzk.github.io/meu_portfolio)
+
+---
+
 ## 🧩 Seções do Portfólio
 
 ### 🧭 Navbar Animada  
@@ -98,13 +105,6 @@ Mascote + links para entrar em contato.
 3. Abra o arquivo `index.html` no navegador.
 
 > ✅ Não é necessário backend ou dependências adicionais. É um projeto 100% front-end.
-
----
-
-## 🌐 Hospedagem
-
-O portfólio está disponível online em:  
-📍 [https://angelluzk.github.io/meu_portfolio](https://angelluzk.github.io/meu_portfolio)
 
 ---
 
