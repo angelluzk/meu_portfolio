@@ -8,7 +8,9 @@
   <meta name="description" content="Portfólio - desenvolvedora Full Stack Angel Luz">
   <meta name="keywords"
     content="portfolio, html, css, javascript, desenvolvimento, front-end, back-end, mysql, python, php, java, tailwindcss, tailwind, js">
-  <meta name="theme-color" content="#000000">
+  <!-- 'theme-color' is not supported by Firefox/Opera; provide platform fallbacks instead -->
+  <meta name="msapplication-TileColor" content="#000000">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <title>Angel Luz | Desenvolvedora Full Stack & Design Criativo</title>
 
   <link rel="icon" href="assets/img/favicon-ico.png" type="image/png">
@@ -55,9 +57,8 @@
     onload="this.media='all'">
 
   <!-- ⚡ Preload da imagem LCP (mascote) -->
-  <link rel="preload" as="image" href="assets/img/meu-mascote-v4.avif" type="image/avif" fetchpriority="high"
-    imagesrcset="assets/img/meu-mascote-v4.avif 1x, assets/img/meu-mascote-v4.avif 2x">
-  <link rel="preload" as="image" href="assets/img/meu-mascote-v4.webp" type="image/webp" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/img/meu-mascote-v4.avif" type="image/avif">
+  <link rel="preload" as="image" href="assets/img/meu-mascote-v4.webp" type="image/webp">
 </head>
 
 <body class="relative overflow-x-hidden bg-black text-white scroll-smooth">

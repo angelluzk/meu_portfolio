@@ -10,283 +10,304 @@
 .swiper-projetos .swiper-slide {
   display: flex;
   justify-content: center;
+  align-items: stretch;
 }
 
 /* ⭐️ Swiper - Paginação */
 .swiper-pagination {
-    position: absolute;             /* Posiciona sobre o carrossel */
-    bottom: 12px;                   /* Distância da base */
-    left: 0;
-    width: 100%;
-    text-align: center;
-    z-index: 10;                    /* Garante que fique acima das imagens */
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
 }
 
 .swiper-pagination-bullet {
-    background-color: #facc15;      /* Cor dos indicadores */
-    opacity: 0.6;                   /* Menor destaque quando inativo */
+  background-color: #facc15;
+  opacity: 0.6;
 }
 
 .swiper-pagination-bullet-active {
-    opacity: 1;                     /* Destaque total ao bullet ativo */
+  opacity: 1;
 }
 
 /* ⭐️ Swiper - Botões de Navegação */
 .swiper-button-next,
 .swiper-button-prev {
-    color: #facc15;                 /* Cor dos ícones de seta */
-    width: 48px;
-    height: 48px;
-    border-radius: 9999px;          /* Botão circular */
-    top: 50%;                       /* Centraliza verticalmente */
-    transform: translateY(-50%);
-    z-index: 20;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s ease, color 0.3s ease;
+  color: #facc15;
+  width: 48px;
+  height: 48px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== Setas do lado de fora ===== */
+#projetos { 
+  overflow: visible;
+}
+.swiper-projetos {
+  overflow: visible;
+  padding-inline: 2rem;
+}
+.swiper-button-prev { left: -2.75rem; }
+.swiper-button-next { right: -2.75rem; }
+
+@media (min-width: 1024px) {
+  .swiper-button-prev { left: -3.5rem; }
+  .swiper-button-next { right: -3.5rem; }
+}
+@media (min-width: 1280px) {
+  .swiper-button-prev { left: -4.25rem; }
+  .swiper-button-next { right: -4.25rem; }
+}
+@media (min-width: 1536px) { /* 2xl */
+  .swiper-button-prev { left: -5rem; }
+  .swiper-button-next { right: -5rem; }
 }
 
 /* =======================
 ⭐️ Cards de Projetos
 ======================= */
 .box {
-    background: rgba(0, 0, 0, 0.7); /* Fundo semitransparente escuro */
-    border-radius: 20px;
-    overflow: hidden;              /* Garante bordas arredondadas visíveis */
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.3s ease;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
 }
 
 .box:hover {
-    transform: translateY(-6px) scale(1.02); /* Eleva e amplia levemente no hover */
+  transform: translateY(-6px) scale(1.02);
 }
 
 /* Imagem */
 .cover img {
-    width: 100%;
-    height: clamp(220px, 25vw, 300px); /* Altura responsiva */
-    object-fit: cover;                 /* Garante o preenchimento da área */
-    transition: transform 0.5s ease;
+  width: 100%;
+  height: clamp(220px, 25vw, 300px);
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  display: block;
 }
 
 .group:hover .cover img {
-    transform: scale(1.07);           /* Zoom na imagem ao passar o mouse */
+  transform: scale(1.07);
 }
 
 /* Detalhes ao Hover */
 .details {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.75); /* Fundo escuro transparente */
-    padding: 14px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+  position: absolute;
+  inset: auto 0 0 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .group:hover .details {
-    opacity: 1;
-    transform: translateY(0);         /* Exibe os detalhes com transição suave */
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Descrição fixa no card */
 .description {
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 10px 16px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .description p {
-    color: white;
-    font-size: 0.85rem;
+  color: white;
+  font-size: 0.85rem;
 }
 
 .description a {
-    color: #facc15;
-    font-weight: 600;
-    cursor: pointer;
+  color: #facc15;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 .description a:hover {
-    text-decoration: underline;
-    color: #fde047;
+  text-decoration: underline;
+  color: #fde047;
 }
 
 /* =======================
 ⭐️ Marquee - Tecnologias
 ======================= */
+.marquee-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 88px;
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 6%, #000 94%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0, #000 6%, #000 94%, transparent 100%);
+}
+
+.marquee-track {
+  position: absolute;
+  top: 0; left: 0;
+  height: 88px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  will-change: transform;
+  white-space: nowrap;
+}
+
 .icon-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-width: 100px;
-    gap: 0.1rem;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+  gap: 0.1rem;
+  text-align: center;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .icon-item img {
-    width: 48px;
-    height: 48px;
+  width: 48px;
+  height: 48px;
+  display: block;
 }
 
-/* Container dos ícones no modal - impede scroll horizontal */
+/* Container dos ícones no modal - impede vazamento lateral */
 .flex.gap-3.justify-end {
-    overflow-x: visible;
+  overflow-x: hidden;
 }
 
 /* =======================
 ⭐️ Scrollbar Personalizada
 ======================= */
 .custom-scroll::-webkit-scrollbar {
-    width: 6px;
+  width: 6px;
 }
 
 .custom-scroll::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
 }
 
 .custom-scroll::-webkit-scrollbar-thumb {
-    background-color: rgba(253, 224, 71, 0.8);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(253, 224, 71, 0.8);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .custom-scroll::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(253, 224, 71, 1);
+  background-color: rgba(253, 224, 71, 1);
 }
 
 /* =======================
 ⭐️ Correções de Camada
 ======================= */
 #projetos > div.absolute {
-    z-index: 0; /* Garante que decorativos no fundo fiquem atrás dos elementos principais */
+  z-index: 0;                               /* decorativos sempre atrás */
 }
 
 /* =======================
 ⭐️ Animações
 ======================= */
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: scale(0.95);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
 }
 
 @keyframes fadeOut {
-    from {
-        opacity: 1;
-        transform: scale(1);
-    }
-    to {
-        opacity: 0;
-        transform: scale(0.95);
-    }
+  from { opacity: 1; transform: scale(1); }
+  to   { opacity: 0; transform: scale(0.95); }
 }
 
 @keyframes gradientMove {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* Aplicação das Animações */
-.animate-fadeIn {
-    animation: fadeIn 0.6s ease forwards;
-}
-
-.animate-fadeOut {
-    animation: fadeOut 0.3s ease forwards;
-}
-
+.animate-fadeIn { animation: fadeIn 0.6s ease forwards; }
+.animate-fadeOut{ animation: fadeOut 0.3s ease forwards; }
 .animate-gradientMove {
-    background-size: 200% 200%;
-    animation: gradientMove 10s ease infinite;
+  background-size: 200% 200%;
+  animation: gradientMove 10s ease infinite;
 }
 
 /* =======================
 ⭐️ Modal Global
 ======================= */
 #close-modal {
-    cursor: pointer;
-    z-index: 9999;
-    line-height: 1;
-    transition: transform 0.3s ease;
+  cursor: pointer;
+  z-index: 9999;
+  line-height: 1;
+  transition: transform 0.3s ease;
 }
 
 #close-modal:hover {
-    transform: scale(1.15);
+  transform: scale(1.15);
 }
 
 .modal-content h3 {
-    line-height: 1.2;
+  line-height: 1.2;
 }
 
 /* =======================
 ⭐️ Tooltip para Tecnologias
 ======================= */
 .tooltip {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
 }
 
 .tooltip .tooltip-text {
-    visibility: hidden;
-    width: max-content;
-    background-color: rgba(253, 224, 71, 0.9);
-    color: black;
-    text-align: center;
-    border-radius: 6px;
-    padding: 4px 8px;
-    position: absolute;
-    z-index: 1000;
-    bottom: 125%;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    white-space: nowrap;
-    font-weight: 600;
-    font-size: 0.75rem;
-    pointer-events: none;
+  visibility: hidden;
+  width: max-content;
+  background-color: rgba(253, 224, 71, 0.9);
+  color: black;
+  text-align: center;
+  border-radius: 6px;
+  padding: 4px 8px;
+  position: absolute;
+  z-index: 1000;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+  font-weight: 600;
+  font-size: 0.75rem;
+  pointer-events: none;
 }
 
 .tooltip .tooltip-text::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: rgba(253, 224, 71, 0.9) transparent transparent transparent;
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgba(253, 224, 71, 0.9) transparent transparent transparent;
 }
 
 .tooltip:hover .tooltip-text {
-    visibility: visible;
-    opacity: 1;
+  visibility: visible;
+  opacity: 1;
 }
 
 /* =======================
@@ -320,14 +341,8 @@
 ✨ Animação de entrada
 ======================= */
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px) scale(0.98);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
+  from { opacity: 0; transform: translateY(20px) scale(0.98); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
 }
 
 /* =======================
@@ -367,10 +382,14 @@
   background-color: rgba(253, 224, 71, 1);
 }
 
-.filter-btn.active {
-    background-color: #FBBF24;
-    color: black;
+/* =======================
+✨ Estado dos filtros
+======================= */
+.filter-btn.active,
+.filter-btn.is-active {
+  background-color: #FBBF24;
+  color: black;
 }
-.filter-btn:not(.active):hover {
-    background-color: rgba(251, 191, 36, 0.1);
+.filter-btn:not(.active):not(.is-active):hover {
+  background-color: rgba(251, 191, 36, 0.1);
 }

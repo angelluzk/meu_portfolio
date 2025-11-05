@@ -2,7 +2,7 @@
 
 <img src="assets/img/capa-portfolio-dev.png" alt="Capa do Portfólio Universo Criativo Dev" style="width:100%; border-radius: 12px;"/>
 
-Bem-vindo ao meu portfólio! Este projeto foi criado para apresentar minha trajetória como desenvolvedora, designer e criadora de conteúdo — unindo programação, design criativo e ilustração em um só lugar. ✨
+Bem-vindo ao meu portfólio! Este projeto foi criado para apresentar minha trajetória como desenvolvedora, designer e criadora de conteúdo, unindo programação, design criativo e ilustração em um só lugar. ✨
 
 ---
 
