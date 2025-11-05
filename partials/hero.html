@@ -1,72 +1,81 @@
 <section id="hero"
-    class="scroll-mt-40 relative min-h-screen pt-40 flex flex-col justify-center items-center text-center z-10 px-8 pt-2 pb-37">
+  class="scroll-mt-40 relative min-h-screen flex flex-col justify-center items-center text-center z-10 px-8 pt-36 pb-20">
 
-    <!-- Fundo escuro + estrelas -->
-    <div class="absolute inset-0 bg-black bg-opacity-80 z-0"></div>
-    <canvas id="starCanvas" class="absolute top-0 left-0 w-full h-full z-0"></canvas>
+  <!-- Fundo escuro + estrelas -->
+  <div class="absolute inset-0 bg-black bg-opacity-80 z-0"></div>
+  <canvas id="starCanvas" class="absolute top-0 left-0 w-full h-full z-0"></canvas>
 
-    <div
-        class="z-10 animate-fade-in w-full max-w-screen-xl mx-auto flex flex-col md:flex-row items-center justify-center gap-6 px-8">
+  <div
+    class="z-10 animate-fade-in w-full max-w-screen-xl mx-auto flex flex-col md:flex-row items-center justify-center gap-6 px-8">
 
-        <!-- Mascote e balão -->
-        <div class="flex flex-col items-center md:items-end group animate-fade-in relative">
+    <!-- Mascote e balão -->
+    <div class="flex flex-col items-center md:items-end group animate-fade-in relative">
 
-            <!-- fundo blur amarelo -->
-            <div
-                class="absolute -z-10 w-[280px] h-[280px] md:w-[450px] md:h-[450px] rounded-full bg-yellow-400 opacity-20 blur-3xl">
-            </div>
+      <!-- fundo blur amarelo -->
+      <div
+        class="absolute -z-10 w-[280px] h-[280px] md:w-[450px] md:h-[450px] rounded-full bg-yellow-400 opacity-20 blur-3xl">
+      </div>
 
-            <!-- vagalumes extras -->
-            <div class="absolute top-10 left-5 w-2 h-2 rounded-full bg-yellow-400 opacity-70 firefly1"></div>
-            <div class="absolute top-20 right-10 w-3 h-3 rounded-full bg-yellow-400 opacity-60 firefly2"></div>
-            <div class="absolute bottom-10 left-14 w-1.5 h-1.5 rounded-full bg-yellow-400 opacity-50 firefly3">
-            </div>
-            <div class="absolute bottom-20 right-20 w-2 h-2 rounded-full bg-yellow-400 opacity-60 firefly4"></div>
-            <div class="absolute top-5 right-32 w-2.5 h-2.5 rounded-full bg-yellow-400 opacity-55 firefly1"></div>
-            <div class="absolute bottom-16 left-28 w-1.8 h-1.8 rounded-full bg-yellow-400 opacity-50 firefly2">
-            </div>
-            <div class="absolute top-36 right-16 w-2 h-2 rounded-full bg-yellow-400 opacity-60 firefly3"></div>
+      <!-- vagalumes extras -->
+      <div class="absolute top-10 left-5 w-2 h-2 rounded-full bg-yellow-400 opacity-70 firefly1"></div>
+      <div class="absolute top-20 right-10 w-3 h-3 rounded-full bg-yellow-400 opacity-60 firefly2"></div>
+      <div class="absolute bottom-10 left-14 w-1.5 h-1.5 rounded-full bg-yellow-400 opacity-50 firefly3"></div>
+      <div class="absolute bottom-20 right-20 w-2 h-2 rounded-full bg-yellow-400 opacity-60 firefly4"></div>
+      <div class="absolute top-5 right-32 w-2.5 h-2.5 rounded-full bg-yellow-400 opacity-55 firefly1"></div>
+      <div class="absolute bottom-16 left-28 w-1.8 h-1.8 rounded-full bg-yellow-400 opacity-50 firefly2"></div>
+      <div class="absolute top-36 right-16 w-2 h-2 rounded-full bg-yellow-400 opacity-60 firefly3"></div>
 
-            <!-- Balão -->
-            <div id="balao"
-                class="absolute top-[0px] left-1/2 -translate-x-1/2 -translate-y-full bg-yellow-400 text-black text-lg px-6 py-3 rounded-xl shadow-xl w-max whitespace-nowrap animate-pulse-soft z-20">
-                <span class="block font-semibold">Vamos explorar meu universo criativo?</span>
-                <div
-                    class="absolute bottom-[-8px] left-6 w-0 h-0 border-l-[8px] border-r-[8px] border-t-[8px] border-l-transparent border-r-transparent border-t-yellow-400">
-                </div>
-            </div>
-
-            <!-- Mascote -->
-            <img src="assets/img/meu-mascote-v4.png" alt="Mascote desenvolvedora"
-                class="group w-[300px] md:w-[490px] object-contain drop-shadow-lg relative z-10 float" />
-            <div class="w-[190px] md:w-[370px] h-10 bg-black/30 rounded-full -mt-6 filter blur-xl"></div>
+      <!-- Balão -->
+      <div id="balao"
+        class="absolute top-[0px] left-1/2 -translate-x-1/2 -translate-y-full bg-yellow-400 text-black text-lg px-6 py-3 rounded-xl shadow-xl w-max whitespace-nowrap animate-pulse-soft z-20">
+        <span class="block font-semibold">Vamos explorar meu universo criativo?</span>
+        <div
+          class="absolute bottom-[-8px] left-6 w-0 h-0 border-l-[8px] border-r-[8px] border-t-[8px] border-l-transparent border-r-transparent border-t-yellow-400">
         </div>
+      </div>
 
-        <!-- Texto -->
-        <div class="max-w-xl text-left animate-fade-in flex flex-col justify-center gap-2">
-            <h1
-                class="text-4xl md:text-6xl font-bold text-yellow-400 drop-shadow-[0_2px_2px_rgba(255,255,255,0.2)] tracking-tight leading-tight whitespace-nowrap">
-                <span id="typed-container">
-                    <span id="typed">Universo Criativo Dev</span><span id="cursor" class="text-yellow-400">|</span>
-                </span>
-            </h1>
+      <!-- Mascote otimizado -->
+      <picture>
+        <source type="image/avif" srcset="assets/img/meu-mascote-v4.avif">
+        <source type="image/webp" srcset="assets/img/meu-mascote-v4.webp">
+        <img
+          src="assets/img/meu-mascote-v4.png"
+          alt="Mascote desenvolvedora Angel Luz"
+          class="group w-[300px] md:w-[490px] object-contain drop-shadow-lg relative z-10 float"
+          width="490" height="490"
+          decoding="async" fetchpriority="high"
+        />
+      </picture>
 
-            <p class="text-lg md:text-xl text-white leading-relaxed">
-                Prepare-se para explorar um universo onde <span class="font-semibold text-yellow-400">código</span>,
-                <span class="font-semibold text-yellow-400">criatividade</span> e <span
-                    class="font-semibold text-yellow-400">inovação</span> se encontram!
-            </p>
-
-            <a href="#sobre"
-                class="scribble-border mt-6 w-fit px-6 py-3 text-lg font-semibold text-white bg-yellow-400/20 hover:bg-yellow-400 hover:text-black hover:scale-105 hover:shadow-lg transition-all duration-300">
-                Entrar
-            </a>
-        </div>
+      <div class="w-[190px] md:w-[370px] h-10 bg-black/30 rounded-full -mt-6 filter blur-xl"></div>
     </div>
 
-    <!-- Vagalumes adicionais -->
-    <span class="absolute top-1/4 left-1/3 w-2 h-2 bg-yellow-400 rounded-full firefly1"></span>
-    <span class="absolute bottom-1/4 right-1/4 w-2 h-2 bg-yellow-400 rounded-full firefly2"></span>
-    <span class="absolute top-1/2 right-1/2 w-2 h-2 bg-yellow-400 rounded-full firefly3"></span>
-    <span class="absolute bottom-1/3 left-1/4 w-2 h-2 bg-yellow-400 rounded-full firefly4"></span>
+    <!-- Texto -->
+    <div class="max-w-xl text-center md:text-left animate-fade-in flex flex-col justify-center gap-2">
+      <h1
+        class="text-3xl sm:text-4xl md:text-6xl font-bold text-yellow-400 drop-shadow-[0_2px_2px_rgba(255,255,255,0.2)] tracking-tight leading-tight break-words">
+        <span id="typed-container">
+          <span id="typed">Universo Criativo Dev</span>
+          <span id="cursor" class="text-yellow-400" aria-hidden="true">|</span>
+        </span>
+      </h1>
+
+      <p class="text-lg md:text-xl text-white leading-relaxed">
+        Prepare-se para explorar um universo onde <span class="font-semibold text-yellow-400">código</span>,
+        <span class="font-semibold text-yellow-400">criatividade</span> e <span
+          class="font-semibold text-yellow-400">inovação</span> se encontram!
+      </p>
+
+      <a href="#sobre"
+        class="scribble-border mt-6 w-fit px-6 py-3 text-lg font-semibold text-white bg-yellow-400/20 hover:bg-yellow-400 hover:text-black hover:scale-105 hover:shadow-lg transition-all duration-300">
+        Entrar
+      </a>
+    </div>
+  </div>
+
+  <!-- Vagalumes adicionais -->
+  <span class="absolute top-1/4 left-1/3 w-2 h-2 bg-yellow-400 rounded-full firefly1"></span>
+  <span class="absolute bottom-1/4 right-1/4 w-2 h-2 bg-yellow-400 rounded-full firefly2"></span>
+  <span class="absolute top-1/2 right-1/2 w-2 h-2 bg-yellow-400 rounded-full firefly3"></span>
+  <span class="absolute bottom-1/3 left-1/4 w-2 h-2 bg-yellow-400 rounded-full firefly4"></span>
 </section>

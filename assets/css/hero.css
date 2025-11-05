@@ -1,21 +1,62 @@
-/* Efeito de digitação do título */
-#cursor {
-  display: inline-block;         /* Permite aplicar animação ao cursor (como um caractere visível) */
-  margin-left: 5px;              /* Espaço entre o texto digitado e o cursor */
-  animation: blink 0.7s infinite;/* Animação de piscar contínua */
-}
 
-@keyframes blink {
-  0%,50% { opacity: 1; }         /* Cursor visível na metade inicial */
-  51%,100% { opacity: 0; }       /* Cursor invisível na segunda metade */
-}
-
+/* Título com digitação — responsivo e sem layout shift */
 #typed-container {
-  white-space: nowrap;           /* Mantém todo o texto digitado em uma única linha */
+  display: inline-block;
+  white-space: pre-wrap;      /* permite quebra natural */
+  word-break: break-word;
+  vertical-align: middle;
+  position: relative;
+  max-width: 100%;
 }
 
+#cursor {
+  display: inline-block;
+  margin-left: 2px;
+  animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink { 50% { opacity: 0; } }
+
+/* Em telas grandes, reservamos largura para estabilidade */
+@media (min-width: 769px) {
+  /* A largura é definida via JS para telas grandes (initTyped),
+     garantindo zero reflow e cursor colado no texto */
+  #typed-container {
+    white-space: nowrap;
+  }
+}
+
+/* Em telas pequenas, deixe quebrar e limite a largura */
 @media (max-width: 768px) {
   #typed-container {
-    white-space: normal;         /* Permite quebra de linha em telas pequenas */
+    white-space: normal;
+    max-width: 90vw;
   }
+}
+
+/* Animação suave do balão */
+.animate-pulse-soft {
+  animation: pulseSoft 2.5s ease-in-out infinite;
+}
+@keyframes pulseSoft {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50%      { transform: scale(1.05); opacity: 0.9; }
+}
+
+/* Vagalumes */
+.firefly1 { animation: flicker 3s infinite ease-in-out alternate; }
+.firefly2 { animation: flicker 4s infinite ease-in-out alternate; }
+.firefly3 { animation: flicker 5s infinite ease-in-out alternate; }
+.firefly4 { animation: flicker 6s infinite ease-in-out alternate; }
+@keyframes flicker {
+  0%   { opacity: 0.2; transform: scale(1); }
+  50%  { opacity: 1;   transform: scale(1.3); }
+  100% { opacity: 0.3; transform: scale(1); }
+}
+
+/* Suaviza entrada do hero */
+.animate-fade-in { animation: fadeIn 1s ease-in-out forwards; }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
 }

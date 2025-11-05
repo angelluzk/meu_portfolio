@@ -1,106 +1,123 @@
-<section id="sobre"
-    class="scroll-mt-40 py-60 relative px-10 max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-center text-center md:text-left animate-fade-in overflow-hidden">
+<section id="sobre" class="relative scroll-mt-40 py-24 md:py-28">
 
-    <!-- Fundo decorativo com múltiplos triângulos -->
-    <div class="absolute inset-0 z-0 pointer-events-none">
-        <div class="absolute top-20 left-10 w-24 h-24 rotate-45 bg-yellow-400 opacity-40 clip-triangle blur-md"></div>
-        <div class="absolute bottom-32 right-12 w-20 h-20 rotate-12 bg-yellow-300 opacity-30 clip-triangle blur-sm">
+    <!-- Fundo decorativo -->
+    <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden" aria-hidden="true" role="presentation">
+        <div class="absolute top-20 left-10 w-24 h-24 rotate-45 bg-yellow-400/40 clip-triangle blur-md"></div>
+        <div class="absolute bottom-32 right-12 w-20 h-20 rotate-12 bg-yellow-300/30 clip-triangle blur-sm"></div>
+        <div class="absolute top-[20%] left-1/4 w-16 h-16 -rotate-12 bg-yellow-200/15 clip-triangle blur-sm"></div>
+        <div class="absolute top-10 right-1/4 w-28 h-28 rotate-[30deg] bg-yellow-300/40 clip-triangle blur-md"></div>
+        <div class="absolute bottom-12 left-1/4 w-6 h-6 rotate-45 bg-yellow-400/60 clip-triangle blur-[3px]"></div>
+        <div class="absolute top-[65%] left-[10%] w-4 h-4 rotate-[15deg] bg-yellow-200/30 clip-triangle blur-sm"></div>
+        <div class="absolute bottom-1/2 right-1/3 w-5 h-5 rotate-[75deg] bg-yellow-400/35 clip-triangle blur-[2px]">
         </div>
-        <div class="absolute top-1/5 left-1/4 w-16 h-16 -rotate-12 bg-yellow-200 opacity-15 clip-triangle blur-sm">
-        </div>
-        <div class="absolute top-10 right-1/4 w-28 h-28 rotate-[30deg] bg-yellow-300 opacity-40 clip-triangle blur-md">
-        </div>
-
-        <div class="absolute bottom-12 left-1/4 w-6 h-6 rotate-45 bg-yellow-400 opacity-60 clip-triangle blur-[3px]">
-        </div>
-        <div
-            class="absolute top-[65%] left-[10%] w-4 h-4 rotate-[15deg] bg-yellow-200 opacity-30 clip-triangle blur-sm">
-        </div>
-        <div
-            class="absolute bottom-1/2 right-1/3 w-5 h-5 rotate-[75deg] bg-yellow-400 opacity-35 clip-triangle blur-[2px]">
-        </div>
-        <div class="absolute top-1/4 right-1/2 w-8 h-8 rotate-[25deg] bg-yellow-300 opacity-20 clip-triangle blur-sm">
-        </div>
-
-        <div class="absolute bottom-10 left-10 w-24 h-24 rotate-45 bg-yellow-100 opacity-10 clip-triangle blur-lg">
-        </div>
-        <div class="absolute top-1/3 right-6 w-16 h-16 rotate-12 bg-yellow-100 opacity-10 clip-triangle blur-lg"></div>
-        <div class="absolute top-72 left-1/2 w-20 h-20 rotate-[60deg] bg-yellow-100 opacity-10 clip-triangle blur-xl">
-        </div>
+        <div class="absolute top-1/4 right-1/2 w-8 h-8 rotate-[25deg] bg-yellow-300/20 clip-triangle blur-sm"></div>
+        <div class="absolute bottom-10 left-10 w-24 h-24 rotate-45 bg-yellow-100/10 clip-triangle blur-lg"></div>
+        <div class="absolute top-1/3 right-6 w-16 h-16 rotate-12 bg-yellow-100/10 clip-triangle blur-lg"></div>
+        <div class="absolute top-72 left-1/2 w-20 h-20 rotate-[60deg] bg-yellow-100/10 clip-triangle blur-xl"></div>
     </div>
 
-    <!-- Container texto + links -->
-    <div class="relative flex flex-col md:flex-row items-center md:items-center w-full gap-6">
+    <!-- CONTAINER CENTRAL -->
+    <div
+        class="relative flex flex-col md:flex-row items-center z-10 mx-auto w-full max-w-7xl py-24 px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-12 lg:gap-16">
 
-        <!-- Coluna esquerda: texto + links -->
-        <div class="flex flex-col justify-center md:flex-1 max-w-5xl mx-auto md:mx-0 md:mr-20 w-full">
+            <!-- COLUNA TEXTO -->
+            <article class="flex flex-col items-center lg:items-start text-center lg:text-left">
+                <div class="scribble-border w-full max-w-2xl p-6 sm:p-8 space-y-6">
+                    <h2 id="sobre-titulo"
+                        class="text-4xl md:text-5xl font-extrabold text-yellow-400 flex items-center gap-4 justify-center lg:justify-start mb-2">
+                        <i data-lucide="user" class="w-8 h-8 text-yellow-400"></i>
+                        Sobre Mim
+                    </h2>
 
-            <div class="scribble-border p-8 space-y-6">
-                <h2
-                    class="text-5xl md:text-4xl extra-bold text-yellow-400 flex items-center gap-5 justify-center md:justify-start mb-10 animate-fade-in">
-                    <i data-lucide="user" class="w-8 h-8 text-yellow-400"></i>
-                    Sobre Mim
-                </h2>
+                    <p class="text-white text-lg leading-relaxed">
+                        Olá! Sou <span class="text-yellow-400 font-semibold">Angel Luz</span>, desenvolvedora
+                        <span class="text-yellow-400 font-semibold">Full Stack</span> que une tecnologia e identidade
+                        visual.
+                        Criei o <span class="text-yellow-400 font-semibold">Universo Criativo Dev</span> para
+                        transformar ideias em
+                        produtos com propósito, equilibrando código, design e experiência.
+                    </p>
 
-                <p class="text-white text-lg leading-tight">
-                    Olá! Sou <span class="text-yellow-400 font-semibold">Angel Luz</span>, desenvolvedora <span
-                        class="text-yellow-400 font-semibold">Full Stack</span>, com um toque criativo em design e
-                    produtora
-                    de conteúdo audiovisual para o <span class="text-yellow-400 font-semibold">YouTube</span>.
-                </p>
-                <p class="text-white text-lg leading-tight">
-                    Com conhecimento em <span class="text-yellow-400 font-semibold">Python</span>, <span
-                        class="text-yellow-400 font-semibold">PHP</span>, <span
-                        class="text-yellow-400 font-semibold">Java</span>,
-                    <span class="text-yellow-400 font-semibold">JavaScript</span>, <span
-                        class="text-yellow-400 font-semibold">HTML</span>, <span
-                        class="text-yellow-400 font-semibold">CSS</span> e <span
-                        class="text-yellow-400 font-semibold">MySQL</span>.
-                </p>
-                <p class="text-white text-lg leading-tight">
-                    Ajudo empresas a transformar sonhos em código e criatividade! Que tal conhecer meu <span
-                        class="text-yellow-400 font-semibold">Universo Criativo</span>?
-                </p>
+                    <p class="text-white text-lg leading-relaxed">
+                        👩‍🎓 Técnica em <span class="text-yellow-400 font-semibold">Informática</span> e graduanda em
+                        <span class="text-yellow-400 font-semibold">Análise e Desenvolvimento de Sistemas</span>.
+                        Vim de <span class="text-yellow-400 font-semibold">suporte/infra</span> (500+ usuários) e hoje
+                        foco em
+                        <span class="text-yellow-400 font-semibold">Laravel 11, Vue 3 e Inertia.js</span> com
+                        <span class="text-yellow-400 font-semibold">TailwindCSS</span> e
+                        <span class="text-yellow-400 font-semibold">PostgreSQL</span>, em ambiente
+                        <span class="text-yellow-400 font-semibold">Docker + WSL2</span>.
+                    </p>
 
-                <span class="sobre-firefly w-2 h-2 top-1 left-1 absolute firefly1"></span>
-                <span class="sobre-firefly w-1.5 h-1.5 bottom-10 right-10 absolute firefly2"></span>
+                    <p class="text-white text-lg leading-tight">
+                        ✨ Meus projetos são pensados como experiências completas: arquitetura limpa, desempenho e
+                        estética,
+                        do setup containerizado às telas finais.
+                    </p>
+
+                    <p class="text-white text-lg leading-relaxed">
+                        Vamos transformar sua ideia em um produto real? 🚀
+                        <span class="text-yellow-400 font-semibold">Conecte-se comigo e explore o Universo Criativo
+                            Dev.</span>
+                    </p>
+
+                    <!-- brilhos discretos -->
+                    <span class="sobre-firefly w-2 h-2 top-1 left-1 absolute firefly1"></span>
+                    <span class="sobre-firefly w-1.5 h-1.5 bottom-10 right-10 absolute firefly2"></span>
+                </div>
+
+                <!-- LINKS -->
+                <nav
+                    class="mt-6 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-yellow-400 text-lg font-semibold">
+                    <a href="https://www.linkedin.com/in/angelitaluz/" target="_blank" rel="noopener noreferrer"
+                        class="flex items-center gap-2 hover:text-yellow-300 transition-colors" aria-label="LinkedIn">
+                        <i data-lucide="linkedin" class="w-6 h-6"></i> LinkedIn
+                    </a>
+                    <a href="https://github.com/angelluzk" target="_blank" rel="noopener noreferrer"
+                        class="flex items-center gap-2 hover:text-yellow-300 transition-colors" aria-label="GitHub">
+                        <i data-lucide="github" class="w-6 h-6"></i> GitHub
+                    </a>
+                    <a href="assets/docs/Curriculo-2025.pdf" target="_blank" rel="noopener noreferrer"
+                        class="flex items-center gap-2 hover:text-yellow-300 transition-colors" aria-label="Currículo">
+                        <i data-lucide="file-text" class="w-6 h-6"></i> Currículo
+                    </a>
+                </nav>
+            </article>
+
+            <!-- COLUNA IMAGEM -->
+            <div class="flex justify-center items-center relative">
+                <picture>
+                    <source type="image/avif" srcset="assets/img/minha-foto.avif">
+                    <source type="image/webp" srcset="assets/img/minha-foto.webp">
+                    <img src="assets/img/minha-foto.png" alt="Foto de Angel Luz" width="450" height="450"
+                        decoding="async" fetchpriority="high" loading="lazy"
+                        sizes="(min-width:1024px) 28rem, (min-width:768px) 24rem, 20rem"
+                        class="scribble-photo-border object-cover rounded-full relative z-20 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem]" />
+                </picture>
+
+                <!-- fireflies -->
+                <span class="sobre-firefly w-3 h-3 top-5 left-10 absolute firefly1"></span>
+                <span class="sobre-firefly w-2 h-2 top-20 right-14 absolute firefly2"></span>
+                <span class="sobre-firefly w-2.5 h-2.5 bottom-12 left-14 absolute firefly3"></span>
+                <span class="sobre-firefly w-3 h-3 bottom-8 right-8 absolute firefly4"></span>
             </div>
-
-            <div class="flex justify-start gap-8 mt-6 px-2 text-yellow-400 text-lg font-semibold">
-                <a href="https://www.linkedin.com/in/angelitaluz/" target="_blank" rel="noopener noreferrer"
-                    class="flex items-center gap-2 hover:text-yellow-300 transition-colors" aria-label="LinkedIn">
-                    <i data-lucide="linkedin" class="w-6 h-6"></i>
-                    LinkedIn
-                </a>
-                <a href="https://github.com/angelluzk" target="_blank" rel="noopener noreferrer"
-                    class="flex items-center gap-2 hover:text-yellow-300 transition-colors" aria-label="GitHub">
-                    <i data-lucide="github" class="w-6 h-6"></i>
-                    GitHub
-                </a>
-                <a href="assets/docs/Curriculo-ANGELITA-LUZ-MOTA.pdf" target="_blank" rel="noopener noreferrer"
-                    class="flex items-center gap-2 hover:text-yellow-300 transition-colors" aria-label="Currículo">
-                    <i data-lucide="file-text" class="w-6 h-6"></i>
-                    Currículo
-                </a>
-            </div>
-        </div>
-
-        <!-- Coluna direita: imagem -->
-        <div class="relative flex-1 flex justify-center md:justify-start items-center animate-fade-in-right max-w-full">
-            <img src="assets/img/minha-foto.png" alt="Foto Sobre Mim"
-                class="scribble-photo-border w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] object-cover rounded-full relative z-20 float" />
-
-            <span class="sobre-firefly w-3 h-3 top-5 left-10 absolute firefly1"></span>
-            <span class="sobre-firefly w-2 h-2 top-20 right-14 absolute firefly2"></span>
-            <span class="sobre-firefly w-2.5 h-2.5 bottom-12 left-14 absolute firefly3"></span>
-            <span class="sobre-firefly w-3 h-3 bottom-8 right-8 absolute firefly4"></span>
         </div>
     </div>
 </section>
 
 <!-- Separador centralizado -->
-<div class="separador" aria-hidden="true">
+<div class="separador mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8" aria-hidden="true">
     <span class="pontos left">. . .</span>
     <div class="linha"></div>
     <span class="pontos right">. . .</span>
 </div>
+
+<!-- Motion Safe para acessibilidade -->
+<style>
+    @media (prefers-reduced-motion: reduce) {
+        .sobre-firefly {
+            animation: none !important;
+        }
+    }
+</style>

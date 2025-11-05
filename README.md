@@ -10,10 +10,10 @@ Bem-vindo ao meu portfólio! Este projeto foi criado para apresentar minha traje
 
 Este portfólio tem como propósito:
 
-- Exibir meus **projetos de desenvolvimento web**
-- Apresentar meu lado **criativo e visual** com ilustrações e thumbnails
-- Demonstrar domínio em **tecnologias modernas**, com foco na experiência do usuário (UX) e interface (UI)
-- Servir como vitrine profissional para oportunidades em **empresas de tecnologia e design**
+- Exibir meus **projetos de desenvolvimento web**.
+- Apresentar meu lado **criativo e visual** com ilustrações e thumbnails.
+- Demonstrar domínio em **tecnologias modernas**, com foco na experiência do usuário (UX) e interface (UI).
+- Servir como vitrine profissional para oportunidades em **empresas de tecnologia e design**.
 
 ---
 

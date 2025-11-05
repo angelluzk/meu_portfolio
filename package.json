@@ -1,0 +1,30 @@
+{
+  "name": "meu_portfolio",
+  "version": "1.0.0",
+  "description": "<img src=\"assets/img/capa-portfolio-dev.png\" alt=\"Capa do Portfólio Universo Criativo Dev\" style=\"width:100%; border-radius: 12px;\"/>",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "img:optimize": "node scripts/optimize-images.mjs",
+    "img:update-html": "node scripts/update-html.mjs",
+    "img:all": "npm run img:optimize && npm run img:update-html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angelluzk/meu_portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/angelluzk/meu_portfolio/issues"
+  },
+  "homepage": "https://github.com/angelluzk/meu_portfolio#readme",
+  "devDependencies": {
+    "cheerio": "^1.1.2",
+    "fast-glob": "^3.3.3",
+    "p-limit": "^7.2.0",
+    "sharp": "^0.34.4"
+  }
+}

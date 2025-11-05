@@ -1,87 +1,117 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="Angel Luz">
-    <meta name="description" content="Portfólio - desenvolvedora Full Stack Angel Luz">
-    <meta name="keywords"
-        content="portfolio, html, css, javascript, desenvolvimento, front-end, back-end, mysql, python, php, java, tailwindcss, tailwind, js">
-    <title>Angel Luz | Desenvolvedora Full Stack & Design Criativo</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Angel Luz">
+  <meta name="description" content="Portfólio - desenvolvedora Full Stack Angel Luz">
+  <meta name="keywords"
+    content="portfolio, html, css, javascript, desenvolvimento, front-end, back-end, mysql, python, php, java, tailwindcss, tailwind, js">
+  <meta name="theme-color" content="#000000">
+  <title>Angel Luz | Desenvolvedora Full Stack & Design Criativo</title>
 
-    <link rel="shortcut icon" href="assets/img/favicon-ico.png" type="image/x-icon">
+  <link rel="icon" href="assets/img/favicon-ico.png" type="image/png">
 
-    <!-- Tailwind -->
-    <script src="https://cdn.tailwindcss.com"></script>
+  <!-- 🌐 Preconnects para performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@400;600&display=swap"
-        rel="stylesheet">
+  <!-- 🎨 Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- 🖋️ Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@400;600&display=swap"
+    rel="stylesheet">
 
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- 🎨 CSS crítico -->
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="preload" as="style" href="assets/css/navbar.css">
+  <link rel="stylesheet" href="assets/css/navbar.css" media="print" onload="this.media='all'">
+  <link rel="preload" as="style" href="assets/css/hero.css">
+  <link rel="stylesheet" href="assets/css/hero.css" media="print" onload="this.media='all'">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- 🪶 CSS não-crítico (carrega sem bloquear) -->
+  <link rel="stylesheet" href="assets/css/sobre.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="assets/css/mapa.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="assets/css/projetos.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="assets/css/laboratorio.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="assets/css/estudio.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="assets/css/mais-sobre-mim.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="assets/css/contato.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="assets/css/footer.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="assets/css/scroll-button.css" media="print" onload="this.media='all'">
 
-    <!-- Estilos customizados -->
-    <link rel="stylesheet" href="assets/css/global.css">
-    <link rel="stylesheet" href="assets/css/navbar.css">
-    <link rel="stylesheet" href="assets/css/hero.css">
-    <link rel="stylesheet" href="assets/css/sobre.css">
-    <link rel="stylesheet" href="assets/css/mapa.css">
-    <link rel="stylesheet" href="assets/css/projetos.css">
-    <link rel="stylesheet" href="assets/css/laboratorio.css">
-    <link rel="stylesheet" href="assets/css/estudio.css">
-    <link rel="stylesheet" href="assets/css/mais-sobre-mim.css">
-    <link rel="stylesheet" href="assets/css/contato.css">
-    <link rel="stylesheet" href="assets/css/footer.css">
-    <link rel="stylesheet" href="assets/css/scroll-button.css">
+  <!-- 🧩 Ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print"
+    onload="this.media='all'">
+  <script src="https://unpkg.com/lucide@latest" defer></script>
 
+  <!-- 🎠 Swiper CSS (não-bloqueante) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print"
+    onload="this.media='all'">
+
+  <!-- ⚡ Preload da imagem LCP (mascote) -->
+  <link rel="preload" as="image" href="assets/img/meu-mascote-v4.avif" type="image/avif" fetchpriority="high"
+    imagesrcset="assets/img/meu-mascote-v4.avif 1x, assets/img/meu-mascote-v4.avif 2x">
+  <link rel="preload" as="image" href="assets/img/meu-mascote-v4.webp" type="image/webp" fetchpriority="high">
 </head>
 
 <body class="relative overflow-x-hidden bg-black text-white scroll-smooth">
+  <!-- 🌙 Navbar -->
+  <div id="navbar" class="min-h-16"></div>
 
-    <div id="navbar"></div>
+  <main>
+    <!-- HERO -->
+    <div id="hero" class="min-h-[calc(100svh-64px)]"></div>
 
-    <main>
-        <div id="hero"></div>
-        <div id="sobre"></div>
-        <div id="mapa"></div>
-        <div id="projetos"></div>
-        <div id="laboratorio"></div>
-        <div id="estudio"></div>
-        <div id="mais-sobre-mim"></div>
-        <div id="contato"></div>
-    </main>
+    <!-- Outras seções com placeholders -->
+    <div id="sobre" class="min-h-[60svh]"></div>
+    <div id="mapa" class="min-h-[60svh]"></div>
+    <div id="projetos" class="min-h-[80svh]"></div>
+    <div id="laboratorio" class="min-h-[70svh]"></div>
+    <div id="estudio" class="min-h-[60svh]"></div>
+    <div id="mais-sobre-mim" class="min-h-[60svh]"></div>
+    <div id="contato" class="min-h-[60svh]"></div>
+  </main>
 
-    <div id="footer"></div>
+  <!-- 🌌 Rodapé -->
+  <div id="footer" class="min-h-24"></div>
 
-    <!-- SwiperJS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.min.js"></script>
+  <!-- ⚙️ JS de terceiros -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+  <!-- Partículas (somente se realmente usar) -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.min.js" defer></script> -->
 
-    <!-- Scripts customizados -->
-    <script src="assets/js/init.js" defer></script>
-    <script src="assets/js/interacoes.js" defer></script>
-    <script src="assets/js/carrossel-laboratorio.js" defer></script>
-    <script src="assets/js/main.js" defer></script>
-    <script src="assets/js/projetos.js" defer></script>
+  <!-- 🧠 Scripts customizados -->
+  <script src="assets/js/init.js" defer></script>
+  <script src="assets/js/interacoes.js" defer></script>
+  <script src="assets/js/carrossel-laboratorio.js" defer></script>
+  <script src="assets/js/projetos.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
 
-    <!-- Botão subir/descer -->
-    <button id="scrollButton" type="button" aria-label="Ir para a próxima seção" class="scroll-button hidden">
-        <div class="rastro-container" aria-hidden="true">
-            <span class="rastro fumaca"></span>
-            <span class="rastro faisca"></span>
-            <span class="rastro faisca-pequena"></span>
-        </div>
-        <i class="fa-solid fa-arrow-down text-xl" aria-hidden="true"></i>
-    </button>
+  <!-- 🚀 Botão subir/descer -->
+  <button id="scrollButton" type="button" aria-label="Ir para a próxima seção" class="scroll-button hidden">
+    <div class="rastro-container" aria-hidden="true">
+      <span class="rastro fumaca"></span>
+      <span class="rastro faisca"></span>
+      <span class="rastro faisca-pequena"></span>
+    </div>
+    <i class="fa-solid fa-arrow-down text-xl" aria-hidden="true"></i>
+  </button>
 
+  <!-- 🧩 Noscript básico -->
+  <noscript>
+    <style>
+      main>div {
+        min-height: auto
+      }
+    </style>
+    Seu navegador está com JavaScript desativado. Algumas seções podem não carregar.
+  </noscript>
 </body>
 
 </html>
